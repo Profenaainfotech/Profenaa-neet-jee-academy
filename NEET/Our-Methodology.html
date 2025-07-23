@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Methodology </title>
+  <link rel="stylesheet" href="Our-Methodology.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<!-- navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-brand">
+        <img src="images/academy logo.png" alt="logo" class="navbar-logo" />
+        <span class="brand-text">NEET&JEE Academy</span>
+      </div>
+
+      <div class="menu-icon" id="menu-icon">☰</div>
+
+      <div class="navbar-links" id="navbar-links">
+        <a href="homepage.html">Home</a>
+        <a href="about-us.html">About Us</a>
+
+        
+        <div class="dropdown" id="dropdown">
+          <span class="dropdown-btn">Courses ▼</span>
+          <div class="dropdown-content" id="dropdown-content">
+            <a href="neet.html">NEET</a>
+            <a href="JEE.html">JEE</a>
+          <a href="repeaters.html">Repeaters</a>
+            <a href="Crash-course.html">Crash Course</a>
+                        <a href="foundation.html">Foundation</a>  
+ 
+
+          </div>
+        </div>
+        <div class="dropdown" id="dropdown">
+          <span class="dropdown-btn">Flagship ▼</span>
+          <div class="dropdown-content" id="dropdown-content">
+            <a href="Our-Methodology.html"> Our Methodology</a>
+            <a href="Gallery.html">Gallery</a>
+            <!-- <a href="Certification.html">Certification and verification</a> -->
+          </div>
+        </div>
+        <a href="blog.html">Blog</a>
+        <a href="Contact-us.html">Contact Us</a>
+      <a href="javascript:void(0)" id="admission-btn" class="login-btn">Admissions Open</a>
+    </div>
+     
+    </div>
+  </nav>
+     <script src="admission-btn.js"></script>
+
+  <script>
+    // navbar
+
+document.addEventListener("DOMContentLoaded", function () {
+  const menuIcon = document.getElementById("menu-icon");
+  const navbarLinks = document.getElementById("navbar-links");
+  const dropdownBtns = document.querySelectorAll(".dropdown-btn");
+  const dropdownContent = document.getElementById("dropdown-content");
+
+  let isMobile = window.innerWidth <= 768;
+
+  menuIcon.addEventListener("click", () => {
+    navbarLinks.classList.toggle("active");
+  });
+
+   dropdownBtns.forEach(btn => {
+    btn.addEventListener("click", function (e) {
+      if (isMobile) {
+        e.stopPropagation();
+        const dropdownContent = this.nextElementSibling;
+        dropdownContent.classList.toggle("active");
+      }
+    });
+  });
+
+    document.addEventListener("click", function (e) {
+    if (isMobile && !e.target.closest(".dropdown")) {
+      document.querySelectorAll(".dropdown-content.active").forEach(content => {
+        content.classList.remove("active");
+      });
+    }
+  });
+
+
+  window.addEventListener("resize", function () {
+    isMobile = window.innerWidth <= 768;
+    if (!isMobile) {
+      document.querySelectorAll(".dropdown-content").forEach(content => content.classList.remove("active"));
+      navbarLinks.classList.remove("active");
+    }
+  });
+});
+  </script>
+  <!-- Hero -->
+  <section class="mou-hero">
+    <h1 class="title">Our Methodology</h1>
+    <p class="subtitle">Between Profenaa NEET Academy & Industry Partners</p>
+  </section>
+
+ <!-- Feature Highlights Section -->
+<section class="mou-features">
+  <div class="feature-cards">
+    <div class="feature-card scroll-fade delay">
+      <img src="images/Placement.jpg" alt="Industry Tie-Up" />
+      <h3>Hospital Tie-Up</h3>
+      <p>Strong collaborations with leading institutes and companies for student exposure.</p>
+    </div>
+    <div class="feature-card scroll-fade delay2">
+      <img src="images/Placement.jpg" alt="Hands-On Training" />
+      <h3>Expert Training</h3>
+      <p>Get real-time experience with the latest tools and projects under expert guidance.</p>
+    </div>
+    <div class="feature-card scroll-fade delay3">
+      <img src="images/Placement.jpg" alt="Career Support" />
+      <h3>High Level Mentor Support</h3>
+      <p>Benefit from placement assistance, resume building, and interview preparation.</p>
+    </div>
+  </div>
+</section>
+<!-- MOUs -->
+  <section class="mou-content">
+    <div class="mou-card scroll-fade">
+      <h2>Purpose</h2>
+      <p>This MOU establishes a mutual understanding between Profenaa NEET Academy and partnering institutions/organizations to enhance student preparation for medical entrance examinations through academic collaboration, resource sharing, and industry insights.</p>
+    </div>
+
+    <div class="mou-card scroll-fade delay">
+      <h2>Roles & Responsibilities</h2>
+      <ul>
+        <li><strong>Profenaa NEET Academy:</strong> Deliver academic training and organize seminars/workshops.</li>
+        <li><strong>Partner:</strong> Provide guest lectures, real-time medical insights, and career guidance.</li>
+      </ul>
+    </div>
+  </section>
+  <!-- signature-section -->
+  <section class="signature-section scroll-fade delay4">
+    <div class="signature-box">
+      <p>__________________________</p>
+      <p><strong>Director</strong><br>Profenaa NEET & JEE Academy</p>
+    </div>
+    <div class="signature-box">
+      <p>__________________________</p>
+      <p><strong>Authorized Signatory</strong><br>Partner Institute</p>
+    </div>
+  </section>
+
+  <script src="Our-Methodology.js"></script>
+
+  <!-- footer  -->
+ <footer>
+    <div class="footer-column">
+      <h3>Page</h3>
+      <ul>
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="Contact-us.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Program</h3>
+        <ul>
+        <li><a href="neet.html"> NEET</a></li>
+        <li><a href="JEE.html"> JEE</a></li>
+        <li><a href="repeaters.html"> Repeaters </a></li>
+        <li><a href="Crash-course.html">Crash course</a></li>
+               <li><a href="foundation.css">Foundation</a></li>
+
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Flagship Events</h3>
+      <ul>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="Our-Methodology.html"> Our Methodology</a></li>
+        <!-- <li><a href="Certification.html">Certification & verification</a></li> -->
+        <li><a href="blog.html">Blogs</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Contact Us</h3>
+      <p>📞 9500027638 | 9791367638</p>
+      <p>📧 profenaaneetacademy@gmail.com</p>
+      <p>🕒 9.00 AM TO 8.00 PM <br></br> Mon to Sat</p>
+    </div>
+    <div class="footer-column">
+      <h3>Address</h3>
+      <p>📍 <strong>Profenaa NEET & JEE Academy</strong></p>
+<p>📍  37/1, Rajarajeshwari Nagar 2,T.kottampatti, Pollachi,coimbatore Dt-642002</p>    </div>
+     <div class="footer-container">
+      <div class="footer-logo-section">
+        <img src="images/academy logo.png" alt="Profenaa Logo" class="logo" />
+        <p><b>Profenaa NEET & JEE Academy</b></p>
+      </div>
+      <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Profenaa. All rights reserved.</p>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+
+  </footer>
+  <!-- chat  -->
+<div class="floating-whatsapp" onclick="location.href='https://wa.me/+919944897638?text=Hello%20there!'">
+  <div class="icon-container">
+    <i class="fa fa-whatsapp" style="color: white; font-size: 30px;"></i>
+  </div>
+</div>
+
+<!-- form  -->
+
+<!-- Demo content -->
+  <div id="overlay">
+    <div id="popup">
+      <span class="close" id="closeBtn">×</span>
+      <h2>Enroll Now</h2>
+      <form id="contactForm">
+        <div class="input-group">
+          <label>Username</label>
+          <input type="text" name="username" required>
+        </div>
+        <div class="input-group">
+          <label>Password</label>
+          <input type="password" name="password" required>
+        </div>
+        <div class="input-group">
+          <label>Email</label>
+          <input type="email" name="email" required>
+        </div>
+        <div class="input-group">
+          <label>course</label>
+          <input type="text" name="text" required>
+        </div>
+        <div class="input-group">
+          <label>Comment</label>
+          <textarea name="comment"></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+
+ <script>
+    const overlay = document.getElementById('overlay');
+    const form = document.getElementById('contactForm');
+    const closeBtn = document.getElementById('closeBtn');
+
+    function lockBackground() {
+      document.body.classList.add('modal-open');
+    }
+    function unlockBackground() {
+      document.body.classList.remove('modal-open');
+    }
+    function showForm() {
+      overlay.style.display = 'flex';
+      lockBackground();
+    }
+    function hideForm() {
+      overlay.style.display = 'none';
+      unlockBackground();
+    }
+    closeBtn.addEventListener('click', hideForm);
+    overlay.addEventListener('click', e => {
+      if (e.target === overlay) hideForm();
+    });
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      console.log('Submitted:', Object.fromEntries(new FormData(form)));
+      hideForm();
+    });
+  </script>
+ 
+</body>
+</html>

@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>homepage</title>
+  <link rel="stylesheet" href="homepage.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+   
+ <!-- navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-brand">
+       <a href="homepage.html"> <img src="images/academy logo.png" alt="logo" class="navbar-logo" /></a>
+        <span class="brand-text">NEET&JEE Academy</span>
+      </div>
+
+      <div class="menu-icon" id="menu-icon">☰</div>
+
+      <div class="navbar-links" id="navbar-links">
+        <a href="homepage.html">Home</a>
+        <a href="about-us.html">About Us</a>
+
+        <div class="dropdown" id="dropdown">
+          <span class="dropdown-btn">Courses ▼</span>
+          <div class="dropdown-content" id="dropdown-content">
+            <a href="neet.html">NEET</a>
+            <a href="JEE.html">JEE</a>
+          <a href="repeaters.html">Repeaters</a>
+            <a href="Crash-course.html">Crash Course</a>
+            <a href="foundation.html">Foundation</a>  
+
+          </div>
+        </div>
+        <div class="dropdown" id="dropdown">
+          <span class="dropdown-btn">Flagship ▼</span>
+          <div class="dropdown-content" id="dropdown-content">
+            <a href="Our-Methodology.html">Our Methodology</a>
+            <a href="Gallery.html">Gallery</a>
+            <!-- <a href="Certification.html">Certification and verification</a> -->
+          </div>
+        </div>
+        <a href="blog.html">Blog</a>
+        <a href="Contact-us.html">Contact Us</a>
+      <a href="javascript:void(0)" id="admission-btn" class="login-btn">Admissions Open</a>
+    </div>
+   </div>
+  </nav>
+   <script src="admission-btn.js"></script>
+  <script>
+    // navbar
+
+document.addEventListener("DOMContentLoaded", function () {
+  const menuIcon = document.getElementById("menu-icon");
+  const navbarLinks = document.getElementById("navbar-links");
+  const dropdownBtns = document.querySelectorAll(".dropdown-btn");
+
+
+  let isMobile = window.innerWidth <= 768;
+
+  menuIcon.addEventListener("click", () => {
+    navbarLinks.classList.toggle("active");
+  });
+
+   dropdownBtns.forEach(btn => {
+    btn.addEventListener("click", function (e) {
+      if (isMobile) {
+        e.stopPropagation();
+        const dropdownContent = this.nextElementSibling;
+        dropdownContent.classList.toggle("active");
+      }
+    });
+  });
+
+    document.addEventListener("click", function (e) {
+    if (isMobile && !e.target.closest(".dropdown")) {
+      document.querySelectorAll(".dropdown-content.active").forEach(content => {
+        content.classList.remove("active");
+      });
+    }
+  });
+
+
+  window.addEventListener("resize", function () {
+    isMobile = window.innerWidth <= 768;
+    if (!isMobile) {
+      document.querySelectorAll(".dropdown-content").forEach(content => content.classList.remove("active"));
+      navbarLinks.classList.remove("active");
+    }
+  });
+});
+  </script>
+   <!-- SECTION 2: Black 3D Rotating Sentences -->
+ <section class="section2-navbar">
+    <div class="section2-rotator">
+      <span class="section2-sentence active">Empowering your learning journey.</span>
+      <span class="section2-sentence">Unlock your full potential with us.</span>
+      <span class="section2-sentence">Achieve success with expert guidance.</span>
+    </div>
+  </section>
+  <!-- Sentence Rotator Script -->
+  <script>
+    const section2Sentences = document.querySelectorAll('.section2-sentence');
+    let index = 0;
+    setInterval(() => {
+      section2Sentences[index].classList.remove('active');
+      index = (index + 1) % section2Sentences.length;
+      section2Sentences[index].classList.add('active');
+    }, 3000);
+  </script>
+<!-- section 3   -->
+ <section class="section3-banner">
+    <div class="section3-overlay"></div>
+    <div class="section3-content">
+      <h1 class="section3-heading">
+        Crack Competitive Exams <span class="section3-highlight">with Confidence</span>
+      </h1>
+      <p class="section3-description">
+        Prepare for India's top entrance exams like <strong>JEE</strong> and <strong>NEET</strong> with expert-curated content, real-time assessments, and powerful study plans. Elevate your preparation through personalized strategies and high-yield practice.
+      </p>
+      <a  href="javascript:void(0)" id="join-us-btn"  class="section3-button">Join Us</a>
+    </div>
+  </section>
+  <script src="join-us.js"></script>
+<!-- section 4  -->
+<!-- Unlock Future Section -->
+<section class="section4 unlock-future-section">
+  <div class="section4 container">
+    <h2>Unlock Your Future: Enroll with Profenaa Today</h2>
+    <p class="section4 subheading">
+      <em><strong>Achieve your NEET & JEE aspirations. Join Profenaa for a proven path to success.</strong></em>
+    </p>
+    <div class="section4 points-grid">
+      <ul>
+        <li>Limited seats. Secure your spot!</li>
+        <li>Schedule a free consultation.</li>
+      </ul>
+      <ul>
+        <li>Explore our centres or online programmes.</li>
+        <li>Ignite your potential. Begin your academic journey with Profenaa.</li>
+      </ul>
+    </div>
+    <div class="section4 cta-buttons">
+      <a href="#section11" class="section4 btn-primary">Schedule a Free Consultation</a>
+    </div>
+  </div>
+</section>
+
+  <!-- ection 5 -->
+ <!-- What We Offer Section -->
+<section class="section5-offer-section">
+  <div class="section5-container">
+    <h2 class="section5-offer-title">What We Offer</h2>
+    <div class="section5-offer-grid">
+      <div class="section5-offer-card section5-refresh-animate">
+        <img src="images/virtual-class.png" class="section5-icons">
+        <h3>Live Classes</h3>
+        <p>Daily interactive classes with top mentors.</p>
+      </div>
+      <div class="section5-offer-card section5-refresh-animate">
+        <img src="images/exam.png" class="section5-icons">
+        <h3>Mock Tests</h3>
+        <p>Simulated full-length exams with performance reports.</p>
+      </div>
+      <div class="section5-offer-card section5-refresh-animate">
+        <img src="images/help.png" class="section5-icons">
+         <h3>Doubt Solving</h3>
+        <p>Get your queries cleared instantly by experts.</p>
+      </div>
+      <div class="section5-offer-card section5-refresh-animate">
+        <img src="images/books.png" class="section5-icons">
+        <h3>Study Materials</h3>
+        <p>Well-curated notes and practice sheets for NEET & JEE.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+ <!-- section 6  -->
+  <!-- Section 6: Why Students Trust Profenaa -->
+<section class="section6-container">
+  <div class="section6-inner">
+    <h2 class="section6-title">Why Students Trust Profenaa</h2>
+    <div class="section6-grid">
+      <div class="section6-card refresh-animate" style="background-image: url('images/ai.jpg');">
+        <div class="section6-overlay">
+          <h3>AI-Based Tracking</h3>
+          <p>Monitor your progress smartly with AI algorithms built for NEET/JEE.</p>
+        </div>
+      </div>
+      <div class="section6-card refresh-animate" style="background-image: url('images/analytics.jpg');">
+        <div class="section6-overlay">
+          <h3>Detailed Analytics</h3>
+          <p>Topic-wise performance reports to identify strengths & weaknesses.</p>
+        </div>
+      </div>
+      <div class="section6-card refresh-animate" style="background-image: url('images/flexible.jpg');">
+        <div class="section6-overlay">
+          <h3>Flexible Learning</h3>
+          <p>Study anytime, anywhere with a personalized roadmap for your goal.</p>
+        </div>
+      </div>
+      <div class="section6-card refresh-animate" style="background-image: url('images/top.jpg');">
+        <div class="section6-overlay">
+          <h3>Top Faculty</h3>
+          <p>Learn from India’s top 1% educators with years of proven success.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- section 7  -->
+   <!-- Section 7: Hear from Our Toppers -->
+<section class="section7-grid">
+  <h2 class="section7-grid-title">Hear from Our Toppers</h2>
+
+  <div class="section7-grid-wrapper">
+    <!-- Testimonial 1 -->
+    <div class="section7-grid-card">
+      <img src="images/avatar1.png" alt="Riya Sharma">
+      <h3>Riya Sharma</h3>
+      <h4>NEET Topper 2024</h4>
+      <p>"Profenaa's test series and video lectures were a game changer for my NEET prep."</p>
+    </div>
+
+    <!-- Testimonial 2 -->
+    <div class="section7-grid-card">
+      <img src="images/avatar2.png" alt="Arjun Mehta">
+      <h3>Arjun Mehta</h3>
+      <h4>JEE AIR 74</h4>
+      <p>"With Profenaa’s mentorship and daily practice, I stayed consistent and confident."</p>
+    </div>
+
+    <!-- Testimonial 3 -->
+    <div class="section7-grid-card">
+      <img src="images/avatar3.png" alt="Diya Patel">
+      <h3>Diya Patel</h3>
+      <h4>NEET Rank 12</h4>
+      <p>"The guidance and strategy I received helped me score my dream medical seat."</p>
+    </div>
+  </div>
+</section>
+
+<!-- Section 8: Why Choose Profenaa -->
+<section class="section8-whyprofenna" id="section8">
+  <h2 class="section8-title">Why Students <span>Choose Profenaa</span></h2>
+  <p class="section8-subtitle">More than coaching. It’s a movement.</p>
+
+  <div class="section8-feature-blocks">
+
+    <!-- Feature 1 -->
+    <div class="feature-row">
+      <div class="feature-icon">
+        <img src="images/faculty.jpg" alt="Top Faculty">
+      </div>
+      <div class="feature-text">
+        <h3>India’s Best Faculty</h3>
+        <p>Our elite JEE/NEET mentors are trusted by thousands of toppers for their crystal-clear teaching and smart approach.</p>
+      </div>
+    </div>
+
+    <!-- Feature 2 -->
+    <div class="feature-row reverse">
+      <div class="feature-icon">
+        <img src="images/strategy.jpg" alt="Strategic Planning">
+      </div>
+      <div class="feature-text">
+        <h3>Personalized Strategy</h3>
+        <p>Get prep timelines and topic maps that match your strengths, weaknesses and targets — no copy-paste plans.</p>
+      </div>
+    </div>
+
+    <!-- Feature 3 -->
+    <div class="feature-row">
+      <div class="feature-icon">
+        <img src="images/smart.jpg" alt="Analytics">
+      </div>
+      <div class="feature-text">
+        <h3>Smart Analytics</h3>
+        <p>AI-powered dashboards that show your performance pattern, time usage, topic drops — and help you fix them fast.</p>
+      </div>
+    </div>
+
+    <!-- Feature 4 -->
+    <div class="feature-row reverse">
+      <div class="feature-icon">
+        <img src="images/1on 1.jpg" alt="1-on-1 Mentorship">
+      </div>
+      <div class="feature-text">
+        <h3>1-on-1 Mentorship</h3>
+        <p>Every Profenaa student gets paired with a mentor who tracks, motivates, and adjusts your path weekly.</p>
+      </div>
+    </div>
+   </div>
+</section>
+   
+<!-- Section 9: Choose Your Stream -->
+<section class="section9-streamselect" id="section9">
+  <div class="section9-stream-content">
+    <h2 class="section9-stream-title">Choose Your <span>Learning Mode</span></h2>
+    <p class="section9-stream-description">Profenaa offers both Online & Offline excellence. Pick your stream:</p>
+
+    <div class="section9-stream-buttons">
+     <a href="Contact-us.html"> <button class="section9-stream-btn online-btn">Online Stream</button></a>
+      <a href="Contact-us.html"><button class="section9-stream-btn offline-btn">Offline Stream</button></a>
+    </div>
+  </div>
+</section>
+
+<!-- Section 10: FAQ -->
+<section class="section10-faq" id="section10">
+  <h2 class="faq-title">Frequently <span>Asked Questions</span></h2>
+  <p class="faq-subtitle">Still wondering about Profenaa? We’ve got answers.</p>
+
+  <div class="faq-container">
+    <!-- FAQ Item 1 -->
+    <div class="faq-item">
+      <button class="faq-question">What is Profenaa Academy?</button>
+      <div class="faq-answer">
+        <p>Profenaa is a next-gen JEE & NEET academy offering both online and offline streams with advanced tech, analytics, and mentoring.</p>
+      </div>
+    </div>
+
+    <!-- FAQ Item 2 -->
+    <div class="faq-item">
+      <button class="faq-question">Is there a difference between online and offline content?</button>
+      <div class="faq-answer">
+        <p>No. Both streams provide the same depth of content, test series, and mentorship — tailored to your learning mode.</p>
+      </div>
+    </div>
+
+    <!-- FAQ Item 3 -->
+    <div class="faq-item">
+      <button class="faq-question">Are live classes recorded?</button>
+      <div class="faq-answer">
+        <p>Yes. All live sessions are recorded and accessible for revision anytime from your dashboard.</p>
+      </div>
+    </div>
+
+    <!-- FAQ Item 4 -->
+    <div class="faq-item">
+      <button class="faq-question">Do you offer personal mentorship?</button>
+      <div class="faq-answer">
+        <p>Absolutely. Every student is assigned a dedicated mentor to track performance, motivate, and personalize strategy.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // FAQ accordion toggle
+  document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+      const faqItem = button.parentElement;
+      faqItem.classList.toggle('open');
+    });
+  });
+</script>
+
+<!-- section 11  -->
+
+<!-- Section 11: Talk to Our Expert -->
+<section class="section11-container" id="section11">
+  <div class="section11-bg-blur"></div>
+
+  <div class="section11-wrapper">
+    <div class="section11-content">
+      <h2>Talk to Our Expert</h2>
+      <p>Need help choosing the right course or learning path? Let our experts guide you in the right direction.</p>
+      <a href="Contact-us.html" class="section11-button">Connect Now</a>
+    </div>
+
+    <div class="section11-card-3d">
+      <img src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png" alt="Expert Image">
+    </div>
+  </div>
+</section>
+
+<!-- footer  -->
+ <footer>
+    <div class="footer-column">
+      <h3>Page</h3>
+      <ul>
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="Contact-us.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Program</h3>
+        <ul>
+        <li><a href="neet.html"> NEET</a></li>
+        <li><a href="JEE.html"> JEE</a></li>
+        <li><a href="repeaters.html"> Repeaters </a></li>
+        <li><a href="Crash-course.html">Crash course</a></li>
+        <li><a href="foundation.css">Foundation</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Flagship Events</h3>
+      <ul>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="Our-Methodology.html"> Our Methodology</a></li>
+        <!-- <li><a href="Certification.html">Certification & verification</a></li> -->
+        <li><a href="blog.html">Blogs</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Contact Us</h3>
+      <p>📞 9500027638 | 9791367638</p>
+      <p>📧 profenaaneetacademy@gmail.com</p>
+      <p>🕒 9.00 AM TO 8.00 PM <br></br> Mon to Sat</p>
+    </div>
+    <div class="footer-column">
+      <h3>Address</h3>
+      <p>📍 <strong>Profenaa NEET & JEE Academy</strong></p>
+<p>📍  37/1, Rajarajeshwari Nagar 2,T.kottampatti, Pollachi,coimbatore Dt-642002</p>    </div>
+     <div class="footer-container">
+      <div class="footer-logo-section">
+        <img src="images/academy logo.png" alt="Profenaa Logo" class="logo" />
+        <p><b>Profenaa NEET & JEE Academy</b></p>
+      </div>
+      <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Profenaa. All rights reserved.</p>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- chat  -->
+<div class="floating-whatsapp" onclick="location.href='https://wa.me/+919944897638?text=Hello%20there!'">
+  <div class="icon-container">
+    <i class="fa fa-whatsapp" style="color: white; font-size: 30px;"></i>
+  </div>
+</div>
+
+<!-- form  -->
+
+<!-- Demo content -->
+  <div id="overlay">
+    <div id="popup">
+      <span class="close" id="closeBtn">×</span>
+      <h2>Enroll Now</h2>
+      <form id="contactForm">
+        <div class="input-group">
+          <label>Username</label>
+          <input type="text" name="username" required>
+        </div>
+        <div class="input-group">
+          <label>Password</label>
+          <input type="password" name="password" required>
+        </div>
+        <div class="input-group">
+          <label>Email</label>
+          <input type="email" name="email" required>
+        </div>
+        <div class="input-group">
+          <label>course</label>
+          <input type="text" name="text" required>
+        </div>
+        <div class="input-group">
+          <label>Comment</label>
+          <textarea name="comment"></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+
+ <script>
+    const overlay = document.getElementById('overlay');
+    const form = document.getElementById('contactForm');
+    const closeBtn = document.getElementById('closeBtn');
+
+    function lockBackground() {
+      document.body.classList.add('modal-open');
+    }
+    function unlockBackground() {
+      document.body.classList.remove('modal-open');
+    }
+    function showForm() {
+      overlay.style.display = 'flex';
+      lockBackground();
+    }
+    function hideForm() {
+      overlay.style.display = 'none';
+      unlockBackground();
+    }
+
+    // Show once after 3 seconds, on every page load.
+    window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(showForm, 3000);
+    });
+
+    closeBtn.addEventListener('click', hideForm);
+    overlay.addEventListener('click', e => {
+      if (e.target === overlay) hideForm();
+    });
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      console.log('Submitted:', Object.fromEntries(new FormData(form)));
+      hideForm();
+    });
+  </script>
+ 
+</body>
+</html>

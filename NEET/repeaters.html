@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profenaa Repeaters Program</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="repeaters.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <!-- navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-brand">
+        <img src="images/academy logo.png" alt="logo" class="navbar-logo" />
+        <span class="brand-text">NEET&JEE Academy</span>
+      </div>
+
+      <div class="menu-icon" id="menu-icon">☰</div>
+
+      <div class="navbar-links" id="navbar-links">
+        <a href="homepage.html">Home</a>
+        <a href="about-us.html">About Us</a>
+
+        
+        <div class="dropdown" id="dropdown">
+          <span class="dropdown-btn">Courses ▼</span>
+          <div class="dropdown-content" id="dropdown-content">
+            <a href="neet.html">NEET</a>
+            <a href="JEE.html">JEE</a>
+            <a href="repeaters.html">Repeaters</a>
+            <a href="Crash-course.html">Crash Course</a>
+                        <a href="foundation.html">Foundation</a>  
+ 
+
+          </div>
+        </div>
+        <div class="dropdown" id="dropdown">
+          <span class="dropdown-btn">Flagship ▼</span>
+          <div class="dropdown-content" id="dropdown-content">
+            <a href="Our-Methodology.html"> Our Methodology</a>
+            <a href="Gallery.html">Gallery</a>
+            <!-- <a href="Certification.html">Certification and verification</a> -->
+          </div>
+        </div>
+        <a href="blog.html">Blog</a>
+        <a href="Contact-us.html">Contact Us</a>
+      <a href="javascript:void(0)" id="admission-btn" class="login-btn">Admissions Open</a>
+    </div>
+     
+    </div>
+  </nav>
+
+     <script src="admission-btn.js"></script>
+
+  <script>
+    // navbar
+
+document.addEventListener("DOMContentLoaded", function () {
+  const menuIcon = document.getElementById("menu-icon");
+  const navbarLinks = document.getElementById("navbar-links");
+  const dropdownBtns = document.querySelectorAll(".dropdown-btn");
+  // const dropdownContent = document.getElementById("dropdown-content");
+
+  let isMobile = window.innerWidth <= 768;
+
+  menuIcon.addEventListener("click", () => {
+    navbarLinks.classList.toggle("active");
+  });
+
+   dropdownBtns.forEach(btn => {
+    btn.addEventListener("click", function (e) {
+      if (isMobile) {
+        e.stopPropagation();
+        const dropdownContent = this.nextElementSibling;
+        dropdownContent.classList.toggle("active");
+      }
+    });
+  });
+
+    document.addEventListener("click", function (e) {
+    if (isMobile && !e.target.closest(".dropdown")) {
+      document.querySelectorAll(".dropdown-content.active").forEach(content => {
+        content.classList.remove("active");
+      });
+    }
+  });
+
+
+  window.addEventListener("resize", function () {
+    isMobile = window.innerWidth <= 768;
+    if (!isMobile) {
+      document.querySelectorAll(".dropdown-content").forEach(content => content.classList.remove("active"));
+      navbarLinks.classList.remove("active");
+    }
+  });
+});
+  </script>
+  <!-- SECTION 1: HERO -->
+  <section class="hero">
+    <div class="container">
+      <h1>Profenaa Repeaters Program 2025</h1>
+      <p>Dedicated coaching for NEET/JEE repeaters focused on strategy, concept clarity, and exam cracking tactics.</p>
+      <button>Enroll Now</button>
+    </div>
+  </section>
+
+  <!-- SECTION 2: WHY PROFENAA -->
+  <section class="section2">
+    <div class="container">
+      <h2 class="section-title">Why Choose Profenaa?</h2>
+      <div class="why-grid">
+        <div class="why-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Mentorship" />
+          <h3>Expert Mentorship</h3>
+          <p>One-on-one mentoring to clear doubts, track performance, and provide motivation.</p>
+        </div>
+        <div class="why-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/2882/2882870.png" alt="Tests" />
+          <h3>Custom Test Plans</h3>
+          <p>Tailor-made test series with analysis to suit each repeater’s progress.</p>
+        </div>
+        <div class="why-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/2920/2920050.png" alt="Results" />
+          <h3>Proven Results</h3>
+          <p>Our repeaters consistently crack top ranks with refined strategy & focus.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: TIMELINE -->
+  <section class="section3">
+    <div class="container">
+      <h2 class="section-title">Repeater's Success Journey</h2>
+      <div class="timeline">
+        <div class="timeline-item left">
+          <h4>Phase 1: Foundation Rebuild</h4>
+          <p>Strengthen core concepts and fundamentals with daily concept building sessions.</p>
+        </div>
+        <div class="timeline-item right">
+          <h4>Phase 2: Smart Practice</h4>
+          <p>Topic-wise and full-length mock tests aligned to actual NEET/JEE standards.</p>
+        </div>
+        <div class="timeline-item left">
+          <h4>Phase 3: Performance Tuning</h4>
+          <p>Data-driven analysis, gap fixing, and customized revision paths.</p>
+        </div>
+        <div class="timeline-item right">
+          <h4>Final Phase: Mastery</h4>
+          <p>Maximize accuracy and confidence with timed drills and final simulations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: STUDY FRAMEWORK -->
+  <section class="section4">
+    <div class="container">
+      <h2 class="section-title">Structured Study Framework</h2>
+      <div class="framework-grid">
+        <div class="framework-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/4305/4305620.png" />
+          <h4>Daily Practice Sheets</h4>
+          <p>Curated DPPs covering mixed questions with increasing difficulty.</p>
+        </div>
+        <div class="framework-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/1011/1011863.png" />
+          <h4>Live Concept Revise</h4>
+          <p>Live sessions on key chapters with teacher Q&A built in.</p>
+        </div>
+        <div class="framework-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/3048/3048394.png" />
+          <h4>Integrated Mock Analysis</h4>
+          <p>Smart dashboard to track accuracy, speed, and time management.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: COURSE OFFERINGS -->
+  <section class="section5">
+    <div class="container">
+      <h2 class="section-title">Repeaters Batches Available</h2>
+      <div class="course-grid">
+        <div class="course-card">
+          <h3>NEET 2025 Elite</h3>
+          <p>Comprehensive NEET repeater program with crash + advanced modules.</p>
+          <button>Enroll NEET</button>
+        </div>
+        <div class="course-card">
+          <h3>JEE 2025 Pro</h3>
+          <p>Advanced level preparation with previous year analysis and rank booster packs.</p>
+          <button>Enroll JEE</button>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- footer  -->
+  <footer>
+    <div class="footer-column">
+      <h3>Page</h3>
+      <ul>
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="Contact-us.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Program</h3>
+        <ul>
+        <li><a href="neet.html"> NEET</a></li>
+        <li><a href="JEE.html"> JEE</a></li>
+        <li><a href="repeaters.html"> Repeaters </a></li>
+        <li><a href="Crash-course.html">Crash course</a></li>
+               <li><a href="foundation.css">Foundation</a></li>
+
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Flagship Events</h3>
+      <ul>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="Our-Methodology.html"> Our Methodology</a></li>
+        <!-- <li><a href="Certification.html">Certification & verification</a></li> -->
+        <li><a href="blog.html">Blogs</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Contact Us</h3>
+      <p>📞 9500027638 | 9791367638</p>
+      <p>📧 profenaaneetacademy@gmail.com</p>
+      <p>🕒 9.00 AM TO 8.00 PM <br></br> Mon to Sat</p>
+    </div>
+    <div class="footer-column">
+      <h3>Address</h3>
+      <p>📍 <strong>Profenaa NEET & JEE Academy</strong></p>
+<p>📍  37/1, Rajarajeshwari Nagar 2,T.kottampatti, Pollachi,coimbatore Dt-642002</p>    </div>
+     <div class="footer-container">
+      <div class="footer-logo-section">
+        <img src="images/academy logo.png" alt="Profenaa Logo" class="logo" />
+        <p><b>Profenaa NEET & JEE Academy</b></p>
+      </div>
+      <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Profenaa. All rights reserved.</p>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+
+  </footer>
+   <!-- chat  -->
+<div class="floating-whatsapp" onclick="location.href='https://wa.me/+919944897638?text=Hello%20there!'">
+  <div class="icon-container">
+    <i class="fa fa-whatsapp" style="color: white; font-size: 30px;"></i>
+  </div>
+</div>
+
+<!-- form  -->
+
+<!-- Demo content -->
+  <div id="overlay">
+    <div id="popup">
+      <span class="close" id="closeBtn">×</span>
+      <h2>Enroll Now</h2>
+      <form id="contactForm">
+        <div class="input-group">
+          <label>Username</label>
+          <input type="text" name="username" required>
+        </div>
+        <div class="input-group">
+          <label>Password</label>
+          <input type="password" name="password" required>
+        </div>
+        <div class="input-group">
+          <label>Email</label>
+          <input type="email" name="email" required>
+        </div>
+        <div class="input-group">
+          <label>course</label>
+          <input type="text" name="text" required>
+        </div>
+        <div class="input-group">
+          <label>Comment</label>
+          <textarea name="comment"></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+
+ <script>
+    const overlay = document.getElementById('overlay');
+    const form = document.getElementById('contactForm');
+    const closeBtn = document.getElementById('closeBtn');
+
+    function lockBackground() {
+      document.body.classList.add('modal-open');
+    }
+    function unlockBackground() {
+      document.body.classList.remove('modal-open');
+    }
+    function showForm() {
+      overlay.style.display = 'flex';
+      lockBackground();
+    }
+    function hideForm() {
+      overlay.style.display = 'none';
+      unlockBackground();
+    }
+    closeBtn.addEventListener('click', hideForm);
+    overlay.addEventListener('click', e => {
+      if (e.target === overlay) hideForm();
+    });
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      console.log('Submitted:', Object.fromEntries(new FormData(form)));
+      hideForm();
+    });
+  </script>
+</body>
+</html>

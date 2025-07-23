@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Profenaa Academy</title>
+    <link rel="stylesheet" href="about-us.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<!-- navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-brand">
+        <img src="images/academy logo.png" alt="logo" class="navbar-logo" />
+        <span class="brand-text">NEET&JEE Academy</span>
+      </div>
+
+      <div class="menu-icon" id="menu-icon">☰</div>
+
+      <div class="navbar-links" id="navbar-links">
+        <a href="homepage.html">Home</a>
+        <a href="about-us.html">About Us</a>
+
+        
+        <div class="dropdown" id="dropdown">
+          <span class="dropdown-btn">Courses ▼</span>
+          <div class="dropdown-content" id="dropdown-content">
+            <a href="neet.html">NEET</a>
+            <a href="JEE.html">JEE</a>
+          <a href="repeaters.html">Repeaters</a>
+            <a href="Crash-course.html">Crash Course</a>
+                        <a href="foundation.html">Foundation</a>  
+ 
+
+          </div>
+        </div>
+        <div class="dropdown" id="dropdown">
+          <span class="dropdown-btn">Flagship ▼</span>
+          <div class="dropdown-content" id="dropdown-content">
+            <a href="Our-Methodology.html"> Our Methodology</a>
+            <a href="Gallery.html">Gallery</a>
+            <!-- <a href="Certification.html">Certification and verification</a> -->
+          </div>
+        </div>
+        <a href="blog.html">Blog</a>
+        <a href="Contact-us.html">Contact Us</a>
+      <a href="javascript:void(0)" id="admission-btn" class="login-btn">Admissions Open</a>
+    </div>
+     
+    </div>
+  </nav>
+   <script src="admission-btn.js"></script>
+  <script>
+    // navbar
+
+document.addEventListener("DOMContentLoaded", function () {
+  const menuIcon = document.getElementById("menu-icon");
+  const navbarLinks = document.getElementById("navbar-links");
+  const dropdownBtns = document.querySelectorAll(".dropdown-btn");
+  // const dropdownContent = document.getElementById("dropdown-content");
+
+  let isMobile = window.innerWidth <= 768;
+
+  menuIcon.addEventListener("click", () => {
+    navbarLinks.classList.toggle("active");
+  });
+
+   dropdownBtns.forEach(btn => {
+    btn.addEventListener("click", function (e) {
+      if (isMobile) {
+        e.stopPropagation();
+        const dropdownContent = this.nextElementSibling;
+        dropdownContent.classList.toggle("active");
+      }
+    });
+  });
+
+    document.addEventListener("click", function (e) {
+    if (isMobile && !e.target.closest(".dropdown")) {
+      document.querySelectorAll(".dropdown-content.active").forEach(content => {
+        content.classList.remove("active");
+      });
+    }
+  });
+
+
+  window.addEventListener("resize", function () {
+    isMobile = window.innerWidth <= 768;
+    if (!isMobile) {
+      document.querySelectorAll(".dropdown-content").forEach(content => content.classList.remove("active"));
+      navbarLinks.classList.remove("active");
+    }
+  });
+});
+  </script>
+    <!-- section 1 -->
+    <div class="about-hero">
+        <div class="about-container">
+            <div class="about-hero-content">
+                <h1>Profenaa Academy</h1>
+                <p>Your Gateway to Medical & Engineering Excellence</p>
+                <div class="about-stats">
+                    <div class="about-stat-item">
+                        <span class="about-stat-number" data-target="15000">0</span>
+                        <span class="about-stat-label">Students Trained</span>
+                    </div>
+                    <div class="about-stat-item">
+                        <span class="about-stat-number" data-target="85">0</span>
+                        <span class="about-stat-label">% Success Rate</span>
+                    </div>
+                    <div class="about-stat-item">
+                        <span class="about-stat-number" data-target="12">0</span>
+                        <span class="about-stat-label">Years Experience</span>
+                    </div>
+                    <div class="about-stat-item">
+                        <span class="about-stat-number" data-target="50">0</span>
+                        <span class="about-stat-label">Expert Faculty</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-section">
+        <div class="about-container">
+            <h2>Why Choose Profenaa Academy?</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-card-icon">🎯</div>
+                    <h3>Proven Track Record</h3>
+                    <p>With over 12 years of excellence, we've helped thousands of students achieve their dreams of becoming doctors and engineers through comprehensive NEET and JEE preparation.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-card-icon">👨‍🏫</div>
+                    <h3>Expert Faculty</h3>
+                    <p>Our team of highly qualified and experienced faculty members are dedicated to providing personalized attention and innovative teaching methodologies.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-card-icon">📚</div>
+                    <h3>Comprehensive Study Material</h3>
+                    <p>Access to meticulously crafted study materials, practice tests, and mock exams designed to cover the entire NEET and JEE curriculum effectively.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-card-icon">💡</div>
+                    <h3>Smart Learning Approach</h3>
+                    <p>We employ modern teaching techniques, digital resources, and interactive learning methods to make complex concepts easy to understand and remember.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-card-icon">🏆</div>
+                    <h3>Regular Assessment</h3>
+                    <p>Frequent tests, mock examinations, and performance analysis help students track their progress and identify areas for improvement.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-card-icon">🤝</div>
+                    <h3>Personal Mentorship</h3>
+                    <p>Individual counseling sessions and career guidance to help students make informed decisions about their future academic and professional paths.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+   <section class="md-section-advanced">
+    <div class="section3">
+  <div class="md-content">
+    <h2>Meet Our Managing Director</h2>
+    <h3>Dr. M. Muthuraj, Ph.D.</h3>
+    <p><b>Visionary leader with 10+ years in engineering education, exam coaching, and industry-aligned training.</b></p>
+    <ul>
+      <li>Established Profenaa Technologies,school & Academies</li>
+      <li>State-wide expansion across Tamil Nādu in competitive exam prep & industrial skills</li>
+      <li>Embedding placement-focused learning with mock interviews & company prep</li>
+      <li>Driven to empower tomorrow’s engineers & doctors for global success</li>
+    </ul>
+  </div>
+  <div class="md-photo">
+    <img src="images/md.jpeg" alt="Dr. M. Muthuraj">
+  </div>
+  </div>
+</section>
+
+
+    <div class="about-mission">
+        <div class="about-container">
+            <div class="about-mission-content">
+                <h2>Our Mission</h2>
+                <p>At Profenaa Academy, we are committed to nurturing young minds and transforming their aspirations into achievements. Our mission is to provide world-class education and training that empowers students to excel in competitive examinations like NEET and JEE.</p>
+                <p>We believe that every student has the potential to succeed, and with the right guidance, dedication, and resources, they can achieve their dreams of entering prestigious medical and engineering institutions.</p>
+                <p>Our holistic approach focuses not just on academic excellence but also on building confidence, developing problem-solving skills, and fostering a love for learning that lasts a lifetime.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-section">
+        <div class="about-container">
+            <h2>Our Key Features</h2>
+            <div class="about-features">
+                <div class="about-feature">
+                    <div class="about-feature-icon">📖</div>
+                    <h3>NEET Preparation</h3>
+                    <p>Comprehensive coaching for Physics, Chemistry, and Biology with focus on NCERT and competitive level questions.</p>
+                </div>
+                <div class="about-feature">
+                    <div class="about-feature-icon">⚡</div>
+                    <h3>JEE Preparation</h3>
+                    <p>Advanced coaching for JEE Main and Advanced covering Mathematics, Physics, and Chemistry with problem-solving techniques.</p>
+                </div>
+                <div class="about-feature">
+                    <div class="about-feature-icon">🔬</div>
+                    <h3>Practical Learning</h3>
+                    <p>Well-equipped laboratories and practical sessions to enhance understanding of scientific concepts.</p>
+                </div>
+                <div class="about-feature">
+                    <div class="about-feature-icon">📊</div>
+                    <h3>Performance Tracking</h3>
+                    <p>Regular assessments and detailed performance analysis to monitor student progress and improvement.</p>
+                </div>
+                <div class="about-feature">
+                    <div class="about-feature-icon">🎥</div>
+                    <h3>Online Resources</h3>
+                    <p>Access to recorded lectures, online tests, and digital study materials for flexible learning.</p>
+                </div>
+                <div class="about-feature">
+                    <div class="about-feature-icon">🎓</div>
+                    <h3>Alumni Network</h3>
+                    <p>Connect with successful alumni who have cracked NEET and JEE and are now pursuing their dream careers.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-team">
+        <div class="about-container">
+            <h2>Meet Our Leadership Team</h2>
+            <div class="about-team-grid">
+                <div class="about-team-member">
+                    <div class="about-team-avatar">DR</div>
+                    <h3>Dr. Rajesh Kumar</h3>
+                    <p>Founder & Director<br>Ph.D. in Physics, 20+ years experience in competitive exam coaching</p>
+                </div>
+                <div class="about-team-member">
+                    <div class="about-team-avatar">MS</div>
+                    <h3>Dr. Meera Sharma</h3>
+                    <p>Academic Head - Biology<br>M.D. in Medicine, Expert in NEET Biology preparation</p>
+                </div>
+                <div class="about-team-member">
+                    <div class="about-team-avatar">AP</div>
+                    <h3>Prof. Amit Patel</h3>
+                    <p>Head of Mathematics<br>M.Tech from IIT, Specialist in JEE Mathematics</p>
+                </div>
+                <div class="about-team-member">
+                    <div class="about-team-avatar">SG</div>
+                    <h3>Dr. Sunita Gupta</h3>
+                    <p>Chemistry Department Head<br>Ph.D. in Chemistry, 15+ years teaching experience</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-cta">
+        <div class="about-container">
+            <h2>Ready to Start Your Journey?</h2>
+            <p>Join thousands of successful students who have achieved their dreams with Profenaa Academy</p>
+            <a href="Contact-us.html" class="about-btn" onclick="showEnrollmentInfo()">Enroll Now</a>
+        </div>
+    </div>
+
+    <script>
+        // Animated counter for statistics
+        function animateCounters() {
+            const counters = document.querySelectorAll('.about-stat-number');
+            
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const increment = target / 100;
+                let current = 0;
+                
+                const updateCounter = () => {
+                    if (current < target) {
+                        current += increment;
+                        counter.textContent = Math.floor(current);
+                        setTimeout(updateCounter, 20);
+                    } else {
+                        counter.textContent = target;
+                    }
+                };
+                
+                updateCounter();
+            });
+        }
+
+        // Smooth scrolling for internal links
+        function smoothScroll(target) {
+            document.querySelector(target).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // Card hover effects
+        function addCardInteractions() {
+            const cards = document.querySelectorAll('.about-card');
+            
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+        }
+
+        // Enrollment info modal
+        // function showEnrollmentInfo() {
+        //     alert('🎓 Ready to join Profenaa Academy?\n\n✅ Call us at: +91-9876543210\n✅ Email: info@excelprepacademy.com\n✅ Visit: www.excelprepacademy.com\n\nOur counselors are available to guide you through the enrollment process and help you choose the right program for your goals!');
+        // }
+
+        // Intersection Observer for animations
+        function setupAnimations() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+
+            const animatedElements = document.querySelectorAll('.about-card, .about-feature, .about-team-member');
+            animatedElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+        }
+
+        // Initialize everything when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Delay counter animation slightly for better visual effect
+            setTimeout(animateCounters, 500);
+            addCardInteractions();
+            setupAnimations();
+        });
+
+        // Add some interactivity to the hero section
+        document.addEventListener('mousemove', function(e) {
+            const hero = document.querySelector('.about-hero');
+            if (hero) {
+                const rect = hero.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                if (y >= 0 && y <= rect.height) {
+                    const moveX = (x - rect.width / 2) / 50;
+                    const moveY = (y - rect.height / 2) / 50;
+                    
+                    hero.style.transform = `translate(${moveX}px, ${moveY}px)`;
+                }
+            }
+        });
+    </script>
+
+     <!-- footer  -->
+ <footer>
+    <div class="footer-column">
+      <h3>Page</h3>
+      <ul>
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="Contact-us.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Program</h3>
+        <ul>
+        <li><a href="neet.html"> NEET</a></li>
+        <li><a href="JEE.html"> JEE</a></li>
+        <li><a href="repeaters.html"> Repeaters </a></li>
+        <li><a href="Crash-course.html">Crash course</a></li>
+               <li><a href="foundation.css">Foundation</a></li>
+
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Flagship Events</h3>
+      <ul>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="Our-Methodology.html"> Our Methodology</a></li>
+        <!-- <li><a href="Certification.html">Certification & verification</a></li> -->
+        <li><a href="blog.html">Blogs</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Contact Us</h3>
+      <p>📞 9500027638 | 9791367638</p>
+      <p>📧 profenaaneetacademy@gmail.com</p>
+      <p>🕒 9.00 AM TO 8.00 PM <br></br> Mon to Sat</p>
+    </div>
+    <div class="footer-column">
+      <h3>Address</h3>
+      <p>📍 <strong>Profenaa NEET & JEE Academy</strong></p>
+<p>📍  37/1, Rajarajeshwari Nagar 2,T.kottampatti, Pollachi,coimbatore Dt-642002</p>    </div>
+     <div class="footer-container">
+      <div class="footer-logo-section">
+        <img src="images/academy logo.png" alt="Profenaa Logo" class="logo" />
+        <p><b>Profenaa NEET & JEE Academy</b></p>
+      </div>
+      <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Profenaa. All rights reserved.</p>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+
+  </footer>
+   <!-- chat  -->
+<div class="floating-whatsapp" onclick="location.href='https://wa.me/+919944897638?text=Hello%20there!'">
+  <div class="icon-container">
+    <i class="fa fa-whatsapp" style="color: white; font-size: 30px;"></i>
+  </div>
+</div>
+<!-- form  -->
+
+<!-- Demo content -->
+  <div id="overlay">
+    <div id="popup">
+      <span class="close" id="closeBtn">×</span>
+      <h2>Enroll Now</h2>
+      <form id="contactForm">
+        <div class="input-group">
+          <label>Username</label>
+          <input type="text" name="username" required>
+        </div>
+        <div class="input-group">
+          <label>Password</label>
+          <input type="password" name="password" required>
+        </div>
+        <div class="input-group">
+          <label>Email</label>
+          <input type="email" name="email" required>
+        </div>
+        <div class="input-group">
+          <label>course</label>
+          <input type="text" name="text" required>
+        </div>
+        <div class="input-group">
+          <label>Comment</label>
+          <textarea name="comment"></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+
+ <script>
+    const overlay = document.getElementById('overlay');
+    const form = document.getElementById('contactForm');
+    const closeBtn = document.getElementById('closeBtn');
+
+    function lockBackground() {
+      document.body.classList.add('modal-open');
+    }
+    function unlockBackground() {
+      document.body.classList.remove('modal-open');
+    }
+    function showForm() {
+      overlay.style.display = 'flex';
+      lockBackground();
+    }
+    function hideForm() {
+      overlay.style.display = 'none';
+      unlockBackground();
+    }
+    closeBtn.addEventListener('click', hideForm);
+    overlay.addEventListener('click', e => {
+      if (e.target === overlay) hideForm();
+    });
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      console.log('Submitted:', Object.fromEntries(new FormData(form)));
+      hideForm();
+    });
+  </script>
+ 
+</body>
+</html>

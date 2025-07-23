@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEE</title>
+    <link rel="stylesheet" href="JEE.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+     <!-- navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-brand">
+        <img src="images/academy logo.png" alt="logo" class="navbar-logo" />
+        <span class="brand-text">NEET&JEE Academy</span>
+      </div>
+
+      <div class="menu-icon" id="menu-icon">☰</div>
+
+      <div class="navbar-links" id="navbar-links">
+        <a href="homepage.html">Home</a>
+        <a href="about-us.html">About Us</a>
+
+        
+        <div class="dropdown" id="dropdown">
+          <span class="dropdown-btn">Courses ▼</span>
+          <div class="dropdown-content" id="dropdown-content">
+            <a href="neet.html">NEET</a>
+            <a href="JEE.html">JEE</a>
+          <a href="repeaters.html">Repeaters</a>
+            <a href="Crash-course.html">Crash Course</a>
+                        <a href="foundation.html">Foundation</a>  
+ 
+
+          </div>
+        </div>
+        <div class="dropdown" id="dropdown">
+          <span class="dropdown-btn">Flagship ▼</span>
+          <div class="dropdown-content" id="dropdown-content">
+            <a href="Our-Methodology.html"> Our Methodology</a>
+            <a href="Gallery.html">Gallery</a>
+            <!-- <a href="Certification.html">Certification and verification</a> -->
+          </div>
+        </div>
+        <a href="blog.html">Blog</a>
+        <a href="Contact-us.html">Contact Us</a>
+      <a href="javascript:void(0)" id="admission-btn" class="login-btn">Admissions Open</a>
+    </div>
+     
+    </div>
+  </nav>
+     <script src="admission-btn.js"></script>
+  <script>
+    // navbar
+
+document.addEventListener("DOMContentLoaded", function () {
+  const menuIcon = document.getElementById("menu-icon");
+  const navbarLinks = document.getElementById("navbar-links");
+  const dropdownBtns = document.querySelectorAll(".dropdown-btn");
+  // const dropdownContent = document.getElementById("dropdown-content");
+
+  let isMobile = window.innerWidth <= 768;
+
+  menuIcon.addEventListener("click", () => {
+    navbarLinks.classList.toggle("active");
+  });
+
+   dropdownBtns.forEach(btn => {
+    btn.addEventListener("click", function (e) {
+      if (isMobile) {
+        e.stopPropagation();
+        const dropdownContent = this.nextElementSibling;
+        dropdownContent.classList.toggle("active");
+      }
+    });
+  });
+
+    document.addEventListener("click", function (e) {
+    if (isMobile && !e.target.closest(".dropdown")) {
+      document.querySelectorAll(".dropdown-content.active").forEach(content => {
+        content.classList.remove("active");
+      });
+    }
+  });
+
+
+  window.addEventListener("resize", function () {
+    isMobile = window.innerWidth <= 768;
+    if (!isMobile) {
+      document.querySelectorAll(".dropdown-content").forEach(content => content.classList.remove("active"));
+      navbarLinks.classList.remove("active");
+    }
+  });
+});
+  </script>
+<!-- section 1  -->
+ <section class="section1-jee-hero">
+  <div class="jee-hero-content">
+    <h1><span>Crack IIT JEE</span> with Profenaa Academy</h1>
+    <p>Join India’s most advanced JEE(Joint Entrance Examination) preparation platform. Learn from top educators with 3D concepts, AI-based practice, and smart revision tools.</p>
+    <a href="#admission" class="jee-btn">Start Your JEE Journey</a>
+  </div>
+  <div class="jee-bg-shapes">
+    <span class="shape blob1"></span>
+    <span class="shape blob2"></span>
+    <span class="shape blob3"></span>
+  </div>
+</section>
+
+<!-- section 2  -->
+ <!-- Rotating Circle with Dotted Border and Text -->
+  <div class="section-2">
+    
+  <!-- left: Animated Panels -->
+  <div class="panels">
+    <div class="panel"><h2>Class 11</h2><p>Strong JEE foundation with NCERT-based conceptual clarity, early problem-solving techniques, and interactive learning modules.</p></div>
+    <div class="panel"><h2>Class 12</h2><p>Advanced JEE preparation focusing on application-based learning, integrated board + JEE strategy, and high-level concept mastery.</p></div>
+    <div class="panel"><h2>Class 12+</h2><p>Targeted crash courses, rigorous mock tests, personalized mentorship, and performance analytics for droppers and repeaters.</p></div>
+  </div>
+
+  <div class="rotator">
+    <svg viewBox="0 0 300 300">
+      <defs>
+        <path id="circlePath"
+              d="M150,150 m-120,0 a120,120 0 1,0 240,0 a120,120 0 1,0 -240,0"/>
+      </defs>
+      <circle class="dotted" cx="150" cy="150" r="135"/>
+      <circle class="inner" cx="150" cy="150" r="90"/>
+      <text>
+        <textPath href="#circlePath" startOffset="0">
+          · Profenaa Academy · · ·
+           · Profenaa Academy · · ·
+            · Profenaa Academy · ·
+        </textPath>
+      </text>
+    </svg>
+    <div class="arrow">⟶</div>
+  </div>
+</div>
+<!-- IIT JEE Course - Key Features (Futuristic) -->
+<section class="jee-course-features">
+  <div class="jee-feature-wrapper">
+     <div class="jee-feature-image">
+      <img src="images/JEE.jpg" alt="IIT JEE Online Student" />
+    </div>
+    <div class="jee-feature-text">
+      <h2>Key Features of IIT JEE Course 2025</h2>
+      <ul>
+        <li><strong>Complete JEE Main & Advanced Syllabus</strong> – In-depth Physics, Chemistry & Math with concept-driven modules.</li>
+        <li><strong>Live + Recorded Expert Sessions</strong> – Delivered by IIT alumni using concept visualization and digital boards.</li>
+        <li><strong>Chapter-Wise DPPs & PYQs</strong> – Curated sets from previous years and trending topics.</li>
+        <li><strong>Smart Concept Tools</strong> – Formula sheets, topic snapshots, interactive visualizations & flashcards.</li>
+        <li><strong>Real-Time Doubt Support</strong> – With instant chat, live query hours & mentor sessions.</li>
+        <li><strong>Advanced Mock Testing + AI Reports</strong> – Get deep analytics on speed, accuracy & attempt strategy.</li>
+        <li><strong>Strategic Prep & Motivation</strong> – Regular sessions to build exam temperament and productivity.</li>
+      </ul>
+    </div>
+   
+  </div>
+</section>
+
+<!-- section 3 -->
+
+  <h2>JEE Preparation Timeline</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <h3>📘 Foundation & Syllabus Planning</h3>
+      <p>Break down the entire JEE syllabus into Physics, Chemistry, and Math. Create a structured study plan with daily and weekly targets.</p>
+    </div>
+    <div class="timeline-item">
+      <h3>🔬 Concept Mastery & Core Strengthening</h3>
+    <p>Focus on building strong fundamentals through NCERT and reference books. Solve basic to intermediate problems to ensure clarity.</p>
+    </div>
+    <div class="timeline-item">
+       <h3>🧠 Application & Problem Practice</h3>
+    <p>Start solving advanced-level problems and PYQs. Practice mixed-topic worksheets and revise using short notes and formulas.</p>
+    </div>
+    <div class="timeline-item">
+      <h3>📝 Mock Tests & Performance Tracking</h3>
+    <p>Take weekly full-length mock tests. Analyze results to identify weak areas, work on accuracy and speed, and optimize exam strategy.</p>
+    </div>
+    <div class="timeline-item">
+       <h3>🚀 Final Phase & Exam Readiness</h3>
+    <p>Focus on high-weightage topics. Attempt daily revision sessions, practice full mock papers under real-time conditions, and manage stress efficiently.</p>
+    </div>
+  </div>
+
+  <script>
+    const items = document.querySelectorAll('.timeline-item');
+    function reveal() {
+      const trigger = window.innerHeight * 0.85;
+      items.forEach(item => {
+        if (item.getBoundingClientRect().top < trigger) item.classList.add('show');
+      });
+    }
+    window.addEventListener('scroll', reveal);
+    window.addEventListener('load', reveal);
+  </script>
+
+<!-- section 4 -->
+   <div class="section-4">
+   <section class="cta">
+  <div class="cta-left">
+    <h2>Need more info on online courses at <span>Profenaa Academy</span>?</h2>
+    <p>Feel free to call us or request a callback using the form.</p>
+    <button class="cta-btn">Request a Callback</button>
+    <p class="or-text">or 📞 <a href="#">9500027638 | 9791367638</a></p>
+  </div>
+
+  <div class="cta-center">
+    <img src="images/cta.jpg" alt="Support Illustration">
+  </div>
+
+  <div class="cta-right">
+    <div class="form-container">
+      <form id="callbackForm">
+        <div class="form-group">
+          <input type="text" name="name" required placeholder=" ">
+          <label>Name</label>
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" required placeholder=" ">
+          <label>Email</label>
+        </div>
+        <div class="form-group">
+          <input type="tel" name="phone" required placeholder=" ">
+          <label>Phone</label>
+        </div>
+        <div class="form-group">
+          <textarea name="text" rows="2" required placeholder=" "></textarea>
+          <label>Comment</label>
+        </div>
+        <button type="submit" class="submit-btn">Connect Now</button>
+      </form>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- footer  -->
+  <footer>
+    <div class="footer-column">
+      <h3>Page</h3>
+      <ul>
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="Contact-us.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Program</h3>
+        <ul>
+        <li><a href="neet.html"> NEET</a></li>
+        <li><a href="JEE.html"> JEE</a></li>
+        <li><a href="repeaters.html"> Repeaters </a></li>
+        <li><a href="Crash-course.html">Crash course</a></li>
+               <li><a href="foundation.css">Foundation</a></li>
+
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Flagship Events</h3>
+      <ul>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="Our-Methodology.html"> Our Methodology</a></li>
+        <!-- <li><a href="Certification.html">Certification & verification</a></li> -->
+        <li><a href="blog.html">Blogs</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Contact Us</h3>
+      <p>📞 9500027638 | 9791367638</p>
+      <p>📧 profenaaneetacademy@gmail.com</p>
+      <p>🕒 9.00 AM TO 8.00 PM <br></br> Mon to Sat</p>
+    </div>
+    <div class="footer-column">
+      <h3>Address</h3>
+      <p>📍 <strong>Profenaa NEET & JEE Academy</strong></p>
+<p>📍  37/1, Rajarajeshwari Nagar 2,T.kottampatti, Pollachi,coimbatore Dt-642002</p>    </div>
+     <div class="footer-container">
+      <div class="footer-logo-section">
+        <img src="images/academy logo.png" alt="Profenaa Logo" class="logo" />
+        <p><b>Profenaa NEET & JEE Academy</b></p>
+      </div>
+      <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Profenaa. All rights reserved.</p>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+
+  </footer>
+ <!-- chat  -->
+<div class="floating-whatsapp" onclick="location.href='https://wa.me/+919944897638?text=Hello%20there!'">
+  <div class="icon-container">
+    <i class="fa fa-whatsapp" style="color: white; font-size: 30px;"></i>
+  </div>
+</div>
+
+<!-- form  -->
+
+<!-- Demo content -->
+  <div id="overlay">
+    <div id="popup">
+      <span class="close" id="closeBtn">×</span>
+      <h2>Enroll Now</h2>
+      <form id="contactForm">
+        <div class="input-group">
+          <label>Username</label>
+          <input type="text" name="username" required>
+        </div>
+        <div class="input-group">
+          <label>Password</label>
+          <input type="password" name="password" required>
+        </div>
+        <div class="input-group">
+          <label>Email</label>
+          <input type="email" name="email" required>
+        </div>
+        <div class="input-group">
+          <label>course</label>
+          <input type="text" name="text" required>
+        </div>
+        <div class="input-group">
+          <label>Comment</label>
+          <textarea name="comment"></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+
+ <script>
+    const overlay = document.getElementById('overlay');
+    const form = document.getElementById('contactForm');
+    const closeBtn = document.getElementById('closeBtn');
+
+    function lockBackground() {
+      document.body.classList.add('modal-open');
+    }
+    function unlockBackground() {
+      document.body.classList.remove('modal-open');
+    }
+    function showForm() {
+      overlay.style.display = 'flex';
+      lockBackground();
+    }
+    function hideForm() {
+      overlay.style.display = 'none';
+      unlockBackground();
+    }
+    closeBtn.addEventListener('click', hideForm);
+    overlay.addEventListener('click', e => {
+      if (e.target === overlay) hideForm();
+    });
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      console.log('Submitted:', Object.fromEntries(new FormData(form)));
+      hideForm();
+    });
+  </script>
+ 
+</body>
+</html>
