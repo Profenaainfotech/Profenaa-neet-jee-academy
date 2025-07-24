@@ -98,7 +98,7 @@ body{
 /* Dropdown content for desktop */
 .dropdown-content {
   position: absolute;
-  background-color: #c9f8cf;
+  background-color: white;
   top: 25px;
   left: 0;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -130,7 +130,7 @@ body{
 }
 
 .dropdown-content a:hover {
-  color:gray;
+ background-color: rgb(196, 239, 196);
 }
 
 
@@ -368,15 +368,12 @@ body{
 }
 
 .crash-purpose-section {
-  /* background: linear-gradient(145deg, #e2efe2, #fdfdfd); */
   padding: 80px 20px;
-  /* width: 100%; */
   overflow: hidden;
   position: relative;
 }
 
 .crash-container {
-  /* max-width: 1200px; */
   margin: auto;
   display: flex;
   align-items: center;
@@ -397,7 +394,6 @@ body{
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.3);
   position: relative;
-  /* min-height: 160px; */
   overflow: hidden;
 }
 
@@ -436,7 +432,8 @@ body{
 @media (max-width: 768px) {
   .crash-container {
     flex-direction: column-reverse;
-    /* gap: 30px; */
+    margin: 20px;
+    gap: 0;
   }
 .crash-purpose-section{
   padding: 0;
@@ -452,12 +449,12 @@ body{
 @media (max-width: 321px){
 .crash-purpose-section{
   padding: 0;
+  gap: 0;
 }
 }
 /* ===== Crash Course Section ===== */
 .crash-course-section {
   padding: 60px 20px;
-  /* background: linear-gradient(to right, #f9fbff, #eef4fd); */
   font-family: 'Segoe UI', sans-serif;
   color: #1a1a1a;
 }
@@ -490,7 +487,6 @@ body{
   gap: 40px;
   color: white;
   border-radius: 50px;
-  /* max-width: 1200px; */
   margin-bottom: 40px;
   padding: 60px;
   background-color: #16311c;
@@ -572,7 +568,7 @@ body{
   .feature-row {
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    text-align: left;
   }
 
   .features, .feature-image {
@@ -597,7 +593,6 @@ body{
 
 /* ============ Section 3 Hero ============ */
 .section3-crash-hero {
-  /* width: 100%; */
   height: 80vh;
   background: url('https://images.pexels.com/photos/4050316/pexels-photo-4050316.jpeg?auto=compress&cs=tinysrgb&w=1600') no-repeat center center / cover;
   display: flex;
@@ -609,10 +604,9 @@ body{
 }
 
 .section3-overlay {
+  padding: 30px;
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(8px);
-  /* max-width: 550px; */
-  padding: 2.5rem;
   border-radius: 2rem;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
   transform: translateX(100px);
@@ -650,7 +644,7 @@ body{
 
 .section3-btn {
   display: inline-block;
-  background: #0066ff;
+  background: #1d5e21;
   color: white;
   padding: 0.8rem 2rem;
   font-size: 1rem;
@@ -660,7 +654,7 @@ body{
 }
 
 .section3-btn:hover {
-  background: #0044cc;
+  background: #577a58;
 }
 
 /* ========== Animations ========== */
@@ -684,8 +678,6 @@ body{
     justify-content: center;
   }
   .section3-overlay {
-    width: 100%;
-    max-width: 100%;
     padding: 2rem;
   }
   .section3-title {
@@ -694,6 +686,7 @@ body{
 }
 
 @media (max-width: 768px) {
+ 
   .section3-title {
     font-size: 1.6rem;
   }
@@ -726,7 +719,7 @@ body{
 .who-centered-container h2 {
   font-size: 32px;
   margin-bottom: 20px;
-  color: #00e0ff;
+  color: #0cca29;
 }
 
 .who-centered-container p {

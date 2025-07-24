@@ -13,7 +13,8 @@
   <nav class="navbar">
     <div class="navbar-container">
       <div class="navbar-brand">
-        <img src="images/academy logo.png" alt="logo" class="navbar-logo" />
+               <a href="homepage.html"> <img src="images/academy logo.png" alt="logo" class="navbar-logo" /></a>
+
         <span class="brand-text">NEET&JEE Academy</span>
       </div>
 
@@ -39,9 +40,8 @@
         <div class="dropdown" id="dropdown">
           <span class="dropdown-btn">Flagship ▼</span>
           <div class="dropdown-content" id="dropdown-content">
-            <a href="Our-Methodology.html"> Our Methodology</a>
+            <a href="Our-Collaboration.html"> Our Collaboration</a>
             <a href="Gallery.html">Gallery</a>
-            <!-- <a href="Certification.html">Certification and verification</a> -->
           </div>
         </div>
         <a href="blog.html">Blog</a>
@@ -60,7 +60,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const menuIcon = document.getElementById("menu-icon");
   const navbarLinks = document.getElementById("navbar-links");
   const dropdownBtns = document.querySelectorAll(".dropdown-btn");
-  // const dropdownContent = document.getElementById("dropdown-content");
 
   let isMobile = window.innerWidth <= 768;
 
@@ -102,10 +101,11 @@ document.addEventListener("DOMContentLoaded", function () {
       <div>
         <h1>Your Foundation for NEET &amp; JEE</h1>
         <p>Join our class 6–10 program—build strength in Math, Physics &amp; Chemistry before it matters.</p>
-        <a href="#enroll" class="cta">Enroll Now</a>
+        <a  href="javascript:void(0)" id="join-us-btn" class="cta">Enroll Now</a>
       </div>
     </div>
   </section>
+  <script src="join-us.js"></script>
 
   <script>
     if (!CSS.supports('animation-timeline','scroll()')) {

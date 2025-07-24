@@ -101,7 +101,7 @@ body {
 /* Dropdown content for desktop */
 .dropdown-content {
   position: absolute;
-  background-color: #c9f8cf;
+  background-color:white;
   top: 25px;
   left: 0;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -133,8 +133,7 @@ body {
 }
 
 .dropdown-content a:hover {
-  /* background-color: #dee7de; */
-  color:GRAY;
+  background-color: rgb(196, 239, 196);
 }
 
 
@@ -804,6 +803,7 @@ text-align: center !important;
   }
 }
 
+
 /* floationg whatsapp  */
 .floating-whatsapp {
     position: fixed;
@@ -845,7 +845,7 @@ text-align: center !important;
     right: 15px; 
   }
 }
-
+/* form  */
 body.modal-open {
       overflow: hidden;
       position: fixed;
@@ -892,7 +892,7 @@ body.modal-open {
     }
     .input-group {
       position: relative;
-      margin: 16px 0;
+      margin: 16px 10px;
     }
     .input-group label {
       position: absolute;
@@ -905,7 +905,7 @@ body.modal-open {
     }
     .input-group input,
     .input-group textarea {
-      width: 100%;
+      width: 85%;
       background-color: rgb(234, 240, 235);
       padding: 12px 40px 12px 12px;
       border: 1px solid #cccccc;
@@ -947,17 +947,25 @@ body.modal-open {
     }
 @media screen and (max-width: 769px) {
   #popup {
-    width: 80%;
-    max-width: 420px;
-    padding: 25px;
+    width: 70%;
+  
+    max-width: 340px; 
+    padding: 15px;
   }
+  
 }
-
-/* Small mobile: ≤ 426 px */
 @media screen and (max-width: 426px) {
   #popup {
-    width: 90%;
-    max-width: 320px;
-    padding: 20px;
+    width: 80%;
+    
+  }
+
+}
+@media screen and (max-width: 321px) {
+#popup {
+  .input-group input,
+.input-group textarea {
+  width: 75%;
+}
   }
 }

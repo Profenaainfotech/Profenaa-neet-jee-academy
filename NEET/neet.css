@@ -1,5 +1,6 @@
 *{
   font-family: sans-serif;
+ 
   /* overflow-x: hidden; */
 }
 
@@ -95,7 +96,7 @@
 /* Dropdown content for desktop */
 .dropdown-content {
   position: absolute;
-  background-color: #c9f8cf;
+  background-color: white;
   top: 25px;
   left: 0;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -127,9 +128,8 @@
 }
 
 .dropdown-content a:hover {
-  /* background-color: #dee7de; */
-  color:      gray
-;
+  background-color: rgb(196, 239, 196);
+  
 }
 
 
@@ -506,7 +506,6 @@ background-clip: text;
       justify-content: center;
       padding: 80px 30px;
       background-color:rgb(51, 71, 48);
-      /* padding-top: 100px; */
     }
 
     /* --- Rotator on Left --- */
@@ -611,11 +610,8 @@ background-clip: text;
     flex-direction: column;
     max-width: 600px;
     margin: 0 auto;
-    /* Still stacked, could switch to 2 columns via grid if desired */
   }
 }
-  
- /* — Base (≤ 426px): Small phones — default mobile layout — */
 @media (max-width: 426px) {
   .section-2{
     display: flex;
@@ -663,7 +659,7 @@ background-clip: text;
 }
 
 .neet-feature-text h2 {
-  color: #00baff;
+  color: #47b549;
   font-size: 2.3rem;
   margin-bottom: 20px;
   font-weight: 700;
@@ -751,10 +747,7 @@ background-clip: text;
 /* section 3 */
 body {
       margin:0; padding:0;
-      background-color: #e9eee9;
-      /* background-image:
-        radial-gradient(at 30% 30%, rgb(209, 212, 209) 0, transparent 50%),
-        radial-gradient(at 70% 70%, rgb(206, 210, 205) 0, transparent 50%); */
+      background-color:white;
       background-size: 200% 200%;
       animation: bgMove 20s ease infinite;
       font-family: sans-serif;
@@ -803,7 +796,7 @@ body {
       position: absolute;
       top: 16px;
       width: 22px; height: 22px;
-      background: #001eff;
+      background: #1c531e;
       border-radius: 50%;
       box-shadow: 0 0 0 3px rgba(255,255,255,0.1);
     }
@@ -843,7 +836,7 @@ body {
 }
 .cta {
   display:flex;
-   justify-content: space-evenly; /* equal spacing :contentReference[oaicite:8]{index=8} */
+   justify-content: space-evenly; 
   background:white;
   padding:3rem;
    border-radius:16px;
@@ -877,6 +870,8 @@ body {
 }
 .cta-btn:hover {
   transform: translateY(-2px);
+  background: linear-gradient(135deg,#00cc30,#0e4514);
+
   box-shadow:4px 4px 10px rgba(0,0,0,0.2),-4px -4px 10px rgba(255,255,255,0.9);
 }
 .or-text { margin:1rem 0; color:#555; }

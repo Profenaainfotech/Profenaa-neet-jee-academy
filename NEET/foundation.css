@@ -3,11 +3,9 @@
     box-sizing:border-box; 
      margin:0; 
      padding:0; 
+     font-family: sans-serif;
     }
-  /* html, body { 
-    height:50%; 
-    font-family:sans-serif; 
-} */
+  
   body { 
     opacity:0;
      animation:fadeInBody 0.6s forwards;
@@ -40,7 +38,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.4rem 1rem; /* Reduced padding */
+  padding: 0.4rem 1rem;
 }
 
 .navbar-brand {
@@ -50,14 +48,14 @@
 }
 
 .navbar-logo {
-  width: 40px; /* Reduced from 60px */
+  width: 40px; 
   height: 40px;
   margin-right: 0px;
   border-radius: 10px;
 }
 
 .brand-text {
-  font-size: 1rem; /* Reduced from 1.2rem */
+  font-size: 1rem; 
   font-weight: bold;
   color: white;
 }
@@ -82,7 +80,6 @@
   transform: translateY(-2px);
 }
 
-/* Dropdown */
 .dropdown {
   position: relative;
 }
@@ -101,10 +98,9 @@
   color: rgb(50, 150, 35);
 }
 
-/* Dropdown content for desktop */
 .dropdown-content {
   position: absolute;
-  background-color: #c9f8cf;
+  background-color: white;
   top: 25px;
   left: 0;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -136,18 +132,15 @@
 }
 
 .dropdown-content a:hover {
-  /* background-color: #dee7de; */
-  color:      gray
-;
+  background-color: rgb(196, 239, 196);
+
 }
 
-
-/* Login Button */
 .login-btn {
   background-color: white;
   color: #000000 !important;
   text-decoration: none;
-  padding: 6px 12px; /* Slightly reduced */
+  padding: 6px 12px;
   border-radius: 4px;
   margin-left: 130px;
   transition: background 0.3s ease, transform 0.3s ease;
@@ -159,7 +152,6 @@
   transform: scale(1.05);
 }
 
-/* Hamburger Menu */
 .menu-icon {
   display: none;
   font-size: 1.8rem;
@@ -257,7 +249,7 @@
   .login-btn {
     width: 57%;
     text-align: left;
-    padding: 0.4rem 0.8rem; /* Reduced spacing between links on mobile */
+    padding: 0.4rem 0.8rem; 
     color: rgb(17, 16, 17);
   }
     .navbar-links {
@@ -267,9 +259,8 @@
   }
 }
   .hero {
-    /* width: 100%; */
     display:flex; 
-    height:70vh;
+    height:80vh;
   }
   .left, .right {
     flex:1; 
@@ -279,7 +270,7 @@
     position:relative;
   }
   .left {
-    background:url('../NEET/images/foundation1.jpg') center/cover no-repeat fixed;
+    background:url('images/foundation1.jpg') center/cover no-repeat fixed;
   }
   .right {
     background:#f7fafd;
@@ -389,10 +380,11 @@
       opacity: 0;
       animation: fadeInBody 0.6s ease-out forwards;
       border-radius: 50px;
-      margin: 10px;
+      margin: 20px;
       padding: 3rem 2rem;
     }
     .courses h2 {
+      color: #237729;
       font-size: 2.6rem;
       text-align: center;
       margin-bottom: 1rem;
@@ -483,7 +475,8 @@
     }
      @media only screen and (max-width: 350px) {
       .courses {
-        padding: 1.5rem 0.5rem;
+        margin: 4px; 
+        padding: 1.5rem 0.3rem;
       }
       .courses h2 {
         font-size: 1.6rem;
@@ -510,7 +503,7 @@
   /* Section Container */
   .testimonials {
        font-family: sans-serif;
-    background: #f0f2f5;
+    background:white;
     color: #333;
     opacity: 0;
     animation: fadeInBody 0.6s ease-out forwards;
@@ -519,6 +512,7 @@
   }
   .testimonials h2 {
     text-align: center;
+    color: #1e6921;
     font-size: 2.8rem;
     margin-bottom: 1rem;
   }
@@ -622,7 +616,10 @@
     padding:3rem 3rem;
   }
   .why-foundation h2 {
-    font-size:2.6rem; text-align:center; margin-bottom:1rem;
+    font-size:2.6rem; 
+    text-align:center;
+    color: #1e6921;
+    margin-bottom:1rem;
   }
   .why-foundation .intro {
     font-size:1.2rem; text-align:center;

@@ -94,7 +94,7 @@ body{
 
 .dropdown-content {
   position: absolute;
-  background-color: #c9f8cf;
+  background-color:white;
   top: 25px;
   left: 0;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -126,7 +126,7 @@ body{
 }
 
 .dropdown-content a:hover {
-  color:GRAY;
+ background-color:rgb(196, 239, 196);
 }
 
 .login-btn {

@@ -13,7 +13,8 @@
   <nav class="navbar">
     <div class="navbar-container">
       <div class="navbar-brand">
-        <img src="images/academy logo.png" alt="logo" class="navbar-logo" />
+               <a href="homepage.html"> <img src="images/academy logo.png" alt="logo" class="navbar-logo" /></a>
+
         <span class="brand-text">NEET&JEE Academy</span>
       </div>
 
@@ -39,7 +40,7 @@
         <div class="dropdown" id="dropdown">
           <span class="dropdown-btn">Flagship ▼</span>
           <div class="dropdown-content" id="dropdown-content">
-            <a href="Our-Methodology.html"> Our Methodology</a>
+            <a href="Our-Collaboration.html"> Our Collaboration</a>
             <a href="Gallery.html">Gallery</a>
             <!-- <a href="Certification.html">Certification and verification</a> -->
           </div>
@@ -160,22 +161,46 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
         </div>
     </div>
-   <section class="md-section-advanced">
-    <div class="section3">
-  <div class="md-content">
-    <h2>Meet Our Managing Director</h2>
-    <h3>Dr. M. Muthuraj, Ph.D.</h3>
-    <p><b>Visionary leader with 10+ years in engineering education, exam coaching, and industry-aligned training.</b></p>
-    <ul>
-      <li>Established Profenaa Technologies,school & Academies</li>
-      <li>State-wide expansion across Tamil Nādu in competitive exam prep & industrial skills</li>
-      <li>Embedding placement-focused learning with mock interviews & company prep</li>
-      <li>Driven to empower tomorrow’s engineers & doctors for global success</li>
-    </ul>
-  </div>
-  <div class="md-photo">
-    <img src="images/md.jpeg" alt="Dr. M. Muthuraj">
-  </div>
+ <section class="managing-director-section">
+  <div class="director-content">
+    <!-- Left Text Content -->
+    <div class="director-text">
+      <h2>Meet Our Managing Director</h2>
+      <h3>Dr. M. Muthuraj, Ph.D.</h3>
+      <p class="vision">
+        A passionate educator, visionary technologist, and strategic leader with over a decade of experience in engineering education, NEET/JEE exam coaching,IT and industry-aligned training programs.
+      </p>
+
+      <div class="bio-box">
+        <h4>🎓 Academic & Professional Journey</h4>
+        <ul>
+          <li>Founder & CEO of Profenaa Technologies and Profenaa Academies</li>
+          <li>Former Professor and Department Head in leading engineering institutions</li>
+        </ul>
+      </div>
+
+      <div class="achievements-box">
+        <h4>🏆 Key Accomplishments</h4>
+        <ul>
+          <li>Transformed Profenaa into a reputed name in NEET & JEE coaching</li>
+          <li>State-wide footprint with centers in 20+ districts across Tamil Nādu</li>
+          <li>Introduced real-time mock interview modules and placement bootcamps</li>
+          <li>Led numerous teacher-training programs to uplift rural education quality</li>
+        </ul>
+      </div>
+
+      <div class="mission-box">
+        <h4>🌟 Vision & Mission</h4>
+        <p>
+          Dr. Muthuraj envisions a future where every aspiring engineer and doctor, regardless of background, has access to world-class academic support. His mission is to blend traditional teaching with modern technological tools, bridging the gap between potential and performance.
+        </p>
+      </div>
+    </div>
+
+    <!-- Right Image Content -->
+    <div class="director-image">
+      <img src="images/md.jpeg" alt="Managing Director - Dr. M. Muthuraj">
+    </div>
   </div>
 </section>
 
@@ -261,9 +286,10 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="about-container">
             <h2>Ready to Start Your Journey?</h2>
             <p>Join thousands of successful students who have achieved their dreams with Profenaa Academy</p>
-            <a href="Contact-us.html" class="about-btn" onclick="showEnrollmentInfo()">Enroll Now</a>
+            <a href="javascript:void(0)" id="join-us-btn" class="about-btn">Enroll Now</a>
         </div>
     </div>
+  <script src="join-us.js"></script>
 
     <script>
         // Animated counter for statistics
@@ -310,12 +336,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
             });
         }
-
-        // Enrollment info modal
-        // function showEnrollmentInfo() {
-        //     alert('🎓 Ready to join Profenaa Academy?\n\n✅ Call us at: +91-9876543210\n✅ Email: info@excelprepacademy.com\n✅ Visit: www.excelprepacademy.com\n\nOur counselors are available to guide you through the enrollment process and help you choose the right program for your goals!');
-        // }
-
         // Intersection Observer for animations
         function setupAnimations() {
             const observer = new IntersectionObserver((entries) => {

@@ -5,18 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
     <link rel="stylesheet" href="blog.css">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"> -->
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /> -->
-    
-</head>
+  </head>
 <body>
 <!-- navbar -->
   <nav class="navbar">
     <div class="navbar-container">
       <div class="navbar-brand">
-        <img src="images/academy logo.png" alt="logo" class="navbar-logo" />
+               <a href="homepage.html"> <img src="images/academy logo.png" alt="logo" class="navbar-logo" /></a>
+
         <span class="brand-text">NEET&JEE Academy</span>
       </div>
 
@@ -42,7 +41,7 @@
         <div class="dropdown" id="dropdown">
           <span class="dropdown-btn">Flagship ▼</span>
           <div class="dropdown-content" id="dropdown-content">
-            <a href="Our-Methodology.html"> Our Methodology</a>
+            <a href="Our-Collaboration.html"> Our Collaboration</a>
             <a href="Gallery.html">Gallery</a>
             <!-- <a href="Certification.html">Certification and verification</a> -->
           </div>
@@ -423,8 +422,7 @@ function handleSwipe() {
 }
     </script>
 
-    
-  <!-- footer  -->
+    <!-- footer  -->
  <footer>
     <div class="footer-column">
       <h3>Page</h3>
@@ -483,7 +481,7 @@ function handleSwipe() {
     </div>
 
   </footer>
-    <!-- chat  -->
+ <!-- chat  -->
 <div class="floating-whatsapp" onclick="location.href='https://wa.me/+919944897638?text=Hello%20there!'">
   <div class="icon-container">
     <i class="fa fa-whatsapp" style="color: white; font-size: 30px;"></i>
@@ -542,6 +540,7 @@ function handleSwipe() {
       overlay.style.display = 'none';
       unlockBackground();
     }
+
     closeBtn.addEventListener('click', hideForm);
     overlay.addEventListener('click', e => {
       if (e.target === overlay) hideForm();
@@ -553,6 +552,7 @@ function handleSwipe() {
       hideForm();
     });
   </script>
+  
  
 </body>
 </html>
