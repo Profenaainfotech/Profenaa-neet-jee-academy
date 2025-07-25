@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <span class="blog-post-date">March 15, 2024</span>
                     <span class="blog-post-reading-time">5 min read</span>
                 </div>
-                <a href="#" class="blog-post-link">Read Full Article</a>
+                <a href="./Physics-blog.html" class="blog-post-link">Read Full Article</a>
             </div>
         </article>
 
@@ -141,7 +141,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <span class="blog-post-date">March 12, 2024</span>
                     <span class="blog-post-reading-time">7 min read</span>
                 </div>
-                <a href="#" class="blog-post-link">Read Full Article</a>
+                <a href="" class="blog-post-link">Read Full Article</a>
             </div>
         </article>
 
@@ -241,116 +241,6 @@ function observeElements() {
     });
 }
 
-// Reading progress indicator
-function updateReadingProgress() {
-    const progressBar = document.querySelector('.blog-reading-progress');
-    const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-    progressBar.style.width = scrolled + '%';
-}
-
-// Load more posts functionality
-function loadMorePosts() {
-    const container = document.querySelector('.blog-main');
-    const loadButton = document.querySelector('.blog-load-more-btn');
-    
-    // Show loading state
-    loadButton.textContent = 'Loading...';
-    loadButton.disabled = true;
-    container.classList.add('blog-loading');
-    
-    // Simulate loading delay
-    setTimeout(() => {
-        const newPosts = generateMorePosts();
-        newPosts.forEach(post => {
-            container.appendChild(post);
-        });
-      
-        // Smooth scroll to first new post
-        const firstNewPost = container.children[container.children.length - newPosts.length];
-        firstNewPost.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }, 2000);
-}
-
-// Generate more blog posts
-function generateMorePosts() {
-    const additionalPosts = [
-        {
-            image: "https://images.pexels.com/photos/1181424/pexels-photo-1181424.jpeg?auto=compress&cs=tinysrgb&w=800",
-            category: "JEE Strategy",
-            title: "Last 30 Days JEE Preparation: A Complete Action Plan",
-            excerpt: "The final month before JEE is crucial. Learn how to maximize your preparation with this comprehensive 30-day strategy that covers revision, mock tests, and stress management techniques.",
-            date: "March 1, 2024",
-            readTime: "6 min read",
-            reverse: false
-        },
-        {
-            image: "https://images.pexels.com/photos/1181519/pexels-photo-1181519.jpeg?auto=compress&cs=tinysrgb&w=800",
-            category: "Mental Health",
-            title: "Dealing with Exam Anxiety: A Guide for NEET & JEE Aspirants",
-            excerpt: "Exam anxiety can severely impact performance. Discover proven psychological techniques and practical strategies to overcome anxiety and perform at your absolute best during exams.",
-            date: "February 28, 2024",
-            readTime: "5 min read",
-            reverse: true
-        },
-        {
-            image: "https://images.pexels.com/photos/1181345/pexels-photo-1181345.jpeg?auto=compress&cs=tinysrgb&w=800",
-            category: "Study Techniques",
-            title: "Active Recall vs. Passive Reading: Which Method Works Better?",
-            excerpt: "Not all study methods are created equal. Learn why active recall is more effective than passive reading and how to implement it in your daily study routine for maximum retention.",
-            date: "February 25, 2024",
-            readTime: "7 min read",
-            reverse: false
-        }
-    ];
-    
-    return additionalPosts.map((post, index) => {
-        const article = document.createElement('article');
-        article.className = post.reverse ? 'blog-post blog-post-reverse' : 'blog-post';
-        
-        article.innerHTML = `
-            <div class="blog-post-image">
-                <img src="${post.image}" alt="${post.title}">
-            </div>
-            <div class="blog-post-content">
-                <div class="blog-post-category">${post.category}</div>
-                <h2 class="blog-post-title">${post.title}</h2>
-                <p class="blog-post-excerpt">${post.excerpt}</p>
-                <div class="blog-post-meta">
-                    <span class="blog-post-date">${post.date}</span>
-                    <span class="blog-post-reading-time">${post.readTime}</span>
-                </div>
-                <a href="#" class="blog-post-link">Read Full Article</a>
-            </div>
-        `;
-        
-        return article;
-    });
-    
-    // Setup image loading for new posts
-    setTimeout(() => {
-        setupImageLoading();
-    }, 100);
-}
-
-// Smooth scrolling for anchor links
-document.addEventListener('click', function(e) {
-    if (e.target.classList.contains('blog-post-link')) {
-        e.preventDefault();
-        // Add your navigation logic here
-        console.log('Navigate to full article:', e.target.closest('.blog-post').querySelector('.blog-post-title').textContent);
-    }
-});
-
-// Keyboard navigation
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'ArrowDown') {
-        e.preventDefault();
-        window.scrollBy({ top: 200, behavior: 'smooth' });
-    } else if (e.key === 'ArrowUp') {
-        e.preventDefault();
-        window.scrollBy({ top: -200, behavior: 'smooth' });
-    }
-});
 
 // Simple image loading with error handling
 function setupImageLoading() {
@@ -447,7 +337,7 @@ function handleSwipe() {
       <h3>Flagship Events</h3>
       <ul>
         <li><a href="Gallery.html">Gallery</a></li>
-        <li><a href="Our-Methodology.html"> Our Methodology</a></li>
+        <li><a href="Our-Collaboration.html"> Our Collaboration</a></li>
         <!-- <li><a href="Certification.html">Certification & verification</a></li> -->
         <li><a href="blog.html">Blogs</a></li>
       </ul>
