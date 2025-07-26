@@ -14,7 +14,7 @@
   <nav class="navbar">
     <div class="navbar-container">
       <div class="navbar-brand">
-      <a href="homepage.html"> <img src="images/academy logo.png" alt="logo" class="navbar-logo" /></a>
+               <a href="homepage.html"> <img src="images/academy logo.png" alt="logo" class="navbar-logo" /></a>
 
         <span class="brand-text">NEET&JEE Academy</span>
       </div>
@@ -25,6 +25,7 @@
         <a href="homepage.html">Home</a>
         <a href="about-us.html">About Us</a>
 
+        
         <div class="dropdown" id="dropdown">
           <span class="dropdown-btn">Courses ▼</span>
           <div class="dropdown-content" id="dropdown-content">
@@ -32,7 +33,7 @@
             <a href="JEE.html">JEE</a>
           <a href="repeaters.html">Repeaters</a>
             <a href="Crash-course.html">Crash Course</a>
-            <a href="foundation.html">Foundation</a>  
+                        <a href="foundation.html">Foundation</a>  
  
 
           </div>
@@ -40,17 +41,20 @@
         <div class="dropdown" id="dropdown">
           <span class="dropdown-btn">Flagship ▼</span>
           <div class="dropdown-content" id="dropdown-content">
-            <a href="Our-Collaboration.html">Our Collaboration</a>
+            <a href="Our-Collaboration.html"> Our Collaboration</a>
             <a href="Gallery.html">Gallery</a>
+            <!-- <a href="Certification.html">Certification and verification</a> -->
           </div>
         </div>
         <a href="blog.html">Blog</a>
         <a href="Contact-us.html">Contact Us</a>
       <a href="javascript:void(0)" id="admission-btn" class="login-btn">Admissions Open</a>
     </div>
-   </div>
+     
+    </div>
   </nav>
-   <script src="admission-btn.js"></script>
+     <script src="admission-btn.js"></script>
+
   <script>
     // navbar
 
@@ -58,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const menuIcon = document.getElementById("menu-icon");
   const navbarLinks = document.getElementById("navbar-links");
   const dropdownBtns = document.querySelectorAll(".dropdown-btn");
-
+  // const dropdownContent = document.getElementById("dropdown-content");
 
   let isMobile = window.innerWidth <= 768;
 

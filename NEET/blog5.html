@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>blog5</title>
+<link rel="stylesheet" href="blog2.css">
+  <!-- Font and Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+     <!-- navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-brand">
+               <a href="homepage.html"> <img src="images/academy logo.png" alt="logo" class="navbar-logo" /></a>
+
+        <span class="brand-text">NEET&JEE Academy</span>
+      </div>
+
+      <div class="menu-icon" id="menu-icon">☰</div>
+
+      <div class="navbar-links" id="navbar-links">
+        <a href="homepage.html">Home</a>
+        <a href="about-us.html">About Us</a>
+
+        
+        <div class="dropdown" id="dropdown">
+          <span class="dropdown-btn">Courses ▼</span>
+          <div class="dropdown-content" id="dropdown-content">
+            <a href="neet.html">NEET</a>
+            <a href="JEE.html">JEE</a>
+          <a href="repeaters.html">Repeaters</a>
+            <a href="Crash-course.html">Crash Course</a>
+                        <a href="foundation.html">Foundation</a>  
+ 
+
+          </div>
+        </div>
+        <div class="dropdown" id="dropdown">
+          <span class="dropdown-btn">Flagship ▼</span>
+          <div class="dropdown-content" id="dropdown-content">
+            <a href="Our-Collaboration.html"> Our Collaboration</a>
+            <a href="Gallery.html">Gallery</a>
+            <!-- <a href="Certification.html">Certification and verification</a> -->
+          </div>
+        </div>
+        <a href="blog.html">Blog</a>
+        <a href="Contact-us.html">Contact Us</a>
+      <a href="javascript:void(0)" id="admission-btn" class="login-btn">Admissions Open</a>
+    </div>
+     
+    </div>
+  </nav>
+
+     <script src="admission-btn.js"></script>
+
+  <script>
+    // navbar
+
+document.addEventListener("DOMContentLoaded", function () {
+  const menuIcon = document.getElementById("menu-icon");
+  const navbarLinks = document.getElementById("navbar-links");
+  const dropdownBtns = document.querySelectorAll(".dropdown-btn");
+  // const dropdownContent = document.getElementById("dropdown-content");
+
+  let isMobile = window.innerWidth <= 768;
+
+  menuIcon.addEventListener("click", () => {
+    navbarLinks.classList.toggle("active");
+  });
+
+   dropdownBtns.forEach(btn => {
+    btn.addEventListener("click", function (e) {
+      if (isMobile) {
+        e.stopPropagation();
+        const dropdownContent = this.nextElementSibling;
+        dropdownContent.classList.toggle("active");
+      }
+    });
+  });
+
+    document.addEventListener("click", function (e) {
+    if (isMobile && !e.target.closest(".dropdown")) {
+      document.querySelectorAll(".dropdown-content.active").forEach(content => {
+        content.classList.remove("active");
+      });
+    }
+  });
+
+
+  window.addEventListener("resize", function () {
+    isMobile = window.innerWidth <= 768;
+    if (!isMobile) {
+      document.querySelectorAll(".dropdown-content").forEach(content => content.classList.remove("active"));
+      navbarLinks.classList.remove("active");
+    }
+  });
+});
+  </script>
+
+  <header>
+  <h1>NEET Biology: High-Yield Topics That Guarantee 150+ Marks</h1>
+</header>
+
+<div class="toc" id="toc">
+  <h3>High-Yield Topics</h3>
+  <a href="#strategy1">1. Human Physiology</a>
+  <a href="#strategy2">2. Plant Physiology</a>
+  <a href="#strategy3">3. Genetics & Evolution</a>
+  <a href="#strategy4">4. Cell Biology</a>
+  <a href="#strategy5">5. Ecology & Environment</a>
+  <a href="#strategy6">6. Reproduction</a>
+  <a href="#strategy7">7. Human Health & Disease</a>
+  <a href="#strategy8">8. Biomolecules</a>
+  <a href="#strategy9">9. Structural Organisation in Animals</a>
+  <a href="#strategy10">10. Diversity of Life</a>
+</div>
+
+<main class="container">
+  <section class="strategy" id="strategy1">
+    <h2><i class="fas fa-heartbeat"></i> 1. Human Physiology</h2>
+    <img src="images/blog1.jpg" alt="Human Physiology">
+    <p>Most questions in NEET come from this unit. Focus on digestion, respiration, circulation, excretion, and neural control.</p>
+    <div class="tips"><strong>Tip:</strong> Create flowcharts for each system to quickly revise functions and hormones.</div>
+  </section>
+
+  <section class="strategy" id="strategy2">
+    <h2><i class="fas fa-leaf"></i> 2. Plant Physiology</h2>
+    <img src="images/blog2.jpg" alt="Plant Physiology" class="strategy-img">
+    <p>Master topics like photosynthesis, respiration, transport in plants, and plant growth regulators for sure-shot questions.</p>
+    <div class="tips"><strong>Tip:</strong> Compare human and plant processes to remember easily (e.g., respiration steps).</div>
+  </section>
+
+  <section class="strategy" id="strategy3">
+    <h2><i class="fas fa-dna"></i> 3. Genetics & Evolution</h2>
+    <img src="images/blog3.jpg" alt="Genetics">
+    <p>This is a conceptual and scoring unit. Focus on Mendelian genetics, sex determination, linkage & evolution theories.</p>
+    <div class="tips"><strong>Tip:</strong> Solve pedigree and codominance questions from previous years repeatedly.</div>
+  </section>
+
+  <section class="strategy" id="strategy4">
+    <h2><i class="fas fa-atom"></i> 4. Cell Biology</h2>
+    <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66" alt="Cell Biology">
+    <p>Topics like cell organelles, cell division, and biomolecules are frequently asked. Know diagrams, functions, and differences.</p>
+    <div class="tips"><strong>Tip:</strong> Use labeled diagrams to learn functions of organelles, especially mitochondria & ribosomes.</div>
+  </section>
+
+  <section class="strategy" id="strategy5">
+    <h2><i class="fas fa-recycle"></i> 5. Ecology & Environment</h2>
+    <img src="images/blog4.jpg" alt="Ecology NEET">
+    <p>This is the easiest and most scoring unit in NEET. Focus on topics like ecosystem, biodiversity, pollution, and conservation.</p>
+    <div class="tips"><strong>Tip:</strong> Memorize cycles (nitrogen, carbon), and go through NCERT diagrams carefully.</div>
+  </section>
+
+  <section class="strategy" id="strategy6">
+    <h2><i class="fas fa-baby"></i> 6. Reproduction</h2>
+    <img src="https://images.unsplash.com/photo-1517520287167-4bbf64a00d66" alt="Reproduction">
+    <p>Reproduction in organisms, sexual reproduction in flowering plants, and human reproduction are heavily tested in NEET.</p>
+    <div class="tips"><strong>Tip:</strong> Watch 3D videos to understand flower structure and gamete formation processes.</div>
+  </section>
+
+  <section class="strategy" id="strategy7">
+    <h2><i class="fas fa-virus"></i> 7. Human Health & Disease</h2>
+    <img src="images/blog5.jpg" alt="Health and Disease">
+    <p>This topic includes immunity, diseases (AIDS, cancer, malaria), and vaccines. Diagrams and concepts are scoring.</p>
+    <div class="tips"><strong>Tip:</strong> Learn immunity types using a table and revise vaccine names frequently.</div>
+  </section>
+
+  <section class="strategy" id="strategy8">
+    <h2><i class="fas fa-vials"></i> 8. Biomolecules</h2>
+    <img src="images/blog6.jpg" alt="Biomolecules">
+    <p>Focus on proteins, enzymes, carbohydrates, and nucleic acids. NCERT diagrams and tables are must-know.</p>
+    <div class="tips"><strong>Tip:</strong> Revise enzyme action mechanism and biomolecule functions using flashcards.</div>
+  </section>
+
+  <section class="strategy" id="strategy9">
+    <h2><i class="fas fa-paw"></i> 9. Structural Organisation in Animals</h2>
+    <img src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238" alt="Animal Tissues">
+    <p>Study cockroach anatomy, earthworm and frog from NCERT. Focus on diagrams, tables, and comparative structures.</p>
+    <div class="tips"><strong>Tip:</strong> Revise location and function of tissues using labeled diagrams from NCERT.</div>
+  </section>
+
+  <section class="strategy" id="strategy10">
+    <h2><i class="fas fa-globe-asia"></i> 10. Diversity of Life</h2>
+    <img src="images/blog7.jpg" alt="Biological Diversity">
+    <p>This foundational unit covers kingdoms, classification systems, and biological nomenclature. Very frequent 1-mark questions.</p>
+    <div class="tips"><strong>Tip:</strong> Use mnemonics for kingdom characteristics and key scientists’ contributions.</div>
+  </section>
+</main>
+
+  
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.strategy').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+  
+   <!-- chat  -->
+<div class="floating-whatsapp" onclick="location.href='https://wa.me/+919944897638?text=Hello%20there!'">
+  <div class="icon-container">
+    <i class="fa fa-whatsapp" style="color: white; font-size: 30px;"></i>
+  </div>
+</div>
+<!-- form  -->
+
+<!-- Demo content -->
+  <div id="overlay">
+    <div id="popup">
+      <span class="close" id="closeBtn">×</span>
+      <h2>Enroll Now</h2>
+      <form id="contactForm">
+        <div class="input-group">
+          <label>Username</label>
+          <input type="text" name="username" required>
+        </div>
+        <div class="input-group">
+          <label>Password</label>
+          <input type="password" name="password" required>
+        </div>
+        <div class="input-group">
+          <label>Email</label>
+          <input type="email" name="email" required>
+        </div>
+        <div class="input-group">
+          <label>course</label>
+          <input type="text" name="text" required>
+        </div>
+        <div class="input-group">
+          <label>Comment</label>
+          <textarea name="comment"></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+
+ <script>
+    const overlay = document.getElementById('overlay');
+    const form = document.getElementById('contactForm');
+    const closeBtn = document.getElementById('closeBtn');
+
+    function lockBackground() {
+      document.body.classList.add('modal-open');
+    }
+    function unlockBackground() {
+      document.body.classList.remove('modal-open');
+    }
+    function showForm() {
+      overlay.style.display = 'flex';
+      lockBackground();
+    }
+    function hideForm() {
+      overlay.style.display = 'none';
+      unlockBackground();
+    }
+    closeBtn.addEventListener('click', hideForm);
+    overlay.addEventListener('click', e => {
+      if (e.target === overlay) hideForm();
+    });
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      console.log('Submitted:', Object.fromEntries(new FormData(form)));
+      hideForm();
+    });
+  </script>
+</body>
+<!-- footer  -->
+  <footer id="page-footer">
+    <div class="footer-column">
+      <h3>Page</h3>
+      <ul>
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="Contact-us.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Program</h3>
+        <ul>
+        <li><a href="neet.html"> NEET</a></li>
+        <li><a href="JEE.html"> JEE</a></li>
+        <li><a href="repeaters.html"> Repeaters </a></li>
+        <li><a href="Crash-course.html">Crash course</a></li>
+               <li><a href="foundation.css">Foundation</a></li>
+
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Flagship Events</h3>
+      <ul>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="Our-Collaboration.html"> Our Collaboration</a></li>
+        <li><a href="blog.html">Blogs</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Contact Us</h3>
+      <p>📞 9500027638 | 9791367638</p>
+      <p>📧 profenaaneetacademy@gmail.com</p>
+      <p>🕒 9.00 AM TO 8.00 PM <br></br> Mon to Sat</p>
+    </div>
+    <div class="footer-column">
+      <h3>Address</h3>
+      <p>📍 <strong>Profenaa NEET & JEE Academy</strong></p>
+<p>📍  37/1, Rajarajeshwari Nagar 2,T.kottampatti, Pollachi,coimbatore Dt-642002</p>    </div>
+     <div class="footer-container">
+      <div class="footer-logo-section">
+        <img src="images/academy logo.png" alt="Profenaa Logo" class="logo" />
+        <p><b>Profenaa NEET & JEE Academy</b></p>
+      </div>
+      <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Profenaa. All rights reserved.</p>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+
+  </footer>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const toc = document.querySelector(".toc");
+    const footer = document.querySelector("footer");
+
+    if (!footer) return; // Exit if footer not found
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            toc?.classList.add("hidden");
+          } else {
+            toc?.classList.remove("hidden");
+          }
+        });
+      },
+      {
+        root: null,
+        threshold: 0.1
+      }
+    );
+
+    observer.observe(footer);
+  });
+</script>
+
+
+</html>

@@ -843,7 +843,7 @@ body.modal-open {
     }
 @media screen and (max-width: 769px) {
   #popup {
-    width: 70%;
+    width: 75%;
   
     max-width: 340px; 
     padding: 15px;
@@ -861,7 +861,7 @@ body.modal-open {
 #popup {
   .input-group input,
 .input-group textarea {
-  width: 75%;
+  width: 78%;
 }
   }
 }

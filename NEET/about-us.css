@@ -1271,10 +1271,10 @@ body.modal-open {
 
 @media screen and (max-width: 321px) {
   #popup {
-
+    width: 90%;
+    }
     .input-group input,
     .input-group textarea {
-      width: 75%;
-    }
-  }
+      width: 100%;
+}
 }

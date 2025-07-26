@@ -1020,11 +1020,3 @@ body.modal-open {
     padding: 20px;
   }
 }
-@media screen and (max-width: 321px) {
-#popup {
-  .input-group input,
-.input-group textarea {
-  width: 75%;
-}
-  }
-}

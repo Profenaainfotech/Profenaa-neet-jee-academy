@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>blog2</title>
+<link rel="stylesheet" href="blog2.css">
+  <!-- Font and Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+     <!-- navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-brand">
+               <a href="homepage.html"> <img src="images/academy logo.png" alt="logo" class="navbar-logo" /></a>
+
+        <span class="brand-text">NEET&JEE Academy</span>
+      </div>
+
+      <div class="menu-icon" id="menu-icon">☰</div>
+
+      <div class="navbar-links" id="navbar-links">
+        <a href="homepage.html">Home</a>
+        <a href="about-us.html">About Us</a>
+
+        
+        <div class="dropdown" id="dropdown">
+          <span class="dropdown-btn">Courses ▼</span>
+          <div class="dropdown-content" id="dropdown-content">
+            <a href="neet.html">NEET</a>
+            <a href="JEE.html">JEE</a>
+          <a href="repeaters.html">Repeaters</a>
+            <a href="Crash-course.html">Crash Course</a>
+                        <a href="foundation.html">Foundation</a>  
+ 
+
+          </div>
+        </div>
+        <div class="dropdown" id="dropdown">
+          <span class="dropdown-btn">Flagship ▼</span>
+          <div class="dropdown-content" id="dropdown-content">
+            <a href="Our-Collaboration.html"> Our Collaboration</a>
+            <a href="Gallery.html">Gallery</a>
+            <!-- <a href="Certification.html">Certification and verification</a> -->
+          </div>
+        </div>
+        <a href="blog.html">Blog</a>
+        <a href="Contact-us.html">Contact Us</a>
+      <a href="javascript:void(0)" id="admission-btn" class="login-btn">Admissions Open</a>
+    </div>
+     
+    </div>
+  </nav>
+
+     <script src="admission-btn.js"></script>
+
+  <script>
+    // navbar
+
+document.addEventListener("DOMContentLoaded", function () {
+  const menuIcon = document.getElementById("menu-icon");
+  const navbarLinks = document.getElementById("navbar-links");
+  const dropdownBtns = document.querySelectorAll(".dropdown-btn");
+  // const dropdownContent = document.getElementById("dropdown-content");
+
+  let isMobile = window.innerWidth <= 768;
+
+  menuIcon.addEventListener("click", () => {
+    navbarLinks.classList.toggle("active");
+  });
+
+   dropdownBtns.forEach(btn => {
+    btn.addEventListener("click", function (e) {
+      if (isMobile) {
+        e.stopPropagation();
+        const dropdownContent = this.nextElementSibling;
+        dropdownContent.classList.toggle("active");
+      }
+    });
+  });
+
+    document.addEventListener("click", function (e) {
+    if (isMobile && !e.target.closest(".dropdown")) {
+      document.querySelectorAll(".dropdown-content.active").forEach(content => {
+        content.classList.remove("active");
+      });
+    }
+  });
+
+
+  window.addEventListener("resize", function () {
+    isMobile = window.innerWidth <= 768;
+    if (!isMobile) {
+      document.querySelectorAll(".dropdown-content").forEach(content => content.classList.remove("active"));
+      navbarLinks.classList.remove("active");
+    }
+  });
+});
+  </script>
+
+  <header>
+    <h1>JEE Mathematics: Problem-Solving Techniques for Complex Calculus</h1>
+  </header>
+
+  <div class="toc" id="toc">
+  <h3>Techniques</h3>
+  <a href="#strategy1">1. Concept Clarity in Limits</a>
+  <a href="#strategy2">2. Master Differentiation Tricks</a>
+  <a href="#strategy3">3. Integration Techniques</a>
+  <a href="#strategy4">4. Practice Substitution</a>
+  <a href="#strategy5">5. Use Graphs for Intuition</a>
+  <a href="#strategy6">6. Solve Mixed-Type Questions</a>
+  <a href="#strategy7">7. Learn Formula Derivations</a>
+  <a href="#strategy8">8. Attempt JEE PYQs</a>
+  <a href="#strategy9">9. Identify Pattern-Based Questions</a>
+  <a href="#strategy10">10. Mock Tests Under Timed Conditions</a>
+</div>
+
+<main class="container">
+  <section class="strategy" id="strategy1">
+    <h2><i class="fas fa-infinity"></i> 1. Concept Clarity in Limits</h2>
+    <img src="images/blog1.jpg" alt="Understanding Limits">
+    <p>Limits form the foundation of calculus. Ensure you're confident with L'Hôpital's Rule, indeterminate forms, and left-right limits.</p>
+    <div class="tips"><strong>Tip:</strong> Focus on limit problems involving modulus and greatest integer functions.</div>
+  </section>
+
+  <section class="strategy" id="strategy2">
+    <h2><i class="fas fa-wave-square"></i> 2. Master Differentiation Tricks</h2>
+    <img src="images/blog2.jpg" alt="Differentiation Practice" class="strategy-img">
+    <p>Learn shortcuts for implicit, parametric, and logarithmic differentiation. Understand geometrical interpretation of derivatives.</p>
+    <div class="tips"><strong>Tip:</strong> Memorize standard derivatives and apply chain rule efficiently.</div>
+  </section>
+
+  <section class="strategy" id="strategy3">
+    <h2><i class="fas fa-integral"></i> 3. Integration Techniques</h2>
+    <img src="images/blog3.jpg" alt="Integration Techniques" />
+    <p>Get comfortable with standard forms, by-parts, partial fractions, and trigonometric substitutions.</p>
+    <div class="tips"><strong>Tip:</strong> Make a chart of integrals with substitutions used in JEE frequently.</div>
+  </section>
+
+  <section class="strategy" id="strategy4">
+    <h2><i class="fas fa-exchange-alt"></i> 4. Practice Substitution</h2>
+    <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66" alt="Substitution Method" />
+    <p>Substitution is a powerful tool in calculus. Identify patterns like root expressions, trigonometric identities, and exponential forms.</p>
+    <div class="tips"><strong>Tip:</strong> Try solving the same question using different substitutions to learn flexibility.</div>
+  </section>
+
+  <section class="strategy" id="strategy5">
+    <h2><i class="fas fa-chart-area"></i> 5. Use Graphs for Intuition</h2>
+    <img src="images/blog4.jpg" alt="Graphical Understanding" />
+    <p>Visualizing functions helps in understanding limits, continuity, area, and maxima-minima. Sketch graphs during problem solving.</p>
+    <div class="tips"><strong>Tip:</strong> Learn shapes of basic functions: modulus, log, exponential, trigonometric, step, etc.</div>
+  </section>
+
+  <section class="strategy" id="strategy6">
+    <h2><i class="fas fa-shapes"></i> 6. Solve Mixed-Type Questions</h2>
+    <img src="https://images.unsplash.com/photo-1517520287167-4bbf64a00d66" alt="Mixed Practice" />
+    <p>JEE loves mixing limits, continuity, derivatives, and integrals. Practice combo problems to handle transitions smoothly.</p>
+    <div class="tips"><strong>Tip:</strong> Try JEE Advanced questions that blend 2-3 calculus topics in one.</div>
+  </section>
+
+  <section class="strategy" id="strategy7">
+    <h2><i class="fas fa-lightbulb"></i> 7. Learn Formula Derivations</h2>
+    <img src="images/blog5.jpg" alt="Formula Derivations" />
+    <p>Don’t just memorize — understand where formulas like area under curves, mean value theorems, or Rolle’s theorem come from.</p>
+    <div class="tips"><strong>Tip:</strong> Deriving a formula once helps retain it longer and apply it accurately.</div>
+  </section>
+
+  <section class="strategy" id="strategy8">
+    <h2><i class="fas fa-question-circle"></i> 8. Attempt JEE PYQs</h2>
+    <img src="images/blog6.jpg" alt="Past Year Papers" />
+    <p>Topic-wise previous year questions (Mains + Advanced) help identify how calculus is framed and twisted in JEE.</p>
+    <div class="tips"><strong>Tip:</strong> Practice PYQs immediately after finishing each sub-topic for reinforcement.</div>
+  </section>
+
+  <section class="strategy" id="strategy9">
+    <h2><i class="fas fa-lightbulb-on"></i> 9. Identify Pattern-Based Questions</h2>
+    <img src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238" alt="Patterns in Calculus" />
+    <p>Many integration and limits questions follow recurring patterns. Train your brain to spot them instantly.</p>
+    <div class="tips"><strong>Tip:</strong> Maintain a pattern notebook — note down tricks, shortcuts, and standard Q-types.</div>
+  </section>
+
+  <section class="strategy" id="strategy10">
+    <h2><i class="fas fa-stopwatch"></i> 10. Mock Tests Under Timed Conditions</h2>
+    <img src="images/blog7.jpg" alt="Timed JEE Practice" />
+    <p>Simulate JEE test conditions while solving calculus questions. Accuracy under pressure comes only through practice.</p>
+    <div class="tips"><strong>Tip:</strong> Target 20 questions in 40 minutes for speed + accuracy training.</div>
+  </section>
+</main>
+
+  
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.strategy').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+  
+   <!-- chat  -->
+<div class="floating-whatsapp" onclick="location.href='https://wa.me/+919944897638?text=Hello%20there!'">
+  <div class="icon-container">
+    <i class="fa fa-whatsapp" style="color: white; font-size: 30px;"></i>
+  </div>
+</div>
+<!-- form  -->
+
+<!-- Demo content -->
+  <div id="overlay">
+    <div id="popup">
+      <span class="close" id="closeBtn">×</span>
+      <h2>Enroll Now</h2>
+      <form id="contactForm">
+        <div class="input-group">
+          <label>Username</label>
+          <input type="text" name="username" required>
+        </div>
+        <div class="input-group">
+          <label>Password</label>
+          <input type="password" name="password" required>
+        </div>
+        <div class="input-group">
+          <label>Email</label>
+          <input type="email" name="email" required>
+        </div>
+        <div class="input-group">
+          <label>course</label>
+          <input type="text" name="text" required>
+        </div>
+        <div class="input-group">
+          <label>Comment</label>
+          <textarea name="comment"></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+
+ <script>
+    const overlay = document.getElementById('overlay');
+    const form = document.getElementById('contactForm');
+    const closeBtn = document.getElementById('closeBtn');
+
+    function lockBackground() {
+      document.body.classList.add('modal-open');
+    }
+    function unlockBackground() {
+      document.body.classList.remove('modal-open');
+    }
+    function showForm() {
+      overlay.style.display = 'flex';
+      lockBackground();
+    }
+    function hideForm() {
+      overlay.style.display = 'none';
+      unlockBackground();
+    }
+    closeBtn.addEventListener('click', hideForm);
+    overlay.addEventListener('click', e => {
+      if (e.target === overlay) hideForm();
+    });
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      console.log('Submitted:', Object.fromEntries(new FormData(form)));
+      hideForm();
+    });
+  </script>
+</body>
+<!-- footer  -->
+  <footer id="page-footer">
+    <div class="footer-column">
+      <h3>Page</h3>
+      <ul>
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="Contact-us.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Program</h3>
+        <ul>
+        <li><a href="neet.html"> NEET</a></li>
+        <li><a href="JEE.html"> JEE</a></li>
+        <li><a href="repeaters.html"> Repeaters </a></li>
+        <li><a href="Crash-course.html">Crash course</a></li>
+               <li><a href="foundation.css">Foundation</a></li>
+
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Flagship Events</h3>
+      <ul>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="Our-Collaboration.html"> Our Collaboration</a></li>
+        <li><a href="blog.html">Blogs</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Contact Us</h3>
+      <p>📞 9500027638 | 9791367638</p>
+      <p>📧 profenaaneetacademy@gmail.com</p>
+      <p>🕒 9.00 AM TO 8.00 PM <br></br> Mon to Sat</p>
+    </div>
+    <div class="footer-column">
+      <h3>Address</h3>
+      <p>📍 <strong>Profenaa NEET & JEE Academy</strong></p>
+<p>📍  37/1, Rajarajeshwari Nagar 2,T.kottampatti, Pollachi,coimbatore Dt-642002</p>    </div>
+     <div class="footer-container">
+      <div class="footer-logo-section">
+        <img src="images/academy logo.png" alt="Profenaa Logo" class="logo" />
+        <p><b>Profenaa NEET & JEE Academy</b></p>
+      </div>
+      <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Profenaa. All rights reserved.</p>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+
+  </footer>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const toc = document.querySelector(".toc");
+    const footer = document.querySelector("footer");
+
+    if (!footer) return; // Exit if footer not found
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            toc?.classList.add("hidden");
+          } else {
+            toc?.classList.remove("hidden");
+          }
+        });
+      },
+      {
+        root: null,
+        threshold: 0.1
+      }
+    );
+
+    observer.observe(footer);
+  });
+</script>
+
+
+</html>

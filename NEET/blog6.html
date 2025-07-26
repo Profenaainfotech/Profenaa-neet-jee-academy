@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>blog6</title>
+<link rel="stylesheet" href="blog2.css">
+  <!-- Font and Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+     <!-- navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-brand">
+               <a href="homepage.html"> <img src="images/academy logo.png" alt="logo" class="navbar-logo" /></a>
+
+        <span class="brand-text">NEET&JEE Academy</span>
+      </div>
+
+      <div class="menu-icon" id="menu-icon">☰</div>
+
+      <div class="navbar-links" id="navbar-links">
+        <a href="homepage.html">Home</a>
+        <a href="about-us.html">About Us</a>
+
+        
+        <div class="dropdown" id="dropdown">
+          <span class="dropdown-btn">Courses ▼</span>
+          <div class="dropdown-content" id="dropdown-content">
+            <a href="neet.html">NEET</a>
+            <a href="JEE.html">JEE</a>
+          <a href="repeaters.html">Repeaters</a>
+            <a href="Crash-course.html">Crash Course</a>
+                        <a href="foundation.html">Foundation</a>  
+ 
+
+          </div>
+        </div>
+        <div class="dropdown" id="dropdown">
+          <span class="dropdown-btn">Flagship ▼</span>
+          <div class="dropdown-content" id="dropdown-content">
+            <a href="Our-Collaboration.html"> Our Collaboration</a>
+            <a href="Gallery.html">Gallery</a>
+            <!-- <a href="Certification.html">Certification and verification</a> -->
+          </div>
+        </div>
+        <a href="blog.html">Blog</a>
+        <a href="Contact-us.html">Contact Us</a>
+      <a href="javascript:void(0)" id="admission-btn" class="login-btn">Admissions Open</a>
+    </div>
+     
+    </div>
+  </nav>
+
+     <script src="admission-btn.js"></script>
+
+  <script>
+    // navbar
+
+document.addEventListener("DOMContentLoaded", function () {
+  const menuIcon = document.getElementById("menu-icon");
+  const navbarLinks = document.getElementById("navbar-links");
+  const dropdownBtns = document.querySelectorAll(".dropdown-btn");
+  // const dropdownContent = document.getElementById("dropdown-content");
+
+  let isMobile = window.innerWidth <= 768;
+
+  menuIcon.addEventListener("click", () => {
+    navbarLinks.classList.toggle("active");
+  });
+
+   dropdownBtns.forEach(btn => {
+    btn.addEventListener("click", function (e) {
+      if (isMobile) {
+        e.stopPropagation();
+        const dropdownContent = this.nextElementSibling;
+        dropdownContent.classList.toggle("active");
+      }
+    });
+  });
+
+    document.addEventListener("click", function (e) {
+    if (isMobile && !e.target.closest(".dropdown")) {
+      document.querySelectorAll(".dropdown-content.active").forEach(content => {
+        content.classList.remove("active");
+      });
+    }
+  });
+
+
+  window.addEventListener("resize", function () {
+    isMobile = window.innerWidth <= 768;
+    if (!isMobile) {
+      document.querySelectorAll(".dropdown-content").forEach(content => content.classList.remove("active"));
+      navbarLinks.classList.remove("active");
+    }
+  });
+});
+  </script>
+<header>
+  <h1>From 400 to 650: Rahul's NEET Success Journey</h1>
+</header>
+
+
+<div class="toc" id="toc">
+  <h3>Milestones</h3>
+  <a href="#strategy1">1. Accepting Weaknesses</a>
+  <a href="#strategy2">2. Strategic Time Allocation</a>
+  <a href="#strategy3">3. Rebuilding NCERT Foundation</a>
+  <a href="#strategy4">4. Daily Question Practice</a>
+  <a href="#strategy5">5. Self-Analysis via Mistake Book</a>
+  <a href="#strategy6">6. Weekly Full-Length Tests</a>
+  <a href="#strategy7">7. Learning from Topper Interviews</a>
+  <a href="#strategy8">8. Fixing Biology First</a>
+  <a href="#strategy9">9. Physics & Chemistry Balance</a>
+  <a href="#strategy10">10. Last 30 Days Plan</a>
+</div>
+
+<main class="container">
+  <section class="strategy" id="strategy1">
+    <h2><i class="fas fa-infinity"></i> 1. Accepting Weaknesses</h2>
+    <img src="images/blog1.jpg" alt="Accepting Weaknesses">
+    <p>Rahul began his journey by honestly assessing where he lacked — not just in chapters, but in mindset, revision habits, and exam temperament.</p>
+    <div class="tips"><strong>Tip:</strong> Start your comeback by identifying weak areas and being brutally honest with yourself.</div>
+  </section>
+
+  <section class="strategy" id="strategy2">
+    <h2><i class="fas fa-wave-square"></i> 2. Strategic Time Allocation</h2>
+    <img src="images/blog2.jpg" alt="Time Management" class="strategy-img">
+    <p>He divided his day into fixed slots — mornings for Biology, noon for Chemistry, evenings for Physics, and night for revision or mock attempts.</p>
+    <div class="tips"><strong>Tip:</strong> Have subject-wise focused sessions instead of scattered study hours.</div>
+  </section>
+
+  <section class="strategy" id="strategy3">
+    <h2><i class="fas fa-integral"></i> 3. Rebuilding NCERT Foundation</h2>
+    <img src="images/blog3.jpg" alt="NCERT Focus" />
+    <p>He restarted Biology and Chemistry directly from NCERT, underlining, highlighting, and making short notes for revision.</p>
+    <div class="tips"><strong>Tip:</strong> Don’t skip NCERT lines — especially diagrams, in-text, and highlighted points.</div>
+  </section>
+
+  <section class="strategy" id="strategy4">
+    <h2><i class="fas fa-exchange-alt"></i> 4. Daily Question Practice</h2>
+    <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66" alt="Practice Questions" />
+    <p>Each day, Rahul attempted 60–80 MCQs from different topics. He reviewed each answer critically — even the correct ones.</p>
+    <div class="tips"><strong>Tip:</strong> Quality of review matters more than quantity of questions.</div>
+  </section>
+
+  <section class="strategy" id="strategy5">
+    <h2><i class="fas fa-chart-area"></i> 5. Self-Analysis via Mistake Book</h2>
+    <img src="images/blog4.jpg" alt="Mistake Tracking" />
+    <p>He maintained a ‘Mistake Book’ — jotting down why an error happened and what the right concept or trick was.</p>
+    <div class="tips"><strong>Tip:</strong> Maintain error logs with topic, reason, and correct approach.</div>
+  </section>
+
+  <section class="strategy" id="strategy6">
+    <h2><i class="fas fa-shapes"></i> 6. Weekly Full-Length Tests</h2>
+    <img src="https://images.unsplash.com/photo-1517520287167-4bbf64a00d66" alt="Mock Tests" />
+    <p>Rahul took full NEET mocks every Sunday to track progress and simulate real-exam conditions.</p>
+    <div class="tips"><strong>Tip:</strong> Time your test exactly like NEET — same day, same slot, same discipline.</div>
+  </section>
+
+  <section class="strategy" id="strategy7">
+    <h2><i class="fas fa-lightbulb"></i> 7. Learning from Topper Interviews</h2>
+    <img src="images/blog5.jpg" alt="Topper Insights" />
+    <p>He followed YouTube interviews and success stories to find study hacks, revision plans, and mindset shifts that worked for others.</p>
+    <div class="tips"><strong>Tip:</strong> Note what successful students avoided — not just what they did.</div>
+  </section>
+
+  <section class="strategy" id="strategy8">
+    <h2><i class="fas fa-question-circle"></i> 8. Fixing Biology First</h2>
+    <img src="images/blog6.jpg" alt="Biology Boost" />
+    <p>Biology was his lowest-scoring subject initially. He focused on diagram-based questions, NCERT line-by-line memorization, and mock practice.</p>
+    <div class="tips"><strong>Tip:</strong> 360 in Biology is the easiest boost — don’t let it pull you down.</div>
+  </section>
+
+  <section class="strategy" id="strategy9">
+    <h2><i class="fas fa-lightbulb-on"></i> 9. Physics & Chemistry Balance</h2>
+    <img src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238" alt="Balancing Subjects" />
+    <p>Rahul paired tough Physics topics with easy Chemistry ones on alternate days to maintain interest and reduce burnout.</p>
+    <div class="tips"><strong>Tip:</strong> Don’t study both hard subjects together — plan for psychological ease.</div>
+  </section>
+
+  <section class="strategy" id="strategy10">
+    <h2><i class="fas fa-stopwatch"></i> 10. Last 30 Days Plan</h2>
+    <img src="images/blog7.jpg" alt="Final Month Strategy" />
+    <p>In the final month, he shifted to full-syllabus mocks every 3rd day, followed by 2 days of error revision and NCERT brushing.</p>
+    <div class="tips"><strong>Tip:</strong> Last month is for refining, not for covering new chapters.</div>
+  </section>
+</main>
+
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.strategy').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+  
+   <!-- chat  -->
+<div class="floating-whatsapp" onclick="location.href='https://wa.me/+919944897638?text=Hello%20there!'">
+  <div class="icon-container">
+    <i class="fa fa-whatsapp" style="color: white; font-size: 30px;"></i>
+  </div>
+</div>
+<!-- form  -->
+
+<!-- Demo content -->
+  <div id="overlay">
+    <div id="popup">
+      <span class="close" id="closeBtn">×</span>
+      <h2>Enroll Now</h2>
+      <form id="contactForm">
+        <div class="input-group">
+          <label>Username</label>
+          <input type="text" name="username" required>
+        </div>
+        <div class="input-group">
+          <label>Password</label>
+          <input type="password" name="password" required>
+        </div>
+        <div class="input-group">
+          <label>Email</label>
+          <input type="email" name="email" required>
+        </div>
+        <div class="input-group">
+          <label>course</label>
+          <input type="text" name="text" required>
+        </div>
+        <div class="input-group">
+          <label>Comment</label>
+          <textarea name="comment"></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+
+ <script>
+    const overlay = document.getElementById('overlay');
+    const form = document.getElementById('contactForm');
+    const closeBtn = document.getElementById('closeBtn');
+
+    function lockBackground() {
+      document.body.classList.add('modal-open');
+    }
+    function unlockBackground() {
+      document.body.classList.remove('modal-open');
+    }
+    function showForm() {
+      overlay.style.display = 'flex';
+      lockBackground();
+    }
+    function hideForm() {
+      overlay.style.display = 'none';
+      unlockBackground();
+    }
+    closeBtn.addEventListener('click', hideForm);
+    overlay.addEventListener('click', e => {
+      if (e.target === overlay) hideForm();
+    });
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      console.log('Submitted:', Object.fromEntries(new FormData(form)));
+      hideForm();
+    });
+  </script>
+</body>
+<!-- footer  -->
+  <footer id="page-footer">
+    <div class="footer-column">
+      <h3>Page</h3>
+      <ul>
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="Contact-us.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Program</h3>
+        <ul>
+        <li><a href="neet.html"> NEET</a></li>
+        <li><a href="JEE.html"> JEE</a></li>
+        <li><a href="repeaters.html"> Repeaters </a></li>
+        <li><a href="Crash-course.html">Crash course</a></li>
+               <li><a href="foundation.css">Foundation</a></li>
+
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Flagship Events</h3>
+      <ul>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="Our-Collaboration.html"> Our Collaboration</a></li>
+        <li><a href="blog.html">Blogs</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Contact Us</h3>
+      <p>📞 9500027638 | 9791367638</p>
+      <p>📧 profenaaneetacademy@gmail.com</p>
+      <p>🕒 9.00 AM TO 8.00 PM <br></br> Mon to Sat</p>
+    </div>
+    <div class="footer-column">
+      <h3>Address</h3>
+      <p>📍 <strong>Profenaa NEET & JEE Academy</strong></p>
+<p>📍  37/1, Rajarajeshwari Nagar 2,T.kottampatti, Pollachi,coimbatore Dt-642002</p>    </div>
+     <div class="footer-container">
+      <div class="footer-logo-section">
+        <img src="images/academy logo.png" alt="Profenaa Logo" class="logo" />
+        <p><b>Profenaa NEET & JEE Academy</b></p>
+      </div>
+      <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Profenaa. All rights reserved.</p>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+
+  </footer>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const toc = document.querySelector(".toc");
+    const footer = document.querySelector("footer");
+
+    if (!footer) return; // Exit if footer not found
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            toc?.classList.add("hidden");
+          } else {
+            toc?.classList.remove("hidden");
+          }
+        });
+      },
+      {
+        root: null,
+        threshold: 0.1
+      }
+    );
+
+    observer.observe(footer);
+  });
+</script>
+
+
+</html>

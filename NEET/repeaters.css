@@ -1052,7 +1052,7 @@ body.modal-open {
     }
 @media screen and (max-width: 769px) {
   #popup {
-    width: 80%;
+    width: 50%;
     max-width: 420px;
     padding: 25px;
   }
@@ -1064,13 +1064,5 @@ body.modal-open {
     width: 90%;
     max-width: 320px;
     padding: 20px;
-  }
-}
-@media screen and (max-width: 321px) {
-#popup {
-  .input-group input,
-.input-group textarea {
-  width: 75%;
-}
   }
 }
