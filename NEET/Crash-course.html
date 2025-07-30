@@ -334,14 +334,14 @@ AOS.init({
     <div id="popup">
       <span class="close" id="closeBtn">×</span>
       <h2>Enroll Now</h2>
-      <form id="contactForm">
+    <form id="contactForm">
         <div class="input-group">
-          <label>Username</label>
+          <label>Userame</label>
           <input type="text" name="username" required>
         </div>
         <div class="input-group">
-          <label>Password</label>
-          <input type="password" name="password" required>
+          <label>Phone number</label>
+          <input type="tel" name="phone" required>
         </div>
         <div class="input-group">
           <label>Email</label>
@@ -349,7 +349,7 @@ AOS.init({
         </div>
         <div class="input-group">
           <label>course</label>
-          <input type="text" name="text" required>
+          <input type="text" name="course" required>
         </div>
         <div class="input-group">
           <label>Comment</label>
@@ -388,8 +388,13 @@ AOS.init({
       e.preventDefault();
       console.log('Submitted:', Object.fromEntries(new FormData(form)));
       hideForm();
-    });
+    }); 
+    
   </script>
  
+ <!-- backend  -->
+
+<script src="backend.js"></script>
+
 </body>
 </html>
