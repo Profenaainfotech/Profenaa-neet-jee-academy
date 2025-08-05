@@ -304,7 +304,7 @@ body {
   background: #f4f9f4;
   border: 1px solid #cde3c3;
   border-radius: 12px;
-  padding: 20px 40px;
+  padding: 10px 10px;
   text-align: center;
   transition: transform 0.3s ease;
 }
