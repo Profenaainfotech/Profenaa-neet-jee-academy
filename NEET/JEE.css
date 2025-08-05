@@ -1259,6 +1259,7 @@ body.modal-open {
     #popup h2 {
       text-align: center;
       margin-bottom: 20px;
+      text-shadow: none;
       color: #133011;
     }
     .input-group {
@@ -1310,6 +1311,7 @@ body.modal-open {
       font-size: 16px;
       cursor: pointer;
       margin-top: 12px;
+      box-shadow: none;
       transition: background 0.3s, box-shadow 0.3s;
     }
     .submit-btn:hover {
