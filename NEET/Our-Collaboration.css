@@ -304,9 +304,10 @@ body {
   background: #f4f9f4;
   border: 1px solid #cde3c3;
   border-radius: 12px;
-  padding: 10px 10px;
+  padding: 20px;
   text-align: center;
   transition: transform 0.3s ease;
+ 
 }
 
 .feature-card img {
@@ -341,7 +342,7 @@ body {
 
   .feature-card {
     flex: 1;
-    max-width: 260px;
+    max-width: 310px;
   }
 }
 
