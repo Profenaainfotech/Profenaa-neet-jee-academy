@@ -18,7 +18,6 @@ function hideForm() {
 const admissionBtn = document.getElementById('admission-btn');
 admissionBtn.addEventListener('click', (e) => {
   e.preventDefault();
-  document.getElementById('buttonType').value = 'Admission Open';
   showForm();
 });
 

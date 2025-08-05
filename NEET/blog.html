@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
-   <link rel="icon" type="image/png" href="images/academy logo.png">
-    <link rel="stylesheet" href="blog.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog</title>
+  <link rel="icon" type="image/png" href="images/academy logo.png">
+  <link rel="stylesheet" href="blog.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
 <body>
-<!-- navbar -->
+  <!-- navbar -->
   <nav class="navbar">
     <div class="navbar-container">
       <div class="navbar-brand">
-               <a href="homepage.html"> <img src="images/academy logo.png" alt="logo" class="navbar-logo" /></a>
+        <a href="homepage.html"> <img src="images/academy logo.png" alt="logo" class="navbar-logo" /></a>
 
         <span class="brand-text">NEET&JEE Academy</span>
       </div>
@@ -26,295 +28,314 @@
         <a href="homepage.html">Home</a>
         <a href="about-us.html">About Us</a>
 
-        
+
         <div class="dropdown" id="dropdown">
           <span class="dropdown-btn">Courses ▼</span>
           <div class="dropdown-content" id="dropdown-content">
             <a href="neet.html">NEET</a>
             <a href="JEE.html">JEE</a>
-          <a href="repeaters.html">Repeaters</a>
+            <a href="repeaters.html">Repeaters</a>
             <a href="Crash-course.html">Crash Course</a>
-                        <a href="foundation.html">Foundation</a>  
- 
-
-          </div>
+            <a href="foundation.html">Foundation</a>
+           </div>
         </div>
         <div class="dropdown" id="dropdown">
           <span class="dropdown-btn">Flagship ▼</span>
           <div class="dropdown-content" id="dropdown-content">
             <a href="Our-Collaboration.html"> Our Collaboration</a>
             <a href="Gallery.html">Gallery</a>
-            <!-- <a href="Certification.html">Certification and verification</a> -->
           </div>
         </div>
         <a href="blog.html">Blog</a>
         <a href="Contact-us.html">Contact Us</a>
-      <a href="javascript:void(0)" id="admission-btn" class="login-btn">Admissions Open</a>
-    </div>
-     
+        <a href="javascript:void(0)" id="admission-btn" class="login-btn">Admissions Open</a>
+      </div>
+
     </div>
   </nav>
-     <script src="admission-btn.js"></script>
+  <script src="admission-btn.js"></script>
 
   <script>
     // navbar
 
-document.addEventListener("DOMContentLoaded", function () {
-  const menuIcon = document.getElementById("menu-icon");
-  const navbarLinks = document.getElementById("navbar-links");
-  const dropdownBtns = document.querySelectorAll(".dropdown-btn");
-  // const dropdownContent = document.getElementById("dropdown-content");
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuIcon = document.getElementById("menu-icon");
+      const navbarLinks = document.getElementById("navbar-links");
+      const dropdownBtns = document.querySelectorAll(".dropdown-btn");
 
-  let isMobile = window.innerWidth <= 768;
+      let isMobile = window.innerWidth <= 768;
 
-  menuIcon.addEventListener("click", () => {
-    navbarLinks.classList.toggle("active");
-  });
-
-   dropdownBtns.forEach(btn => {
-    btn.addEventListener("click", function (e) {
-      if (isMobile) {
-        e.stopPropagation();
-        const dropdownContent = this.nextElementSibling;
-        dropdownContent.classList.toggle("active");
-      }
-    });
-  });
-
-    document.addEventListener("click", function (e) {
-    if (isMobile && !e.target.closest(".dropdown")) {
-      document.querySelectorAll(".dropdown-content.active").forEach(content => {
-        content.classList.remove("active");
+      menuIcon.addEventListener("click", () => {
+        navbarLinks.classList.toggle("active");
       });
-    }
-  });
 
-
-  window.addEventListener("resize", function () {
-    isMobile = window.innerWidth <= 768;
-    if (!isMobile) {
-      document.querySelectorAll(".dropdown-content").forEach(content => content.classList.remove("active"));
-      navbarLinks.classList.remove("active");
-    }
-  });
-});
-  </script>
-    <!-- section 1  -->
-    <div class="blog-reading-progress"></div>
-    
-    <header class="blog-header">
-        <h1 class="blog-title">NEET & JEE Academy Blog</h1>
-        <p class="blog-subtitle">Expert Tips, Strategies & Success Stories for Medical & Engineering Aspirants</p>
-    </header>
-
-    <main class="blog-main">
-        <article class="blog-post">
-            <div class="blog-post-image">
-                <img src="https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=800" alt="NEET Physics Preparation">
-            </div>
-            <div class="blog-post-content">
-                <div class="blog-post-category">NEET Physics</div>
-                <h2 class="blog-post-title">Master NEET Physics: Top 10 Strategies That Actually Work</h2>
-                <p class="blog-post-excerpt">
-                    Physics often intimidates NEET aspirants, but with the right approach, it can become your strongest subject. 
-                    Discover proven strategies used by top scorers to excel in NEET Physics and boost your confidence.
-                </p>
-                <div class="blog-post-meta">
-                    <span class="blog-post-date">March 15, 2024</span>
-                    <span class="blog-post-reading-time">5 min read</span>
-                </div>
-                <a href="blog1.html" class="blog-post-link">Read Full Article</a>
-            </div>
-        </article>
-
-        <article class="blog-post blog-post-reverse">
-            <div class="blog-post-image">
-                <img src="https://images.pexels.com/photos/1181533/pexels-photo-1181533.jpeg?auto=compress&cs=tinysrgb&w=800" alt="JEE Mathematics Tips">
-            </div>
-            <div class="blog-post-content">
-                <div class="blog-post-category">JEE Mathematics</div>
-                <h2 class="blog-post-title">JEE Mathematics: Problem-Solving Techniques for Complex Calculus</h2>
-                <p class="blog-post-excerpt">
-                    Calculus forms the backbone of JEE Mathematics. Learn systematic approaches to tackle even the most 
-                    challenging calculus problems with confidence and precision using proven methodologies.
-                </p>
-                <div class="blog-post-meta">
-                    <span class="blog-post-date">March 12, 2024</span>
-                    <span class="blog-post-reading-time">7 min read</span>
-                </div>
-                <a href="blog2.html" class="blog-post-link">Read Full Article</a>
-            </div>
-        </article>
-
-        <article class="blog-post">
-            <div class="blog-post-image">
-                <img src="https://images.pexels.com/photos/2280549/pexels-photo-2280549.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Organic Chemistry Study">
-            </div>
-            <div class="blog-post-content">
-                <div class="blog-post-category">Chemistry</div>
-                <h2 class="blog-post-title">Organic Chemistry Made Simple: Memory Techniques for Reactions</h2>
-                <p class="blog-post-excerpt">
-                    Organic chemistry doesn't have to be memorization hell. Discover powerful memory techniques and 
-                    logical approaches that top students use to master organic reactions effortlessly and systematically.
-                </p>
-                <div class="blog-post-meta">
-                    <span class="blog-post-date">March 10, 2024</span>
-                    <span class="blog-post-reading-time">6 min read</span>
-                </div>
-                <a href="blog3.html" class="blog-post-link">Read Full Article</a>
-            </div>
-        </article>
-
-        <article class="blog-post blog-post-reverse">
-            <div class="blog-post-image">
-                <img src="https://images.pexels.com/photos/1181216/pexels-photo-1181216.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Time Management Study">
-            </div>
-            <div class="blog-post-content">
-                <div class="blog-post-category">Study Tips</div>
-                <h2 class="blog-post-title">Time Management Secrets: How to Cover Entire Syllabus in 6 Months</h2>
-                <p class="blog-post-excerpt">
-                    Feeling overwhelmed by the vast syllabus? Learn how toppers strategically manage their time to 
-                    cover everything efficiently while maintaining high retention rates and avoiding burnout.
-                </p>
-                <div class="blog-post-meta">
-                    <span class="blog-post-date">March 8, 2024</span>
-                    <span class="blog-post-reading-time">4 min read</span>
-                </div>
-                <a href="blog4.html" class="blog-post-link">Read Full Article</a>
-            </div>
-        </article>
-
-        <article class="blog-post">
-            <div class="blog-post-image">
-                <img src="https://images.pexels.com/photos/1181472/pexels-photo-1181472.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Biology NEET Preparation">
-            </div>
-            <div class="blog-post-content">
-                <div class="blog-post-category">NEET Biology</div>
-                <h2 class="blog-post-title">NEET Biology: High-Yield Topics That Guarantee 150+ Marks</h2>
-                <p class="blog-post-excerpt">
-                    Biology is your gateway to NEET success. Identify and master the high-yield topics that consistently 
-                    appear in exams and can boost your score significantly with focused preparation strategies.
-                </p>
-                <div class="blog-post-meta">
-                    <span class="blog-post-date">March 5, 2024</span>
-                    <span class="blog-post-reading-time">8 min read</span>
-                </div>
-                <a href="blog5.html" class="blog-post-link">Read Full Article</a>
-            </div>
-        </article>
-
-        <article class="blog-post blog-post-reverse">
-            <div class="blog-post-image">
-                <img src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Success Story">
-            </div>
-            <div class="blog-post-content">
-                <div class="blog-post-category">Success Story</div>
-                <h2 class="blog-post-title">From 400 to 650: Rahul's NEET Success Journey</h2>
-                <p class="blog-post-excerpt">
-                    Read how Rahul transformed his NEET preparation from scoring 400 in mock tests to achieving 650 in 
-                    the actual exam. His strategy, mindset, and daily routine revealed in detail.
-                </p>
-                <div class="blog-post-meta">
-                    <span class="blog-post-date">March 3, 2024</span>
-                    <span class="blog-post-reading-time">10 min read</span>
-                </div>
-                <a href="blog6.html" class="blog-post-link">Read Full Article</a>
-            </div>
-        </article>
-      </main>
-
-    <script>
-        // Animation on scroll
-function observeElements() {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('blog-animate');
-            }
+      dropdownBtns.forEach(btn => {
+        btn.addEventListener("click", function (e) {
+          if (isMobile) {
+            e.stopPropagation();
+            const dropdownContent = this.nextElementSibling;
+            dropdownContent.classList.toggle("active");
+          }
         });
-    }, {
+      });
+
+      document.addEventListener("click", function (e) {
+        if (isMobile && !e.target.closest(".dropdown")) {
+          document.querySelectorAll(".dropdown-content.active").forEach(content => {
+            content.classList.remove("active");
+          });
+        }
+      });
+
+
+      window.addEventListener("resize", function () {
+        isMobile = window.innerWidth <= 768;
+        if (!isMobile) {
+          document.querySelectorAll(".dropdown-content").forEach(content => content.classList.remove("active"));
+          navbarLinks.classList.remove("active");
+        }
+      });
+    });
+  </script>
+  <!-- section 1  -->
+  <div class="blog-reading-progress"></div>
+
+  <header class="blog-header">
+    <h1 class="blog-title">NEET & JEE Academy Blog</h1>
+    <p class="blog-subtitle">Expert Tips, Strategies & Success Stories for Medical & Engineering Aspirants</p>
+  </header>
+
+  <main class="blog-main">
+    <article class="blog-post">
+      <div class="blog-post-image">
+        <img
+          src="https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=800"
+          alt="NEET Physics Preparation">
+      </div>
+      <div class="blog-post-content">
+        <div class="blog-post-category">NEET Physics</div>
+        <h2 class="blog-post-title">Master NEET Physics: Top 10 Strategies That Actually Work</h2>
+        <p class="blog-post-excerpt">
+         Struggling with NEET Physics? You're not alone. Physics is one of the most feared subjects among NEET aspirants, but it doesn’t have to be. At Profenaa Academy – Pollachi's trusted NEET coaching institute, our top-scoring students have followed smart, time-tested techniques to turn Physics into their highest-scoring subject.
+In this blog post, we share the top 10 expert strategies that will help you simplify concepts, master problem-solving, and build the confidence to score 160+ in NEET Physics.
+Whether you're a repeater or a first-time aspirant, these techniques are designed to work for every NEET student preparing under the expert guidance of Profenaa Pollachi.
+        </p>
+        <div class="blog-post-meta">
+          <span class="blog-post-date">March 15, 2024</span>
+          <span class="blog-post-reading-time">5 min read</span>
+        </div>
+        <a href="blog1.html" class="blog-post-link">Read Full Article</a>
+      </div>
+    </article>
+
+    <article class="blog-post blog-post-reverse">
+      <div class="blog-post-image">
+        <img src="https://images.pexels.com/photos/1181533/pexels-photo-1181533.jpeg?auto=compress&cs=tinysrgb&w=800"
+          alt="JEE Mathematics Tips">
+      </div>
+      <div class="blog-post-content">
+        <div class="blog-post-category">JEE Mathematics</div>
+        <h2 class="blog-post-title">JEE Mathematics: Problem-Solving Techniques for Complex Calculus</h2>
+        <p class="blog-post-excerpt">
+         Struggling with Calculus in JEE Mathematics? You’re not alone. Calculus is a crucial yet often feared part of the JEE syllabus — but with the right problem-solving strategies, it becomes manageable and even enjoyable.
+At Profenaa Academy, Coimbatore's leading JEE coaching center, we train students with systematic, concept-based approaches that simplify even the most complex calculus questions.
+<h4>In this blog, discover proven techniques that help you:</h4>
+i.Break down advanced calculus problems step-by-step<br>
+ii.Master integration, differentiation, and application-based questions<br>
+iii.Build the speed and accuracy needed to crack JEE Main & Advanced<br>
+
+Whether you're from Coimbatore, Tiruppur, Erode, or nearby districts, these calculus strategies are designed to help you score high in JEE Mathematics.
+        </p>
+        <div class="blog-post-meta">
+          <span class="blog-post-date">March 12, 2024</span>
+          <span class="blog-post-reading-time">7 min read</span>
+        </div>
+        <a href="blog2.html" class="blog-post-link">Read Full Article</a>
+      </div>
+    </article>
+
+    <article class="blog-post">
+      <div class="blog-post-image">
+        <img src="https://images.pexels.com/photos/2280549/pexels-photo-2280549.jpeg?auto=compress&cs=tinysrgb&w=800"
+          alt="Organic Chemistry Study">
+      </div>
+      <div class="blog-post-content">
+        <div class="blog-post-category">Chemistry</div>
+        <h2 class="blog-post-title">Organic Chemistry Made Simple: Memory Techniques for Reactions</h2>
+        <p class="blog-post-excerpt">
+  Organic Chemistry is often seen as overwhelming due to the sheer number of reactions — but it doesn’t have to be. With the right memory techniques and logical patterns, even the most complex reaction mechanisms can become easy to recall.
+
+At Profenaa Academy – one of the top NEET & JEE coaching centers in Erode, we train students to approach Organic Chemistry strategically, not just by rote learning.
+
+<h4>In this blog, you’ll discover:</h4>
+
+i.Proven memory tricks to recall name reactions and mechanisms<br>
+
+ii.Pattern recognition techniques that reduce confusion<br>
+
+iii.How to logically group reactions for better long-term retention<br>
+        </p>
+        <div class="blog-post-meta">
+          <span class="blog-post-date">March 10, 2024</span>
+          <span class="blog-post-reading-time">6 min read</span>
+        </div>
+        <a href="blog3.html" class="blog-post-link">Read Full Article</a>
+      </div>
+    </article>
+
+    <article class="blog-post blog-post-reverse">
+      <div class="blog-post-image">
+        <img src="https://images.pexels.com/photos/1181216/pexels-photo-1181216.jpeg?auto=compress&cs=tinysrgb&w=800"
+          alt="Time Management Study">
+      </div>
+      <div class="blog-post-content">
+        <div class="blog-post-category">Study Tips</div>
+        <h2 class="blog-post-title">Time Management Secrets: How to Cover Entire Syllabus in 6 Months</h2>
+        <p class="blog-post-excerpt">
+          Feeling overwhelmed by the vast syllabus? Learn how toppers strategically manage their time to
+          cover everything efficiently while maintaining high retention rates and avoiding burnout.
+        </p>
+        <div class="blog-post-meta">
+          <span class="blog-post-date">March 8, 2024</span>
+          <span class="blog-post-reading-time">4 min read</span>
+        </div>
+        <a href="blog4.html" class="blog-post-link">Read Full Article</a>
+      </div>
+    </article>
+
+    <article class="blog-post">
+      <div class="blog-post-image">
+        <img src="https://images.pexels.com/photos/1181472/pexels-photo-1181472.jpeg?auto=compress&cs=tinysrgb&w=800"
+          alt="Biology NEET Preparation">
+      </div>
+      <div class="blog-post-content">
+        <div class="blog-post-category">NEET Biology</div>
+        <h2 class="blog-post-title">NEET Biology: High-Yield Topics That Guarantee 150+ Marks</h2>
+        <p class="blog-post-excerpt">
+          Biology is your gateway to NEET success. Identify and master the high-yield topics that consistently
+          appear in exams and can boost your score significantly with focused preparation strategies.
+        </p>
+        <div class="blog-post-meta">
+          <span class="blog-post-date">March 5, 2024</span>
+          <span class="blog-post-reading-time">8 min read</span>
+        </div>
+        <a href="blog5.html" class="blog-post-link">Read Full Article</a>
+      </div>
+    </article>
+
+    <article class="blog-post blog-post-reverse">
+      <div class="blog-post-image">
+        <img src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=800"
+          alt="Success Story">
+      </div>
+      <div class="blog-post-content">
+        <div class="blog-post-category">Success Story</div>
+        <h2 class="blog-post-title">From 400 to 650: Rahul's NEET Success Journey</h2>
+        <p class="blog-post-excerpt">
+          Read how Rahul transformed his NEET preparation from scoring 400 in mock tests to achieving 650 in
+          the actual exam. His strategy, mindset, and daily routine revealed in detail.
+        </p>
+        <div class="blog-post-meta">
+          <span class="blog-post-date">March 3, 2024</span>
+          <span class="blog-post-reading-time">10 min read</span>
+        </div>
+        <a href="blog6.html" class="blog-post-link">Read Full Article</a>
+      </div>
+    </article>
+  </main>
+
+  <script>
+    // Animation on scroll
+    function observeElements() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('blog-animate');
+          }
+        });
+      }, {
         threshold: 0.1,
         rootMargin: '0px 0px -100px 0px'
-    });
+      });
 
-    document.querySelectorAll('.blog-post').forEach(post => {
+      document.querySelectorAll('.blog-post').forEach(post => {
         observer.observe(post);
-    });
-}
+      });
+    }
 
 
-// Simple image loading with error handling
-function setupImageLoading() {
-    const images = document.querySelectorAll('.blog-post-image img');
-    
-    images.forEach(img => {
+    // Simple image loading with error handling
+    function setupImageLoading() {
+      const images = document.querySelectorAll('.blog-post-image img');
+
+      images.forEach(img => {
         // Add error handling for failed image loads
-        img.onerror = function() {
-            this.style.display = 'none';
-            this.parentElement.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
-            this.parentElement.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: white; font-size: 1.2rem;">📚 Educational Content</div>';
+        img.onerror = function () {
+          this.style.display = 'none';
+          this.parentElement.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+          this.parentElement.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: white; font-size: 1.2rem;">📚 Educational Content</div>';
         };
-        
+
         // Ensure image loads properly
         if (img.complete) {
-            img.style.opacity = '1';
+          img.style.opacity = '1';
         } else {
-            img.onload = function() {
-                this.style.opacity = '1';
-            };
+          img.onload = function () {
+            this.style.opacity = '1';
+          };
         }
-    });
-}
-
-// Initialize everything when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
-    observeElements();
-    setupImageLoading();
-    
-    // Update reading progress on scroll
-    window.addEventListener('scroll', updateReadingProgress);
-    
-    // Add smooth reveal animation for posts
-    setTimeout(() => {
-        document.querySelectorAll('.blog-post').forEach((post, index) => {
-            setTimeout(() => {
-                post.classList.add('blog-animate');
-            }, index * 200);
-        });
-    }, 500);
-});
-
-// Add touch gestures for mobile
-let touchStartY = 0;
-let touchEndY = 0;
-
-document.addEventListener('touchstart', function(e) {
-    touchStartY = e.changedTouches[0].screenY;
-});
-
-document.addEventListener('touchend', function(e) {
-    touchEndY = e.changedTouches[0].screenY;
-    handleSwipe();
-});
-
-function handleSwipe() {
-    const swipeThreshold = 50;
-    const diff = touchStartY - touchEndY;
-    
-    if (Math.abs(diff) > swipeThreshold) {
-        if (diff > 0) {
-            // Swipe up - scroll down
-            window.scrollBy({ top: 300, behavior: 'smooth' });
-        } else {
-            // Swipe down - scroll up
-            window.scrollBy({ top: -300, behavior: 'smooth' });
-        }
+      });
     }
-}
-    </script>
 
-    <!-- footer  -->
- <footer>
+    // Initialize everything when DOM is loaded
+    document.addEventListener('DOMContentLoaded', function () {
+      observeElements();
+      setupImageLoading();
+
+      // Update reading progress on scroll
+      window.addEventListener('scroll', updateReadingProgress);
+
+      // Add smooth reveal animation for posts
+      setTimeout(() => {
+        document.querySelectorAll('.blog-post').forEach((post, index) => {
+          setTimeout(() => {
+            post.classList.add('blog-animate');
+          }, index * 200);
+        });
+      }, 500);
+    });
+
+    // Add touch gestures for mobile
+    let touchStartY = 0;
+    let touchEndY = 0;
+
+    document.addEventListener('touchstart', function (e) {
+      touchStartY = e.changedTouches[0].screenY;
+    });
+
+    document.addEventListener('touchend', function (e) {
+      touchEndY = e.changedTouches[0].screenY;
+      handleSwipe();
+    });
+
+    function handleSwipe() {
+      const swipeThreshold = 50;
+      const diff = touchStartY - touchEndY;
+
+      if (Math.abs(diff) > swipeThreshold) {
+        if (diff > 0) {
+          // Swipe up - scroll down
+          window.scrollBy({ top: 300, behavior: 'smooth' });
+        } else {
+          // Swipe down - scroll up
+          window.scrollBy({ top: -300, behavior: 'smooth' });
+        }
+      }
+    }
+  </script>
+
+  <!-- footer  -->
+  <footer>
     <div class="footer-column">
       <h3>Page</h3>
       <ul>
@@ -325,12 +346,12 @@ function handleSwipe() {
     </div>
     <div class="footer-column">
       <h3>Program</h3>
-        <ul>
+      <ul>
         <li><a href="neet.html"> NEET</a></li>
         <li><a href="JEE.html"> JEE</a></li>
         <li><a href="repeaters.html"> Repeaters </a></li>
         <li><a href="Crash-course.html">Crash course</a></li>
-               <li><a href="foundation.css">Foundation</a></li>
+        <li><a href="foundation.css">Foundation</a></li>
 
       </ul>
     </div>
@@ -352,14 +373,15 @@ function handleSwipe() {
     <div class="footer-column">
       <h3>Address</h3>
       <p>📍 <strong>Profenaa NEET & JEE Academy</strong></p>
-<p>📍  37/1, Rajarajeshwari Nagar 2,T.kottampatti, Pollachi,coimbatore Dt-642002</p>    </div>
-     <div class="footer-container">
+      <p>📍 37/1, Rajarajeshwari Nagar 2,T.kottampatti, Pollachi,coimbatore Dt-642002</p>
+    </div>
+    <div class="footer-container">
       <div class="footer-logo-section">
         <img src="images/academy logo.png" alt="Profenaa Logo" class="logo" />
         <p><b>Profenaa NEET & JEE Academy</b></p>
       </div>
       <div class="social-icons">
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-twitter"></i></a>
         <a href="#"><i class="fab fa-linkedin-in"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -372,21 +394,21 @@ function handleSwipe() {
     </div>
 
   </footer>
- <!-- chat  -->
-<div class="floating-whatsapp" onclick="location.href='https://wa.me/+919944897638?text=Hello%20there!'">
-  <div class="icon-container">
-    <i class="fa fa-whatsapp" style="color: white; font-size: 30px;"></i>
+  <!-- chat  -->
+  <div class="floating-whatsapp" onclick="location.href='https://wa.me/+919944897638?text=Hello%20there!'">
+    <div class="icon-container">
+      <i class="fa fa-whatsapp" style="color: white; font-size: 30px;"></i>
+    </div>
   </div>
-</div>
 
-<!-- form  -->
+  <!-- form  -->
 
-<!-- Demo content -->
+  <!-- Demo content -->
   <div id="overlay">
     <div id="popup">
       <span class="close" id="closeBtn">×</span>
       <h2>Enroll Now</h2>
-    <form id="contactForm">
+      <form id="contactForm">
         <div class="input-group">
           <label>Userame</label>
           <input type="text" name="username" required>
@@ -412,7 +434,7 @@ function handleSwipe() {
     </div>
   </div>
 
- <script>
+  <script>
     const overlay = document.getElementById('overlay');
     const form = document.getElementById('contactForm');
     const closeBtn = document.getElementById('closeBtn');
@@ -443,7 +465,8 @@ function handleSwipe() {
       hideForm();
     });
   </script>
-  
- 
+
+
 </body>
+
 </html>
