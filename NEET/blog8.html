@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>blog6</title>
+<link rel="stylesheet" href="blog2.css">
+   <link rel="icon" type="image/png" href="images/academy logo.png">
+  <!-- Font and Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+     <!-- navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-brand">
+               <a href="homepage.html"> <img src="images/academy logo.png" alt="logo" class="navbar-logo" /></a>
+
+        <span class="brand-text">NEET&JEE Academy</span>
+      </div>
+
+      <div class="menu-icon" id="menu-icon">☰</div>
+
+      <div class="navbar-links" id="navbar-links">
+        <a href="homepage.html">Home</a>
+        <a href="about-us.html">About Us</a>
+
+        
+        <div class="dropdown" id="dropdown">
+          <span class="dropdown-btn">Courses ▼</span>
+          <div class="dropdown-content" id="dropdown-content">
+            <a href="neet.html">NEET</a>
+            <a href="JEE.html">JEE</a>
+          <a href="repeaters.html">Repeaters</a>
+            <a href="Crash-course.html">Crash Course</a>
+                        <a href="foundation.html">Foundation</a>  
+ 
+
+          </div>
+        </div>
+        <div class="dropdown" id="dropdown">
+          <span class="dropdown-btn">Flagship ▼</span>
+          <div class="dropdown-content" id="dropdown-content">
+            <a href="Our-Collaboration.html"> Our Collaboration</a>
+            <a href="Gallery.html">Gallery</a>
+            <!-- <a href="Certification.html">Certification and verification</a> -->
+          </div>
+        </div>
+        <a href="blog.html">Blog</a>
+        <a href="Contact-us.html">Contact Us</a>
+      <a href="javascript:void(0)" id="admission-btn" class="login-btn">Admissions Open</a>
+    </div>
+     
+    </div>
+  </nav>
+
+     <script src="admission-btn.js"></script>
+
+  <script>
+    // navbar
+
+document.addEventListener("DOMContentLoaded", function () {
+  const menuIcon = document.getElementById("menu-icon");
+  const navbarLinks = document.getElementById("navbar-links");
+  const dropdownBtns = document.querySelectorAll(".dropdown-btn");
+  // const dropdownContent = document.getElementById("dropdown-content");
+
+  let isMobile = window.innerWidth <= 768;
+
+  menuIcon.addEventListener("click", () => {
+    navbarLinks.classList.toggle("active");
+  });
+
+   dropdownBtns.forEach(btn => {
+    btn.addEventListener("click", function (e) {
+      if (isMobile) {
+        e.stopPropagation();
+        const dropdownContent = this.nextElementSibling;
+        dropdownContent.classList.toggle("active");
+      }
+    });
+  });
+
+    document.addEventListener("click", function (e) {
+    if (isMobile && !e.target.closest(".dropdown")) {
+      document.querySelectorAll(".dropdown-content.active").forEach(content => {
+        content.classList.remove("active");
+      });
+    }
+  });
+
+
+  window.addEventListener("resize", function () {
+    isMobile = window.innerWidth <= 768;
+    if (!isMobile) {
+      document.querySelectorAll(".dropdown-content").forEach(content => content.classList.remove("active"));
+      navbarLinks.classList.remove("active");
+    }
+  });
+});
+  </script>
+<header>
+  <h1>Dindigul Students Excel in NEET & JEE with Profenaa's Personalized Coaching</h1>
+</header>
+
+<div class="toc" id="toc">
+  <h3>Explore</h3>
+  <a href="#strategy1">1. Dindigul’s Rise in NEET & JEE Aspirants</a>
+  <a href="#strategy2">2. Flexible Coaching Plans for Dindigul Students</a>
+  <a href="#strategy3">3. Smart Learning with Technology & Materials</a>
+  <a href="#strategy4">4. Crash Courses & Career Workshops</a>
+  <a href="#strategy5">5. Parent-Teacher Academic Transparency</a>
+  <a href="#strategy6">6. Real Success Stories from Dindigul</a>
+</div>
+
+<main class="container">
+  <section class="strategy" id="strategy1">
+    <h2><i class="fas fa-chart-line"></i> 1. Dindigul’s Rise in NEET & JEE Aspirants</h2>
+    <img src="https://images.pexels.com/photos/6958531/pexels-photo-6958531.jpeg" alt="Student Writing Math Notes">
+    <p>With an increase in student ambition and academic awareness, Dindigul is fast emerging as a key contributor to NEET and JEE success in Tamil Nadu. Students here are opting for competitive coaching earlier and with sharper focus. Profenaa Academy has become the go-to institution for serious aspirants in the region.</p>
+    <div class="tips"><strong>Tip:</strong> Start early, even from Class 9 or 10, to build strong fundamentals.</div>
+  </section>
+
+  <section class="strategy" id="strategy2">
+    <h2><i class="fas fa-calendar-alt"></i> 2. Flexible Coaching Plans for Dindigul Students</h2>
+    <img src="images/blog2.jpg" alt="Flexible Coaching Plans Dindigul" class="strategy-img">
+    <p>Profenaa offers weekday, weekend, and hybrid coaching formats. Students from Dindigul benefit from customized learning tracks that fit their school schedules. From foundation courses to full-length NEET & JEE crash programs, Profenaa adapts to each learner's pace.</p>
+    <div class="tips"><strong>Tip:</strong> Choose a format that allows for both depth and consistency in preparation.</div>
+  </section>
+
+  <section class="strategy" id="strategy3">
+    <h2><i class="fas fa-laptop-code"></i> 3. Smart Learning with Technology & Materials</h2>
+    <img src="images/blog3.jpg" alt="Digital Study Materials Profenaa" />
+    <p>Dindigul students at Profenaa enjoy tech-enabled classrooms, smart boards, and curated study materials designed by subject experts. Our AI-powered test engine personalizes mock tests based on student performance, ensuring improvement in weak areas.</p>
+    <div class="tips"><strong>Tip:</strong> Use analytics from the test engine to focus revision efforts smartly.</div>
+  </section>
+
+  <section class="strategy" id="strategy4">
+    <h2><i class="fas fa-bolt"></i> 4. Crash Courses & Career Workshops</h2>
+    <img src="images/blog4.jpg" alt="Crash Courses Dindigul Students" />
+    <p>Profenaa’s crash modules for Physics, Chemistry, Biology, and Mathematics are highly effective for last-minute prep. In addition, career awareness workshops expose students from Dindigul to fields like AI, Medicine, Engineering, and Research.</p>
+    <div class="tips"><strong>Tip:</strong> Join workshops early to understand which entrance exam aligns with your dream career.</div>
+  </section>
+
+  <section class="strategy" id="strategy5">
+    <h2><i class="fas fa-users"></i> 5. Parent-Teacher Academic Transparency</h2>
+    <img src="images/blog5.jpg" alt="Parent Teacher Meetings Profenaa" />
+    <p>Profenaa ensures complete transparency through scheduled parent-teacher meetings and online progress reports. Dindigul parents appreciate being involved in every stage of their child's academic journey.</p>
+    <div class="tips"><strong>Tip:</strong> Use regular performance reviews to help your child stay on track and motivated.</div>
+  </section>
+
+  <section class="strategy" id="strategy6">
+    <h2><i class="fas fa-award"></i> 6. Real Success Stories from Dindigul</h2>
+    <img src="images/blog6.jpg" alt="Dindigul NEET JEE Toppers" />
+    <p>Many of Profenaa’s top NEET scorers and JEE rankers come from Dindigul. These young achievers have shown how proper guidance, timely mentorship, and hard work can lead to national-level results, regardless of location.</p>
+    <div class="tips"><strong>Tip:</strong> Learn from past achievers — ask about their routine, mock strategy, and time management.</div>
+  </section>
+</main>
+
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.strategy').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+  
+   <!-- chat  -->
+<div class="floating-whatsapp" onclick="location.href='https://wa.me/+919944897638?text=Hello%20there!'">
+  <div class="icon-container">
+    <i class="fa fa-whatsapp" style="color: white; font-size: 30px;"></i>
+  </div>
+</div>
+<!-- form  -->
+
+<!-- Demo content -->
+  <div id="overlay">
+    <div id="popup">
+      <span class="close" id="closeBtn">×</span>
+      <h2>Enroll Now</h2>
+    <form id="contactForm">
+        <div class="input-group">
+          <label>Userame</label>
+          <input type="text" name="username" required>
+        </div>
+        <div class="input-group">
+          <label>Phone number</label>
+          <input type="tel" name="phone" required>
+        </div>
+        <div class="input-group">
+          <label>Email</label>
+          <input type="email" name="email" required>
+        </div>
+        <div class="input-group">
+          <label>course</label>
+          <input type="text" name="course" required>
+        </div>
+        <div class="input-group">
+          <label>Comment</label>
+          <textarea name="comment"></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+
+ <script>
+    const overlay = document.getElementById('overlay');
+    const form = document.getElementById('contactForm');
+    const closeBtn = document.getElementById('closeBtn');
+
+    function lockBackground() {
+      document.body.classList.add('modal-open');
+    }
+    function unlockBackground() {
+      document.body.classList.remove('modal-open');
+    }
+    function showForm() {
+      overlay.style.display = 'flex';
+      lockBackground();
+    }
+    function hideForm() {
+      overlay.style.display = 'none';
+      unlockBackground();
+    }
+    closeBtn.addEventListener('click', hideForm);
+    overlay.addEventListener('click', e => {
+      if (e.target === overlay) hideForm();
+    });
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      console.log('Submitted:', Object.fromEntries(new FormData(form)));
+      hideForm();
+    });
+  </script>
+</body>
+<!-- footer  -->
+  <footer id="page-footer">
+    <div class="footer-column">
+      <h3>Page</h3>
+      <ul>
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="Contact-us.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Program</h3>
+        <ul>
+        <li><a href="neet.html"> NEET</a></li>
+        <li><a href="JEE.html"> JEE</a></li>
+        <li><a href="repeaters.html"> Repeaters </a></li>
+        <li><a href="Crash-course.html">Crash course</a></li>
+               <li><a href="foundation.css">Foundation</a></li>
+
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Flagship Events</h3>
+      <ul>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="Our-Collaboration.html"> Our Collaboration</a></li>
+        <li><a href="blog.html">Blogs</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Contact Us</h3>
+      <p>📞 9500027638 | 9791367638</p>
+      <p>📧 profenaaneetacademy@gmail.com</p>
+      <p>🕒 9.00 AM TO 8.00 PM <br></br> Mon to Sat</p>
+    </div>
+    <div class="footer-column">
+      <h3>Address</h3>
+      <p>📍 <strong>Profenaa NEET & JEE Academy</strong></p>
+<p>📍  37/1, Rajarajeshwari Nagar 2,T.kottampatti, Pollachi,coimbatore Dt-642002</p>    </div>
+     <div class="footer-container">
+      <div class="footer-logo-section">
+        <img src="images/academy logo.png" alt="Profenaa Logo" class="logo" />
+        <p><b>Profenaa NEET & JEE Academy</b></p>
+      </div>
+      <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Profenaa. All rights reserved.</p>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+
+  </footer>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const toc = document.querySelector(".toc");
+    const footer = document.querySelector("footer");
+
+    if (!footer) return; // Exit if footer not found
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            toc?.classList.add("hidden");
+          } else {
+            toc?.classList.remove("hidden");
+          }
+        });
+      },
+      {
+        root: null,
+        threshold: 0.1
+      }
+    );
+
+    observer.observe(footer);
+  });
+</script>
+
+
+</html>

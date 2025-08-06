@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>blog6</title>
+<link rel="stylesheet" href="blog2.css">
+   <link rel="icon" type="image/png" href="images/academy logo.png">
+  <!-- Font and Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+     <!-- navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-brand">
+               <a href="homepage.html"> <img src="images/academy logo.png" alt="logo" class="navbar-logo" /></a>
+
+        <span class="brand-text">NEET&JEE Academy</span>
+      </div>
+
+      <div class="menu-icon" id="menu-icon">☰</div>
+
+      <div class="navbar-links" id="navbar-links">
+        <a href="homepage.html">Home</a>
+        <a href="about-us.html">About Us</a>
+
+        
+        <div class="dropdown" id="dropdown">
+          <span class="dropdown-btn">Courses ▼</span>
+          <div class="dropdown-content" id="dropdown-content">
+            <a href="neet.html">NEET</a>
+            <a href="JEE.html">JEE</a>
+          <a href="repeaters.html">Repeaters</a>
+            <a href="Crash-course.html">Crash Course</a>
+                        <a href="foundation.html">Foundation</a>  
+ 
+
+          </div>
+        </div>
+        <div class="dropdown" id="dropdown">
+          <span class="dropdown-btn">Flagship ▼</span>
+          <div class="dropdown-content" id="dropdown-content">
+            <a href="Our-Collaboration.html"> Our Collaboration</a>
+            <a href="Gallery.html">Gallery</a>
+            <!-- <a href="Certification.html">Certification and verification</a> -->
+          </div>
+        </div>
+        <a href="blog.html">Blog</a>
+        <a href="Contact-us.html">Contact Us</a>
+      <a href="javascript:void(0)" id="admission-btn" class="login-btn">Admissions Open</a>
+    </div>
+     
+    </div>
+  </nav>
+
+     <script src="admission-btn.js"></script>
+
+  <script>
+    // navbar
+
+document.addEventListener("DOMContentLoaded", function () {
+  const menuIcon = document.getElementById("menu-icon");
+  const navbarLinks = document.getElementById("navbar-links");
+  const dropdownBtns = document.querySelectorAll(".dropdown-btn");
+  // const dropdownContent = document.getElementById("dropdown-content");
+
+  let isMobile = window.innerWidth <= 768;
+
+  menuIcon.addEventListener("click", () => {
+    navbarLinks.classList.toggle("active");
+  });
+
+   dropdownBtns.forEach(btn => {
+    btn.addEventListener("click", function (e) {
+      if (isMobile) {
+        e.stopPropagation();
+        const dropdownContent = this.nextElementSibling;
+        dropdownContent.classList.toggle("active");
+      }
+    });
+  });
+
+    document.addEventListener("click", function (e) {
+    if (isMobile && !e.target.closest(".dropdown")) {
+      document.querySelectorAll(".dropdown-content.active").forEach(content => {
+        content.classList.remove("active");
+      });
+    }
+  });
+
+
+  window.addEventListener("resize", function () {
+    isMobile = window.innerWidth <= 768;
+    if (!isMobile) {
+      document.querySelectorAll(".dropdown-content").forEach(content => content.classList.remove("active"));
+      navbarLinks.classList.remove("active");
+    }
+  });
+});
+  </script>
+<header>
+  <h1>Hybrid NEET & JEE Coaching for Karur Students – Profenaa Advantage</h1>
+</header>
+
+<div class="toc" id="toc">
+  <h3>Milestones</h3>
+  <a href="#strategy1">1. Local Needs, Global Solutions</a>
+  <a href="#strategy2">2. Structured Hybrid Timetable</a>
+  <a href="#strategy3">3. Emphasis on NCERT & Basics</a>
+  <a href="#strategy4">4. Daily Practice via Online Tests</a>
+  <a href="#strategy5">5. Tracking Progress with Reports</a>
+  <a href="#strategy6">6. Full-Length Weekly Tests</a>
+  <a href="#strategy7">7. Digital + Mentor Support</a>
+  <a href="#strategy8">8. Subject Prioritization</a>
+  <a href="#strategy9">9. Hostel + Travel Guidance</a>
+  <a href="#strategy10">10. Final Revision Blueprint</a>
+</div>
+
+<main class="container">
+  <section class="strategy" id="strategy1">
+    <h2><i class="fas fa-infinity"></i> 1. Local Needs, Global Solutions</h2>
+    <img src="images/blog1.jpg" alt="Accepting Weaknesses">
+    <p>Students in Karur often face limited coaching access. Profenaa bridges this gap with a scalable hybrid model that delivers elite NEET & JEE content anywhere.</p>
+    <div class="tips"><strong>Tip:</strong> Geography shouldn’t limit your success — hybrid coaching is your answer.</div>
+  </section>
+
+  <section class="strategy" id="strategy2">
+    <h2><i class="fas fa-wave-square"></i> 2. Structured Hybrid Timetable</h2>
+    <img src="images/blog2.jpg" alt="Time Management" class="strategy-img">
+    <p>Live classes in the evening, pre-recorded content during the day, and flexible test slots allow Karur students to build consistency and balance.</p>
+    <div class="tips"><strong>Tip:</strong> Stick to a fixed schedule even if learning from home or hostel.</div>
+  </section>
+
+  <section class="strategy" id="strategy3">
+    <h2><i class="fas fa-integral"></i> 3. Emphasis on NCERT & Basics</h2>
+    <img src="images/blog3.jpg" alt="NCERT Focus" />
+    <p>Profenaa ensures all Biology and Chemistry preparation starts with NCERT mastery. Karur students benefit from annotated notes, diagrams, and concept recall sessions.</p>
+    <div class="tips"><strong>Tip:</strong> NCERT is non-negotiable — finish it before touching guidebooks.</div>
+  </section>
+
+  <section class="strategy" id="strategy4">
+    <h2><i class="fas fa-exchange-alt"></i> 4. Daily Practice via Online Tests</h2>
+    <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66" alt="Practice Questions" />
+    <p>Karur aspirants use Profenaa’s online portal to solve daily MCQs with instant feedback, solutions, and ranking insights.</p>
+    <div class="tips"><strong>Tip:</strong> Don’t skip daily tests — they shape your exam instincts.</div>
+  </section>
+
+  <section class="strategy" id="strategy5">
+    <h2><i class="fas fa-chart-area"></i> 5. Tracking Progress with Reports</h2>
+    <img src="images/blog4.jpg" alt="Mistake Tracking" />
+    <p>Students receive weekly reports highlighting weak zones, topic-wise performance, and improvement graphs — personalized for Karur batches.</p>
+    <div class="tips"><strong>Tip:</strong> Let data guide your preparation, not emotions.</div>
+  </section>
+
+  <section class="strategy" id="strategy6">
+    <h2><i class="fas fa-shapes"></i> 6. Full-Length Weekly Tests</h2>
+    <img src="https://images.unsplash.com/photo-1517520287167-4bbf64a00d66" alt="Mock Tests" />
+    <p>Every Sunday, Karur students take full NEET/JEE mocks on the Profenaa app. Timed exams boost accuracy and confidence under pressure.</p>
+    <div class="tips"><strong>Tip:</strong> Simulate real NEET every week — same rules, same time.</div>
+  </section>
+
+  <section class="strategy" id="strategy7">
+    <h2><i class="fas fa-lightbulb"></i> 7. Digital + Mentor Support</h2>
+    <img src="images/blog5.jpg" alt="Topper Insights" />
+    <p>Along with online resources, every student is assigned a mentor who checks in weekly and helps with doubts, plans, and motivation.</p>
+    <div class="tips"><strong>Tip:</strong> Leverage your mentor — they’re your academic GPS.</div>
+  </section>
+
+  <section class="strategy" id="strategy8">
+    <h2><i class="fas fa-question-circle"></i> 8. Subject Prioritization</h2>
+    <img src="images/blog6.jpg" alt="Biology Boost" />
+    <p>Karur students start with Biology for quick wins, move to Chemistry for consistency, and finally sharpen Physics problem-solving with daily drills.</p>
+    <div class="tips"><strong>Tip:</strong> Prioritize scoring subjects to build early momentum.</div>
+  </section>
+
+  <section class="strategy" id="strategy9">
+    <h2><i class="fas fa-lightbulb-on"></i> 9. Hostel + Travel Guidance</h2>
+    <img src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238" alt="Balancing Subjects" />
+    <p>Profenaa provides Karur students with curated hostel tie-ups, safe travel suggestions, and quiet early morning batches for full focus.</p>
+    <div class="tips"><strong>Tip:</strong> Choose a study environment that supports your schedule, not disrupts it.</div>
+  </section>
+
+  <section class="strategy" id="strategy10">
+    <h2><i class="fas fa-stopwatch"></i> 10. Final Revision Blueprint</h2>
+    <img src="images/blog7.jpg" alt="Final Month Strategy" />
+    <p>Before NEET/JEE, Karur batches follow a 30-day final plan — mock, revise, revise again. Focus is only on tested chapters and recurring mistakes.</p>
+    <div class="tips"><strong>Tip:</strong> Your last month plan should be 80% revision, 20% strategy.</div>
+  </section>
+</main>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.strategy').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+  
+   <!-- chat  -->
+<div class="floating-whatsapp" onclick="location.href='https://wa.me/+919944897638?text=Hello%20there!'">
+  <div class="icon-container">
+    <i class="fa fa-whatsapp" style="color: white; font-size: 30px;"></i>
+  </div>
+</div>
+<!-- form  -->
+
+<!-- Demo content -->
+  <div id="overlay">
+    <div id="popup">
+      <span class="close" id="closeBtn">×</span>
+      <h2>Enroll Now</h2>
+    <form id="contactForm">
+        <div class="input-group">
+          <label>Userame</label>
+          <input type="text" name="username" required>
+        </div>
+        <div class="input-group">
+          <label>Phone number</label>
+          <input type="tel" name="phone" required>
+        </div>
+        <div class="input-group">
+          <label>Email</label>
+          <input type="email" name="email" required>
+        </div>
+        <div class="input-group">
+          <label>course</label>
+          <input type="text" name="course" required>
+        </div>
+        <div class="input-group">
+          <label>Comment</label>
+          <textarea name="comment"></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+
+ <script>
+    const overlay = document.getElementById('overlay');
+    const form = document.getElementById('contactForm');
+    const closeBtn = document.getElementById('closeBtn');
+
+    function lockBackground() {
+      document.body.classList.add('modal-open');
+    }
+    function unlockBackground() {
+      document.body.classList.remove('modal-open');
+    }
+    function showForm() {
+      overlay.style.display = 'flex';
+      lockBackground();
+    }
+    function hideForm() {
+      overlay.style.display = 'none';
+      unlockBackground();
+    }
+    closeBtn.addEventListener('click', hideForm);
+    overlay.addEventListener('click', e => {
+      if (e.target === overlay) hideForm();
+    });
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      console.log('Submitted:', Object.fromEntries(new FormData(form)));
+      hideForm();
+    });
+  </script>
+</body>
+<!-- footer  -->
+  <footer id="page-footer">
+    <div class="footer-column">
+      <h3>Page</h3>
+      <ul>
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="Contact-us.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Program</h3>
+        <ul>
+        <li><a href="neet.html"> NEET</a></li>
+        <li><a href="JEE.html"> JEE</a></li>
+        <li><a href="repeaters.html"> Repeaters </a></li>
+        <li><a href="Crash-course.html">Crash course</a></li>
+               <li><a href="foundation.css">Foundation</a></li>
+
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Flagship Events</h3>
+      <ul>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="Our-Collaboration.html"> Our Collaboration</a></li>
+        <li><a href="blog.html">Blogs</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Contact Us</h3>
+      <p>📞 9500027638 | 9791367638</p>
+      <p>📧 profenaaneetacademy@gmail.com</p>
+      <p>🕒 9.00 AM TO 8.00 PM <br></br> Mon to Sat</p>
+    </div>
+    <div class="footer-column">
+      <h3>Address</h3>
+      <p>📍 <strong>Profenaa NEET & JEE Academy</strong></p>
+<p>📍  37/1, Rajarajeshwari Nagar 2,T.kottampatti, Pollachi,coimbatore Dt-642002</p>    </div>
+     <div class="footer-container">
+      <div class="footer-logo-section">
+        <img src="images/academy logo.png" alt="Profenaa Logo" class="logo" />
+        <p><b>Profenaa NEET & JEE Academy</b></p>
+      </div>
+      <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Profenaa. All rights reserved.</p>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+
+  </footer>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const toc = document.querySelector(".toc");
+    const footer = document.querySelector("footer");
+
+    if (!footer) return; // Exit if footer not found
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            toc?.classList.add("hidden");
+          } else {
+            toc?.classList.remove("hidden");
+          }
+        });
+      },
+      {
+        root: null,
+        threshold: 0.1
+      }
+    );
+
+    observer.observe(footer);
+  });
+</script>
+
+
+</html>
