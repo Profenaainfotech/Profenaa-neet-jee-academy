@@ -352,6 +352,91 @@
       padding: 12px;
       border-radius: 6px;
     }
+/* Responsive TOC */
+@media (max-width: 1024px) {
+  .toc {
+    position: relative;
+    max-width: none;
+    top: auto;
+    left: auto;
+    margin: 20px auto;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    box-shadow: none;
+    border-radius: 8px;
+    background: #f9f9f9;
+    padding: 15px;
+  }
+
+  .toc h3 {
+    flex-basis: 100%;
+    text-align: center;
+  }
+
+  .toc a {
+    font-size: 14px;
+    background: #eaf4e9;
+    padding: 6px 10px;
+    border-radius: 6px;
+    text-align: center;
+  }
+}
+
+/* Container padding for smaller screens */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .strategy {
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+
+  .strategy h2 {
+    font-size: 18px;
+    gap: 8px;
+  }
+
+  .strategy img {
+    height: auto;
+  }
+
+  header h1 {
+    font-size: 6vw;
+  }
+}
+
+/* Stack elements better on small devices */
+@media (max-width: 480px) {
+  .toc {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .toc a {
+    font-size: 13px;
+    width: 100%;
+    padding: 8px 0;
+  }
+
+  header h1 {
+    font-size: 20px;
+    padding: 20px 10px;
+  }
+
+  .strategy h2 {
+    font-size: 16px;
+  }
+
+  .tips {
+    font-size: 14px;
+  }
+}
+
 
  /* footer  */
 
