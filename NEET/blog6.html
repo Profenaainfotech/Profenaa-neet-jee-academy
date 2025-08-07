@@ -10,35 +10,27 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-
 <body>
      <!-- navbar -->
   <nav class="navbar">
     <div class="navbar-container">
       <div class="navbar-brand">
                <a href="homepage.html"> <img src="images/academy logo.png" alt="logo" class="navbar-logo" /></a>
-
-        <span class="brand-text">NEET&JEE Academy</span>
+          <span class="brand-text">NEET&JEE Academy</span>
       </div>
-
       <div class="menu-icon" id="menu-icon">☰</div>
-
       <div class="navbar-links" id="navbar-links">
         <a href="homepage.html">Home</a>
         <a href="about-us.html">About Us</a>
-
-        
-        <div class="dropdown" id="dropdown">
+      <div class="dropdown" id="dropdown">
           <span class="dropdown-btn">Courses ▼</span>
           <div class="dropdown-content" id="dropdown-content">
             <a href="neet.html">NEET</a>
             <a href="JEE.html">JEE</a>
           <a href="repeaters.html">Repeaters</a>
             <a href="Crash-course.html">Crash Course</a>
-                        <a href="foundation.html">Foundation</a>  
- 
-
-          </div>
+            <a href="foundation.html">Foundation</a>  
+        </div>
         </div>
         <div class="dropdown" id="dropdown">
           <span class="dropdown-btn">Flagship ▼</span>
@@ -52,28 +44,21 @@
         <a href="Contact-us.html">Contact Us</a>
       <a href="javascript:void(0)" id="admission-btn" class="login-btn">Admissions Open</a>
     </div>
-     
     </div>
   </nav>
-
-     <script src="admission-btn.js"></script>
-
+  <script src="admission-btn.js"></script>
   <script>
     // navbar
-
 document.addEventListener("DOMContentLoaded", function () {
   const menuIcon = document.getElementById("menu-icon");
   const navbarLinks = document.getElementById("navbar-links");
   const dropdownBtns = document.querySelectorAll(".dropdown-btn");
   // const dropdownContent = document.getElementById("dropdown-content");
-
-  let isMobile = window.innerWidth <= 768;
-
-  menuIcon.addEventListener("click", () => {
+let isMobile = window.innerWidth <= 768;
+menuIcon.addEventListener("click", () => {
     navbarLinks.classList.toggle("active");
   });
-
-   dropdownBtns.forEach(btn => {
+  dropdownBtns.forEach(btn => {
     btn.addEventListener("click", function (e) {
       if (isMobile) {
         e.stopPropagation();
@@ -109,86 +94,71 @@ document.addEventListener("DOMContentLoaded", function () {
   <h3>Milestones</h3>
   <a href="#strategy1">1. Accepting Weaknesses</a>
   <a href="#strategy2">2. Strategic Time Allocation</a>
-  <a href="#strategy3">3. Rebuilding NCERT Foundation</a>
-  <a href="#strategy4">4. Daily Question Practice</a>
-  <a href="#strategy5">5. Self-Analysis via Mistake Book</a>
-  <a href="#strategy6">6. Weekly Full-Length Tests</a>
-  <a href="#strategy7">7. Learning from Topper Interviews</a>
-  <a href="#strategy8">8. Fixing Biology First</a>
-  <a href="#strategy9">9. Physics & Chemistry Balance</a>
-  <a href="#strategy10">10. Last 30 Days Plan</a>
+  <a href="#strategy3">3. Daily Question Practice</a>
+  <a href="#strategy4">4. Self-Analysis via Mistake Book</a>
+  <a href="#strategy5">5. Weekly Full-Length Tests</a>
+  <a href="#strategy6">6. Learning from Topper Interviews</a>
+  <a href="#strategy7">7. Fixing Biology First</a>
+  <a href="#strategy8">8. Physics & Chemistry Balance</a>
 </div>
 
 <main class="container">
   <section class="strategy" id="strategy1">
     <h2><i class="fas fa-infinity"></i> 1. Accepting Weaknesses</h2>
-    <img src="images/blog1.jpg" alt="Accepting Weaknesses">
+    <img src="images/blog6.1.jpg" alt="Accepting Weaknesses">
     <p>Rahul’s NEET preparation began with a deep self-evaluation. From academic gaps to mindset issues, he acknowledged where he was going wrong.</p>
     <div class="tips"><strong>Tip:</strong> Identify your real obstacles early—mindset, discipline, or subject gaps.</div>
   </section>
 
   <section class="strategy" id="strategy2">
     <h2><i class="fas fa-wave-square"></i> 2. Strategic Time Allocation</h2>
-    <img src="images/blog2.jpg" alt="Time Management" class="strategy-img">
+    <img src="images/blog6.2.jpg" alt="Time Management" class="strategy-img">
     <p>His daily routine included specific time slots for each subject. Mornings were for Biology, afternoons for Chemistry, and evenings for Physics, followed by revision.</p>
     <div class="tips"><strong>Tip:</strong> Build a repeatable schedule with fixed subject zones.</div>
   </section>
 
   <section class="strategy" id="strategy3">
-    <h2><i class="fas fa-integral"></i> 3. Rebuilding NCERT Foundation</h2>
-    <img src="images/blog3.jpg" alt="NCERT Focus" />
-    <p>Rahul restarted with NCERT textbooks, focusing on diagrams, flowcharts, and highlighted content in Biology and Chemistry.</p>
-    <div class="tips"><strong>Tip:</strong> NCERT is your NEET Bible. Stick to it until you master every line.</div>
-  </section>
-
-  <section class="strategy" id="strategy4">
-    <h2><i class="fas fa-exchange-alt"></i> 4. Daily Question Practice</h2>
-    <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66" alt="Practice Questions" />
+    <h2><i class="fas fa-exchange-alt"></i> 3. Daily Question Practice</h2>
+    <img src="images/blog6.3.jpg" alt="Practice Questions" />
     <p>Every day, he solved topic-wise MCQs. He prioritized reviewing even his correct answers to avoid overconfidence.</p>
     <div class="tips"><strong>Tip:</strong> Review what you got right to understand *why* it’s right.</div>
   </section>
 
-  <section class="strategy" id="strategy5">
-    <h2><i class="fas fa-chart-area"></i> 5. Self-Analysis via Mistake Book</h2>
+  <section class="strategy" id="strategy4">
+    <h2><i class="fas fa-chart-area"></i> 4. Self-Analysis via Mistake Book</h2>
     <img src="images/blog4.jpg" alt="Mistake Tracking" />
     <p>Rahul tracked every error with details—topic, reason, and correct concept—to ensure he never repeated the same mistake.</p>
     <div class="tips"><strong>Tip:</strong> A “Mistake Book” is your most honest teacher during revision.</div>
   </section>
 
-  <section class="strategy" id="strategy6">
-    <h2><i class="fas fa-shapes"></i> 6. Weekly Full-Length Tests</h2>
+  <section class="strategy" id="strategy5">
+    <h2><i class="fas fa-shapes"></i> 5. Weekly Full-Length Tests</h2>
     <img src="https://images.unsplash.com/photo-1517520287167-4bbf64a00d66" alt="Mock Tests" />
     <p>By simulating real NEET exam conditions every Sunday, Rahul built exam stamina and time discipline.</p>
     <div class="tips"><strong>Tip:</strong> Take mock tests like real NEET — no shortcuts, no breaks.</div>
   </section>
 
-  <section class="strategy" id="strategy7">
-    <h2><i class="fas fa-lightbulb"></i> 7. Learning from Topper Interviews</h2>
+  <section class="strategy" id="strategy6">
+    <h2><i class="fas fa-lightbulb"></i> 6. Learning from Topper Interviews</h2>
     <img src="images/blog5.jpg" alt="Topper Insights" />
     <p>Topper interviews became a learning tool for Rahul. He extracted strategies, schedules, and motivation hacks from YouTube videos.</p>
     <div class="tips"><strong>Tip:</strong> Avoid common traps toppers warn about—those are gold.</div>
   </section>
 
-  <section class="strategy" id="strategy8">
-    <h2><i class="fas fa-question-circle"></i> 8. Fixing Biology First</h2>
+  <section class="strategy" id="strategy7">
+    <h2><i class="fas fa-question-circle"></i> 7. Fixing Biology First</h2>
     <img src="images/blog6.jpg" alt="Biology Boost" />
     <p>Once his weakest subject, Biology became Rahul’s strength thanks to NCERT memorization, mock tests, and diagram practice.</p>
     <div class="tips"><strong>Tip:</strong> A strong Biology score can make or break your NEET rank.</div>
   </section>
 
-  <section class="strategy" id="strategy9">
-    <h2><i class="fas fa-lightbulb-on"></i> 9. Physics & Chemistry Balance</h2>
+  <section class="strategy" id="strategy8">
+    <h2><i class="fas fa-lightbulb-on"></i> 8. Physics & Chemistry Balance</h2>
     <img src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238" alt="Balancing Subjects" />
     <p>He strategically paired tough topics in Physics with easier chapters in Chemistry to stay motivated.</p>
     <div class="tips"><strong>Tip:</strong> Alternate high-load and low-load subjects for better retention.</div>
   </section>
 
-  <section class="strategy" id="strategy10">
-    <h2><i class="fas fa-stopwatch"></i> 10. Last 30 Days Plan</h2>
-    <img src="images/blog7.jpg" alt="Final Month Strategy" />
-    <p>The last month was all about mocks, analysis, and focused revision. Rahul didn’t start any new chapters during this phase.</p>
-    <div class="tips"><strong>Tip:</strong> Final month is for polishing—not learning.</div>
-  </section>
 </main>
 
   <script>
@@ -292,8 +262,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <li><a href="JEE.html"> JEE</a></li>
         <li><a href="repeaters.html"> Repeaters </a></li>
         <li><a href="Crash-course.html">Crash course</a></li>
-               <li><a href="foundation.css">Foundation</a></li>
-
+        <li><a href="foundation.css">Foundation</a></li>
       </ul>
     </div>
     <div class="footer-column">
@@ -359,6 +328,4 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(footer);
   });
 </script>
-
-
 </html>
