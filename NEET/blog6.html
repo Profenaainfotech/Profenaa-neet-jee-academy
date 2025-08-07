@@ -37,7 +37,6 @@
           <div class="dropdown-content" id="dropdown-content">
             <a href="Our-Collaboration.html"> Our Collaboration</a>
             <a href="Gallery.html">Gallery</a>
-            <!-- <a href="Certification.html">Certification and verification</a> -->
           </div>
         </div>
         <a href="blog.html">Blog</a>
@@ -53,7 +52,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const menuIcon = document.getElementById("menu-icon");
   const navbarLinks = document.getElementById("navbar-links");
   const dropdownBtns = document.querySelectorAll(".dropdown-btn");
-  // const dropdownContent = document.getElementById("dropdown-content");
 let isMobile = window.innerWidth <= 768;
 menuIcon.addEventListener("click", () => {
     navbarLinks.classList.toggle("active");
@@ -67,8 +65,7 @@ menuIcon.addEventListener("click", () => {
       }
     });
   });
-
-    document.addEventListener("click", function (e) {
+   document.addEventListener("click", function (e) {
     if (isMobile && !e.target.closest(".dropdown")) {
       document.querySelectorAll(".dropdown-content.active").forEach(content => {
         content.classList.remove("active");
@@ -133,34 +130,32 @@ menuIcon.addEventListener("click", () => {
 
   <section class="strategy" id="strategy5">
     <h2><i class="fas fa-shapes"></i> 5. Weekly Full-Length Tests</h2>
-    <img src="https://images.unsplash.com/photo-1517520287167-4bbf64a00d66" alt="Mock Tests" />
+    <img src="images/blog6.4.jpg" alt="Mock Tests" />
     <p>By simulating real NEET exam conditions every Sunday, Rahul built exam stamina and time discipline.</p>
     <div class="tips"><strong>Tip:</strong> Take mock tests like real NEET — no shortcuts, no breaks.</div>
   </section>
 
   <section class="strategy" id="strategy6">
     <h2><i class="fas fa-lightbulb"></i> 6. Learning from Topper Interviews</h2>
-    <img src="images/blog5.jpg" alt="Topper Insights" />
+    <img src="images/log6.5.jpg" alt="Topper Insights" />
     <p>Topper interviews became a learning tool for Rahul. He extracted strategies, schedules, and motivation hacks from YouTube videos.</p>
     <div class="tips"><strong>Tip:</strong> Avoid common traps toppers warn about—those are gold.</div>
   </section>
 
   <section class="strategy" id="strategy7">
     <h2><i class="fas fa-question-circle"></i> 7. Fixing Biology First</h2>
-    <img src="images/blog6.jpg" alt="Biology Boost" />
+    <img src="images/blog6.6.jpg" alt="Biology Boost" />
     <p>Once his weakest subject, Biology became Rahul’s strength thanks to NCERT memorization, mock tests, and diagram practice.</p>
     <div class="tips"><strong>Tip:</strong> A strong Biology score can make or break your NEET rank.</div>
   </section>
 
   <section class="strategy" id="strategy8">
     <h2><i class="fas fa-lightbulb-on"></i> 8. Physics & Chemistry Balance</h2>
-    <img src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238" alt="Balancing Subjects" />
+    <img src="images/blog6.7.jpg" alt="Balancing Subjects" />
     <p>He strategically paired tough topics in Physics with easier chapters in Chemistry to stay motivated.</p>
     <div class="tips"><strong>Tip:</strong> Alternate high-load and low-load subjects for better retention.</div>
   </section>
-
 </main>
-
   <script>
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -182,8 +177,7 @@ menuIcon.addEventListener("click", () => {
   </div>
 </div>
 <!-- form  -->
-
-<!-- Demo content -->
+ <!-- Demo content -->
   <div id="overlay">
     <div id="popup">
       <span class="close" id="closeBtn">×</span>
@@ -213,8 +207,7 @@ menuIcon.addEventListener("click", () => {
       </form>
     </div>
   </div>
-
- <script>
+<script>
     const overlay = document.getElementById('overlay');
     const form = document.getElementById('contactForm');
     const closeBtn = document.getElementById('closeBtn');
@@ -282,7 +275,7 @@ menuIcon.addEventListener("click", () => {
     <div class="footer-column">
       <h3>Address</h3>
       <p>📍 <strong>Profenaa NEET & JEE Academy</strong></p>
-<p>📍  37/1, Rajarajeshwari Nagar 2,T.kottampatti, Pollachi,coimbatore Dt-642002</p>    </div>
+      <p>📍  37/1, Rajarajeshwari Nagar 2,T.kottampatti, Pollachi,coimbatore Dt-642002</p>    </div>
      <div class="footer-container">
       <div class="footer-logo-section">
         <img src="images/academy logo.png" alt="Profenaa Logo" class="logo" />

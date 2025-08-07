@@ -359,11 +359,6 @@ document.addEventListener("DOMContentLoaded", function () {
       unlockBackground();
     }
 
-    // Show once after 3 seconds, on every page load.
-    window.addEventListener('DOMContentLoaded', () => {
-      setTimeout(showForm, 3000);
-    });
-
     closeBtn.addEventListener('click', hideForm);
     overlay.addEventListener('click', e => {
       if (e.target === overlay) hideForm();
