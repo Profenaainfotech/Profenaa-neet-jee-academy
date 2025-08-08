@@ -644,7 +644,8 @@ body{
   z-index: 1;
 }
 .section5-icons{
-  width: 100px;
+  width: 300px;
+  border-radius: 20px;
 }
 @media (max-width: 1025px) {
   .section5-offer-card {

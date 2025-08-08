@@ -561,7 +561,7 @@ background-clip: text;
       overflow: hidden;
       animation: fadeIn 1s ease-out both;
     }
-    .panel:nth-child(1) { clip-path: polygon(0 0,100% 0,100% 85%,0 100%); background:#c7e4f9; animation-delay:0.2s; }
+    .panel:nth-child(1) { clip-path: polygon(0 0,100% 0,100% 85%,0 110%); background:#c7e4f9; animation-delay:0.2s; }
     .panel:nth-child(2) { clip-path: circle(60% at 50% 50%); background:#fce6c2; animation-delay:0.4s; }
     .panel:nth-child(3) { border-radius:0 60px 60px 0; background:#c9f4cc; animation-delay:0.6s; }
     @keyframes fadeIn {
