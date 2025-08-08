@@ -1,13 +1,7 @@
 * {
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
-html, body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
 body {
   font-family: sans-serif;
   line-height: 1.6;
@@ -146,7 +140,7 @@ body {
   background-color: white;
   color: #000000 !important;
   text-decoration: none;
-  padding: 6px 12px;
+  padding: 6px 12px !important;
   border-radius: 4px;
   margin-left: 130px;
   transition: background 0.3s ease, transform 0.3s ease;
@@ -189,7 +183,7 @@ body {
   }
 
   .navbar-links {
-    width: 30%;
+    width: 38%;
     position: absolute;
     top: 70px;
     left: 70;

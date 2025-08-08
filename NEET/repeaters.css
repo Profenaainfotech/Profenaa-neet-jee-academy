@@ -8,13 +8,8 @@
     }
     * {
       margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    html, body {
-      width: 100%;
-      overflow-x: hidden;
-    }
+  box-sizing: border-box;
+}
     body {
       font-family: 'Inter', sans-serif;
       background: var(--bg-light);
@@ -50,7 +45,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.4rem 1rem; /* Reduced padding */
+  padding: 0.4rem 1rem; 
 }
 
 .navbar-brand {
@@ -60,14 +55,14 @@
 }
 
 .navbar-logo {
-  width: 40px; /* Reduced from 60px */
+  width: 40px; 
   height: 40px;
   margin-right: 0px;
   border-radius: 10px;
 }
 
 .brand-text {
-  font-size: 1rem; /* Reduced from 1.2rem */
+  font-size: 1rem; 
   font-weight: bold;
   color: white;
 }
@@ -92,7 +87,6 @@
   transform: translateY(-2px);
 }
 
-/* Dropdown */
 .dropdown {
   position: relative;
 }
@@ -110,8 +104,6 @@
 .dropdown-btn:hover {
   color: rgb(50, 150, 35);
 }
-
-/* Dropdown content for desktop */
 .dropdown-content {
   position: absolute;
   background-color: white;
@@ -149,14 +141,11 @@
   background-color: rgb(196, 239, 196);
  
 }
-
-
-/* Login Button */
 .login-btn {
   background-color: white;
   color: #000000 !important;
   text-decoration: none;
-  padding: 6px 12px; /* Slightly reduced */
+  padding: 6px 12px !important;
   border-radius: 4px;
   margin-left: 130px;
   transition: background 0.3s ease, transform 0.3s ease;
@@ -167,8 +156,6 @@
   color: #000000;
   transform: scale(1.05);
 }
-
-/* Hamburger Menu */
 .menu-icon {
   display: none;
   font-size: 1.8rem;
@@ -198,9 +185,9 @@
   }
 
   .navbar-links {
-    width: 30%;
+    width: 38%;
     position: absolute;
-    top: 70px; /* Adjusted for reduced navbar height */
+    top: 70px; 
     left: 70;
     right: 0;
     flex-direction: column;
@@ -221,7 +208,7 @@
   .login-btn {
     width: 60%;
     text-align:left;
-    padding: 0.4rem 0.8rem; /* Reduced spacing between links on mobile */
+    padding: 0.4rem 0.8rem; 
     color: rgb(17, 16, 17);
   }
 
@@ -253,8 +240,6 @@
     padding: 0.5rem 0;
   }
 }
-
-/* Desktop hover dropdown only */
 @media (min-width: 769px) {
   .dropdown:hover .dropdown-content {
     display: block;
@@ -460,11 +445,9 @@
     }
     .framework-card img {
       width: 50px;
-      /* margin-bottom: 15px; */
     }
     .framework-card h4 {
       color: var(--primary);
-      /* margin-bottom: 10px; */
     }
 
     /* SECTION 5: COURSE OFFERINGS */
@@ -662,7 +645,6 @@
   .contact-map,
   .contact-form {
     width: 90%;
-    /* flex: none; */
   }
 
   .contact-map {
@@ -838,7 +820,6 @@ color: white;
     margin-right: 80px;
   }
   .social-icons {
-    /* margin-left: 130px; */
     margin-bottom: 30px;
   }
 
@@ -856,7 +837,6 @@ color: white;
   }
 
   .footer-logo-section {
-    /* margin-left: 140px; */
     margin-bottom: 20px;
   }
 
@@ -1058,7 +1038,6 @@ body.modal-open {
   }
 }
 
-/* Small mobile: ≤ 426 px */
 @media screen and (max-width: 426px) {
   #popup {
     width: 90%;

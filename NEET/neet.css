@@ -1,7 +1,5 @@
 *{
   font-family: sans-serif;
- 
-  /* overflow-x: hidden; */
 }
 
 /* section 1  */
@@ -32,9 +30,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.4rem 1rem; /* Reduced padding */
+  padding: 0.4rem 1rem; 
 }
-
 .navbar-brand {
   display: flex;
   gap: 20px;
@@ -42,14 +39,14 @@
 }
 
 .navbar-logo {
-  width: 40px; /* Reduced from 60px */
+  width: 40px;
   height: 40px;
   margin-right: 0px;
   border-radius: 10px;
 }
 
 .brand-text {
-  font-size: 1rem; /* Reduced from 1.2rem */
+  font-size: 1rem; 
   font-weight: bold;
   color: white;
 }
@@ -74,7 +71,6 @@
   transform: translateY(-2px);
 }
 
-/* Dropdown */
 .dropdown {
   position: relative;
 }
@@ -93,7 +89,6 @@
   color: rgb(50, 150, 35);
 }
 
-/* Dropdown content for desktop */
 .dropdown-content {
   position: absolute;
   background-color: white;
@@ -132,15 +127,14 @@
   
 }
 
-
-/* Login Button */
 .login-btn {
   background-color: white;
   color: #000000 !important;
   text-decoration: none;
-  padding: 6px 12px; /* Slightly reduced */
+  padding: 6px 12px; 
   border-radius: 4px;
   margin-left: 130px;
+  margin-right: 18px;
   transition: background 0.3s ease, transform 0.3s ease;
 }
 
@@ -150,7 +144,6 @@
   transform: scale(1.05);
 }
 
-/* Hamburger Menu */
 .menu-icon {
   display: none;
   font-size: 1.8rem;
