@@ -590,7 +590,7 @@ body{
 /* ============ Section 3 Hero ============ */
 .section3-crash-hero {
   height: 80vh;
-  background: url('https://images.pexels.com/photos/4050316/pexels-photo-4050316.jpeg?auto=compress&cs=tinysrgb&w=1600') no-repeat center center / cover;
+  background: url('images/3.jpg') no-repeat center center / cover;
   display: flex;
   align-items: center;
   justify-content: flex-end;

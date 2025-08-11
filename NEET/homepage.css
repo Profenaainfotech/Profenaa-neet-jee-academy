@@ -1027,6 +1027,74 @@ body{
     flex-direction: column;
   }
 }
+/* toppers section  */
+.toppers-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 32px;
+  color: #0a3d62;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.toppers-grid {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.topper-card {
+  background: #e8fae9;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  width: 350px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.topper-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.topper-video video {
+  width: 100%;
+  border-radius: 8px;
+  outline: none;
+}
+
+.topper-card h3 {
+  font-size: 20px;
+  margin: 15px 0 5px;
+  color: #0a3d62;
+}
+
+.topper-card p {
+  font-size: 15px;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .toppers-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .topper-card {
+    width: 100%;
+    max-width: 400px;
+  }
+}
 
 /* section 9  */
 /* Section 9: Futuristic Stream Selector */

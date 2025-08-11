@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Stream</title>
+   <link rel="icon" type="image/png" href="images/academy logo.png">
+  <link rel="stylesheet" href="online.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+     <!-- navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-brand">
+           <a href="homepage.html"> <img src="images/academy logo.png" alt="logo" class="navbar-logo" /></a>
+        <span class="brand-text">NEET&JEE Academy</span>
+      </div>
+
+      <div class="menu-icon" id="menu-icon">☰</div>
+
+      <div class="navbar-links" id="navbar-links">
+        <a href="homepage.html">Home</a>
+        <a href="about-us.html">About Us</a>
+
+        <div class="dropdown" id="dropdown">
+          <span class="dropdown-btn">Courses ▼</span>
+          <div class="dropdown-content" id="dropdown-content">
+            <a href="neet.html">NEET</a>
+            <a href="JEE.html">JEE</a>
+          <a href="repeaters.html">Repeaters</a>
+            <a href="Crash-course.html">Crash Course</a>
+            <a href="foundation.html">Foundation</a>  
+
+          </div>
+        </div>
+        <div class="dropdown" id="dropdown">
+          <span class="dropdown-btn">Flagship ▼</span>
+          <div class="dropdown-content" id="dropdown-content">
+            <a href="Our-Collaboration.html">Our Collaboration</a>
+            <a href="Gallery.html">Gallery</a>
+            <!-- <a href="Certification.html">Certification and verification</a> -->
+          </div>
+        </div>
+        <a href="blog.html">Blog</a>
+        <a href="Contact-us.html">Contact Us</a>
+      <a href="javascript:void(0)" id="admission-btn" class="login-btn">Admissions Open</a>
+    </div>
+   </div>
+  </nav>
+   <script src="admission-btn.js"></script>
+  <script>
+    // navbar
+
+document.addEventListener("DOMContentLoaded", function () {
+  const menuIcon = document.getElementById("menu-icon");
+  const navbarLinks = document.getElementById("navbar-links");
+  const dropdownBtns = document.querySelectorAll(".dropdown-btn");
+
+
+  let isMobile = window.innerWidth <= 768;
+
+  menuIcon.addEventListener("click", () => {
+    navbarLinks.classList.toggle("active");
+  });
+
+   dropdownBtns.forEach(btn => {
+    btn.addEventListener("click", function (e) {
+      if (isMobile) {
+        e.stopPropagation();
+        const dropdownContent = this.nextElementSibling;
+        dropdownContent.classList.toggle("active");
+      }
+    });
+  });
+
+    document.addEventListener("click", function (e) {
+    if (isMobile && !e.target.closest(".dropdown")) {
+      document.querySelectorAll(".dropdown-content.active").forEach(content => {
+        content.classList.remove("active");
+      });
+    }
+  });
+
+
+  window.addEventListener("resize", function () {
+    isMobile = window.innerWidth <= 768;
+    if (!isMobile) {
+      document.querySelectorAll(".dropdown-content").forEach(content => content.classList.remove("active"));
+      navbarLinks.classList.remove("active");
+    }
+  });
+});
+  </script>
+   <header>
+    <div class="headcontainer">
+      <div class="brand">
+        <div class="logo">P</div>
+        <div>
+          <div style="font-weight:800;color:#206919">Profenaa Academy</div>
+          <div style="font-size:12px;color:var(--muted)">NEET & JEE — Live Online</div>
+        </div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:center">
+      <a class="btn btn-primary" href="homepage.html">Back to Offline</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero reveal">
+      <div class="hero-card">
+        <h1 class="headline">Learn Anytime, Anywhere —<span class="head">Profenaa’s Online Stream for NEET & JEE</span> </h1>
+        <p class="sub">Experience interactive, live-streamed coaching with India’s top educators — recorded access, doubt-solving, and a smart adaptive dashboard included.</p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#courses">Explore Courses</a>
+          <a class="btn btn-outline" href="#how" style="color: black;">How It Works</a>
+        </div>
+
+        <div style="margin-top:20px;display:flex;gap:10px;flex-wrap:wrap">
+          <div style="padding:10px 14px;background:linear-gradient(90deg,#e6f0ff,#fff);border-radius:12px;">HD Live Streaming</div>
+          <div style="padding:10px 14px;background:linear-gradient(90deg,#fff0f6,#fff);border-radius:12px;">Recorded Access</div>
+          <div style="padding:10px 14px;background:linear-gradient(90deg,#f0fff4,#fff);border-radius:12px;">Doubt Solving</div>
+        </div>
+      </div>
+
+        <div class="hero-visual reveal refresh-anim">
+            <div class="laptop">
+            <div class="screen"></div>
+            <div class="overlay">
+                <!-- <img src="images/1.jpg"> -->
+            </div>
+            </div>
+            <div style="display:flex;gap:12px;margin-top:14px;align-items:center;justify-content:space-between">
+            <div style="display:flex;gap:10px;align-items:center">
+                <img src="images/1on 1.jpg" alt="student" style="width:46px;height:46px;border-radius:10px;object-fit:cover;box-shadow:0 8px 22px rgba(13, 42, 174, 0.06)">
+                <div style="font-weight:700">Join Live Class</div>
+            </div>
+            </div>
+        </div>
+        </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how">
+      <h3 style="margin-bottom:14px">How It Works — Live Streaming Flow</h3>
+      <div class="how">
+        <div class="how-card reveal">
+          <div class="ic">💻</div>
+          <h4>Join from Any Device</h4>
+          <p class="small">Laptop, tablet, phone — your learning follows you.</p>
+        </div>
+        <div class="how-card reveal">
+          <div class="ic">🗣️</div>
+          <h4>Live Interactive Classes</h4>
+          <p class="small">Chat, polls, live doubts — two-way interaction with faculty.</p>
+        </div>
+        <div class="how-card reveal">
+          <div class="ic">⏯️</div>
+          <h4>Recorded Access</h4>
+          <p class="small">Missed a class? Watch the recordings anytime.</p>
+        </div>
+        <div class="how-card reveal">
+          <div class="ic">📊</div>
+          <h4>Integrated Tests & Analysis</h4>
+          <p class="small">Simulated tests, instant reports and personalised analytics.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="feature" style="margin-top:20px">
+      <h3>Features of Our Online Mode</h3>
+      <div class="features">
+        <div class="feature-list">
+          <div class="feature-item reveal">
+            <div class="dot">1</div>
+            <div>
+              <div style="font-weight:800">HD Live Streaming</div>
+              <div class="small">Low-latency streams with adaptive bitrate for low bandwidth.</div>
+            </div>
+          </div>
+          <div class="feature-item reveal">
+            <div class="dot">2</div>
+            <div>
+              <div style="font-weight:800">Two-Way Interaction</div>
+              <div class="small">Ask questions realtime via voice/chat and live polls.</div>
+            </div>
+          </div>
+          <div class="feature-item reveal">
+            <div class="dot">3</div>
+            <div>
+              <div style="font-weight:800">Digital Whiteboard & Smart Notes</div>
+              <div class="small">Auto-synced class notes and downloadable PDFs.</div>
+            </div>
+          </div>
+          <div class="feature-item reveal">
+            <div class="dot">4</div>
+            <div>
+              <div style="font-weight:800">Personalised Doubt Sessions</div>
+              <div class="small">Small-group or 1:1 doubt-solving slots with mentors.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-list">
+          <div class="feature-item reveal">
+            <div class="dot">5</div>
+            <div>
+              <div style="font-weight:800">Session Recordings</div>
+              <div class="small">Unlimited replays plus timestamps linked to notes.</div>
+            </div>
+          </div>
+          <div class="feature-item reveal">
+            <div class="dot">6</div>
+            <div>
+              <div style="font-weight:800">NCERT & PYQ Coverage</div>
+              <div class="small">Syllabus mapped and past-year question focus.</div>
+            </div>
+          </div>
+          <div class="feature-item reveal">
+            <div class="dot">7</div>
+            <div>
+              <div style="font-weight:800">Adaptive Learning Dashboard</div>
+              <div class="small">Personalised plan, weak-topic tracker and revision scheduler.</div>
+            </div>
+          </div>
+          <div class="feature-item reveal">
+            <div class="dot">8</div>
+            <div>
+              <div style="font-weight:800">Secure Exam Simulation Portal</div>
+              <div class="small">Proctored mock tests that mirror exam-day experience.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ADVANTAGES -->
+    <section class="advanced">
+      <h3>Advantages Over Regular Coaching</h3>
+      <div class="adv">
+        <div class="card reveal"><strong>Study from anywhere</strong><div class="small">Save commute time and attend from home or anywhere.</div></div>
+        <div class="card reveal"><strong>Learn from top faculty</strong><div class="small">Access expert teachers without relocating.</div></div>
+        <div class="card reveal"><strong>Flexible schedule</strong><div class="small">Replay lectures and revise on your timeline.</div></div>
+        <div class="card reveal"><strong>Nationwide competition</strong><div class="small">Compete with students across India via ranked tests.</div></div>
+        <div class="card reveal"><strong>Same test series & materials</strong><div class="small">Offline-quality content, digital delivery.</div></div>
+      </div>
+    </section>
+
+    <!-- COURSES -->
+    <section id="courses">
+      <h3>Course Options</h3>
+      <div class="courses-grid">
+        <div class="course reveal">
+          <!-- <div class="tag">NEET</div><br> -->
+           <img src="images/on1.png" alt="online class">
+          <h4>NEET Crash Course — Online Mode</h4>
+          <p class="small">Intensive revision-focused course for last-minute preparation.</p>
+        </div>
+
+        <div class="course reveal">
+          <!-- <div class="tag">NEET</div><br> -->
+           <img src="images/on4.jpg" alt="online class">
+
+          <h4>Foundation Courses — Online Mode</h4>
+          <p class="small">Complete syllabus, tests and doubt support across the year.</p>
+        </div>
+
+        <div class="course reveal">
+          <!-- <div class="tag">JEE</div><br> -->
+           <img src="images/on3.jpg" alt="online class">
+
+          <h4>Repeaters — Online Mode</h4>
+          <p class="small">Advanced-level modules with problem-solving masterclasses.</p>
+        </div>
+
+        <div class="course reveal">
+          <!-- <div class="tag">JEE</div><br> -->
+           <img src="images/on2.png" alt="online class">
+
+          <h4>JEE Mains — Online Mode</h4>
+          <p class="small">Concepts-first approach with frequent full-length mocks.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECH REQUIREMENTS -->
+    <section>
+      <h3>Tech Requirements</h3>
+      <div class="tech">
+        <div class="req reveal">Laptop / PC / Tablet / Mobile</div>
+        <div class="req reveal">Stable Internet (min 4 Mbps recommended)</div>
+        <div class="req reveal">Headset / Earphones (recommended)</div>
+        <div class="req reveal">Latest Chrome or Edge browser</div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+      <h3>Frequently Asked Questions</h3>
+      <div class="q reveal" data-open="false">
+        <h4>What happens if I miss a live class? <span>+</span></h4>
+        <div class="a"><p class="small">All sessions are recorded. Access them from your dashboard with timestamps and downloadable notes.</p></div>
+      </div>
+      <div class="q reveal" data-open="false">
+        <h4>How do I ask doubts online? <span>+</span></h4>
+        <div class="a"><p class="small">Use live chat, "raise doubt" pins on the whiteboard, or book a personalised doubt slot with a mentor.</p></div>
+      </div>
+      <div class="q reveal" data-open="false">
+        <h4>Is online mode suitable for NEET/JEE preparation? <span>+</span></h4>
+        <div class="a"><p class="small">Yes — with structured schedules, tests, and doubt support, online students perform on par with offline peers when they engage consistently.</p></div>
+      </div>
+      <div class="q reveal" data-open="false">
+        <h4>How are tests conducted online? <span>+</span></h4>
+        <div class="a"><p class="small">Tests run on our secure simulation portal with timer, proctored options, and instant analytics after submission.</p></div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <script>
+    // Scroll reveal with IntersectionObserver
+    const reveals = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          e.target.classList.add('visible');
+        }
+      })
+    },{threshold:0.12});
+    reveals.forEach(r=>io.observe(r));
+
+    // FAQ toggles
+    document.querySelectorAll('.q').forEach(q=>{
+      q.addEventListener('click',()=>{
+        const a = q.querySelector('.a');
+        const open = q.getAttribute('data-open') === 'true';
+        if(open){
+          a.style.maxHeight = null; q.setAttribute('data-open','false'); q.querySelector('h4 span').textContent='+';
+        } else {
+          a.style.maxHeight = a.scrollHeight + 'px'; q.setAttribute('data-open','true'); q.querySelector('h4 span').textContent='−';
+        }
+      })
+    })
+
+    // small demo form handler (no backend) — shows a simple message
+    document.getElementById('demoForm').addEventListener('submit', (e)=>{
+      e.preventDefault();
+      alert('Thanks! Demo request submitted — we will contact you on the number provided.');
+      e.target.reset();
+    })
+</script>
+
+<!-- footer  -->
+ <footer>
+    <div class="footer-column">
+      <h3>Page</h3>
+      <ul>
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="Contact-us.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Program</h3>
+        <ul>
+        <li><a href="neet.html"> NEET</a></li>
+        <li><a href="JEE.html"> JEE</a></li>
+        <li><a href="repeaters.html"> Repeaters </a></li>
+        <li><a href="Crash-course.html">Crash course</a></li>
+        <li><a href="foundation.css">Foundation</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Flagship Events</h3>
+      <ul>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="Our-Collaboration.html"> Our Collaboration</a></li>
+        <!-- <li><a href="Certification.html">Certification & verification</a></li> -->
+        <li><a href="blog.html">Blogs</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Contact Us</h3>
+      <p>📞 +919500027638 | +919791367638</p>
+      <p>📧 profenaaneetacademy@gmail.com</p>
+      <p>🕒 9.00 AM TO 8.00 PM </p> 
+
+ <p>📅 Mon to Sat</p>     </div>
+    <div class="footer-column">
+      <h3>Address</h3>
+      <p><strong>Profenaa NEET & JEE Academy</strong></p>
+      <p>📍  #37/1, Rajarajeshwari Nagar 2,T.kottampatti, Pollachi,coimbatore Dt-642002</p>    </div>
+     <div class="footer-container">
+      <div class="footer-logo-section">
+        <img src="images/academy logo.png" alt="Profenaa Logo" class="logo" />
+        <p><b>Profenaa NEET & JEE Academy</b></p>
+      </div>
+      <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Profenaa Infotech. All rights reserved.</p>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- chat  -->
+<div class="floating-whatsapp" onclick="location.href='https://wa.me/+919500027638?text=Hello%20there!'">
+  <div class="icon-container">
+    <i class="fa fa-whatsapp" style="color: white; font-size: 30px;"></i>
+  </div>
+</div>
+
+<!-- form  -->
+
+<!-- Demo content -->
+  <div id="overlay">
+    <div id="popup">
+      <span class="close" id="closeBtn">×</span>
+      <h2>Enroll Now</h2>
+      <form id="contactForm">
+          <input type="hidden" id="buttonType" name="buttonType" value="">
+        <div class="input-group">
+          <label>Userame</label>
+          <input type="text" name="username" required>
+        </div>
+        <div class="input-group">
+          <label>Phone number</label>
+          <input type="tel" name="phone" required>
+        </div>
+        <div class="input-group">
+          <label>Email</label>
+          <input type="email" name="email" required>
+        </div>
+        <div class="input-group">
+          <label>course</label>
+          <input type="text" name="course" required>
+        </div>
+        <div class="input-group">
+          <label>Comment</label>
+          <textarea name="comment"></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+
+ <script>
+    const overlay = document.getElementById('overlay');
+    const form = document.getElementById('contactForm');
+    const closeBtn = document.getElementById('closeBtn');
+
+    function lockBackground() {
+      document.body.classList.add('modal-open');
+    }
+    function unlockBackground() {
+      document.body.classList.remove('modal-open');
+    }
+    function showForm() {
+      overlay.style.display = 'flex';
+      lockBackground();
+    }
+    function hideForm() {
+      overlay.style.display = 'none';
+      unlockBackground();
+    }
+
+    // // Show once after 3 seconds, on every page load.
+    // window.addEventListener('DOMContentLoaded', () => {
+    //   setTimeout(showForm, 3000);
+    // });
+
+    closeBtn.addEventListener('click', hideForm);
+    overlay.addEventListener('click', e => {
+      if (e.target === overlay) hideForm();
+    });
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      console.log('Submitted:', Object.fromEntries(new FormData(form)));
+      hideForm();
+    });
+
+   
+</script>
+</body>
+</html>
