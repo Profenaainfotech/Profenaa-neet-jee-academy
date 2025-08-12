@@ -321,11 +321,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       <!-- Topper 2 -->
       <div class="topper-card">
-        <div class="topper-video">
-          <video controls>
-            <source src="images/speech2.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
+    <img src="images/toppers.jpeg">
         </div>
         <!-- <h3>Arjun K.</h3>
         <p>JEE Advanced 2024 Topper - AIR 37</p> -->
@@ -334,7 +330,7 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
   </div>
 </section>
-
+   
 <!-- Section 9: Choose Your Stream -->
 <section class="section9-streamselect" id="section9">
   <div class="section9-stream-content">
@@ -342,7 +338,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <p class="section9-stream-description">Profenaa offers both Online & Offline excellence. Pick your stream:</p>
 
     <div class="section9-stream-buttons">
-     <a href="online.html"> <button class="section9-stream-btn online-btn">Online Stream</button></a>
+       <a href="online.html"> <button class="section9-stream-btn online-btn">Online Stream</button></a>
       <a href="Contact-us.html"><button class="section9-stream-btn offline-btn">Offline Stream</button></a>
     </div>
   </div>
@@ -556,6 +552,36 @@ document.addEventListener("DOMContentLoaded", function () {
 
    
 </script>
+
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", async function (e) {
+    e.preventDefault();
+    const formData = new FormData(this);
+    formData.append("access_key", "88eab9d8-d825-421d-b625-8444fcb05ecd");
+
+    try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+            alert("Form submitted successfully! ✅");
+            this.reset();
+            document.getElementById("overlay").style.display = "none"; // Close popup
+        } else {
+            alert("Form submission failed ❌: " + result.message);
+        }
+    } catch (error) {
+        alert("Something went wrong. Please try again later.");
+        console.error(error);
+    }
+});
+</script>
+
 
  </body>
 </html>

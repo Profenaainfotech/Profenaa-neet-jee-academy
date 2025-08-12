@@ -131,23 +131,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
     <!-- Right: Animated Form -->
     <div class="contact-form">
-      <h2>Let's Talk With Us</h2>
-      <form>
-        <div class="form-group">
-          <input type="text" placeholder="Your Name" required>
-        </div>
-        <div class="form-group">
-          <input type="email" placeholder="Your Email" required>
-        </div>
-        <div class="form-group">
-          <input type="tel" placeholder="Phone Number" required>
-        </div>
-        <div class="form-group">
-          <textarea placeholder="Your Message" rows="5" required></textarea>
-        </div>
-        <button type="submit">Send Message</button>
-      </form>
+  <h2>Let's Talk With Us</h2>
+  <form>
+    <div class="form-group">
+      <input type="text" name="name" placeholder="Your Name" required>
     </div>
+    <div class="form-group">
+      <input type="email" name="email" placeholder="Your Email" required>
+    </div>
+    <div class="form-group">
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+    </div>
+    <div class="form-group">
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+    </div>
+    <button type="submit">Send Message</button>
+  </form>
+</div>
   </div>
 </section>
 </section>
@@ -281,7 +281,66 @@ document.addEventListener("DOMContentLoaded", function () {
       hideForm();
     });
   </script>
- 
+
+    <script>
+document.getElementById("contactForm").addEventListener("submit", async function (e) {
+    e.preventDefault();
+    const formData = new FormData(this);
+    formData.append("access_key", "88eab9d8-d825-421d-b625-8444fcb05ecd");
+
+    try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+            alert("Form submitted successfully! ✅");
+            this.reset();
+            document.getElementById("overlay").style.display = "none"; 
+        } else {
+            alert("Form submission failed ❌: " + result.message);
+        }
+    } catch (error) {
+        alert("Something went wrong. Please try again later.");
+        console.error(error);
+    }
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector(".contact-form form");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    formData.append("access_key", "88eab9d8-d825-421d-b625-8444fcb05ecd");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        alert("✅ Message sent successfully!");
+        form.reset();
+      } else {
+        alert("❌ Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      alert("⚠️ Error occurred: " + error.message);
+    }
+  });
+});
+</script>
+
  
 
 </body>

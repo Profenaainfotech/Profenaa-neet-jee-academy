@@ -217,19 +217,19 @@ document.addEventListener('DOMContentLoaded', () => {
   </div>
   <div class="item">
     <h3>2. Problem-Solving Skills</h3>
-    <p>Regular exposure to analytical and application-based questions develops logical thinking and enhances speed & accuracy in competitive problems.:contentReference[oaicite:2]{index=2}</p>
+    <p>Regular exposure to analytical and application-based questions develops logical thinking and enhances speed & accuracy in competitive problems.</p>
   </div>
   <div class="item">
     <h3>3. Time Management & Exam Awareness</h3>
-    <p>Early mock tests and practice instill time-based strategies and exam pattern familiarity—key to scoring high in NEET/JEE.:contentReference[oaicite:3]{index=3}</p>
+    <p>Early mock tests and practice instill time-based strategies and exam pattern familiarity—key to scoring high in NEET/JEE.</p>
   </div>
   <div class="item">
     <h3>4. Confidence & Reduced Stress</h3>
-    <p>Gradual concept-building reduces last-minute cramming and boosts confidence when facing actual exams in classes 11–12.:contentReference[oaicite:4]{index=4}</p>
+    <p>Gradual concept-building reduces last-minute cramming and boosts confidence when facing actual exams in classes 11–12.</p>
   </div>
   <div class="item">
     <h3>5. Long-Term Academic Discipline</h3>
-    <p>Consistent study routines, analytical habits, and self-assessment built during foundation years promote academic excellence and lifelong learning skills.:contentReference[oaicite:5]{index=5}</p>
+    <p>Consistent study routines, analytical habits, and self-assessment built during foundation years promote academic excellence and lifelong learning skills.</p>
   </div>
 </section>
 
@@ -372,6 +372,35 @@ document.addEventListener('DOMContentLoaded',()=>{
       hideForm();
     });
   </script>
+
+    <script>
+document.getElementById("contactForm").addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(this);
+    formData.append("access_key", "88eab9d8-d825-421d-b625-8444fcb05ecd");
+
+    try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+            alert("Form submitted successfully! ✅");
+            this.reset();
+            document.getElementById("overlay").style.display = "none"; // Close popup
+        } else {
+            alert("Form submission failed ❌: " + result.message);
+        }
+    } catch (error) {
+        alert("Something went wrong. Please try again later.");
+        console.error(error);
+    }
+});
+</script>
 
   
 
