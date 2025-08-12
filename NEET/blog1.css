@@ -373,6 +373,7 @@
     border-radius: 8px;
     background: #f9f9f9;
     padding: 15px;
+    z-index: -1;
   }
 
   .toc h3 {
@@ -419,6 +420,7 @@
   .toc {
     flex-direction: column;
     align-items: center;
+    /* z-index: -1; */
   }
 
   .toc a {
@@ -771,7 +773,6 @@ body.modal-open {
 @media screen and (max-width: 769px) {
   #popup {
     width: 70%;
-  
     max-width: 340px; 
     padding: 15px;
   }
@@ -782,7 +783,10 @@ body.modal-open {
     width: 80%;
     
   }
-
+  .input-group input,
+    .input-group textarea {
+      width: 80%;
+}
 }
 
     
