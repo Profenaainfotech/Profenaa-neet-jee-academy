@@ -1877,9 +1877,12 @@ body.modal-open {
   #popup {
     width: 80%;
     }
-
+  .input-group input,
+    .input-group textarea {
+      width: 83%;
 }
-@media screen and (max-width: 321px) {
+}
+@media screen and (max-width: 361px) {
   #popup {
     width: 80%;
     }

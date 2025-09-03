@@ -1,13 +1,15 @@
 *{
   font-family: sans-serif;
-}
-body{
-  margin: 0;
+   margin: 0;
   padding: 0;
-  width: 100%;
   box-sizing: border-box;
 
 }
+html,body{
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 .navbar {
   background-color: #253512;
   position: fixed;
@@ -1087,6 +1089,9 @@ body.modal-open {
       box-shadow: 0 4px 12px rgba(90,74,255,0.3);
     }
 @media screen and (max-width: 769px) {
+  body{
+    width: 100%;
+  }
   #popup {
     width: 70%;
   
@@ -1096,14 +1101,19 @@ body.modal-open {
   
 }
 @media screen and (max-width: 426px) {
+  
   #popup {
     width: 80%;
     
   }
+  .input-group input,
+    .input-group textarea {
+      width: 81%;
+}
 
 }
 
-  @media screen and (max-width: 321px) {
+  @media screen and (max-width: 361px) {
 #popup {
   .input-group input,
 .input-group textarea {

@@ -284,7 +284,9 @@ body {
     position: relative;
     overflow: hidden;
 }
-
+.extra{
+  color: gray;
+}
 .blog-header::before {
     content: '';
     position: absolute;

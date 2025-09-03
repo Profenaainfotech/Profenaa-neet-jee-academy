@@ -1319,14 +1319,17 @@ body.modal-open {
     width: 80%;
     
   }
-
+  .input-group input,
+    .input-group textarea {
+      width: 81%;
+}
 }
 
-@media screen and (max-width: 321px) {
+@media screen and (max-width: 361px) {
 #popup {
   .input-group input,
 .input-group textarea {
-  width: 75%;
+  width: 78%;
 }
   }
 }
