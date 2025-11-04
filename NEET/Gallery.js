@@ -13,7 +13,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   setTimeout(() => {
     grid.style.opacity = '1';
-    grid.style.transform = 'scale(1)';
+    grid.style.transform ='scale(1)';
   }, 800);
 
   // Arrow controls
