@@ -41,7 +41,7 @@
   <div class="jee-hero-content">
     <h1><span>Crack IIT JEE</span> with Profenaa Academy</h1>
     <p>Join India’s most advanced JEE(Joint Entrance Examination) preparation platform. Learn from top educators with 3D concepts, AI-based practice, and smart revision tools.</p>
-    <a  href="javascript:void(0)" id="join-us-btn"  class="jee-btn">Start Your JEE Journey</a>
+    <a  href="https://forms.gle/WDAFwibZQncJFW5R7" id="join-us-btn"  class="jee-btn">Start Your JEE Journey</a>
   </div>
   <div class="jee-bg-shapes">
     <span class="shape blob1"></span>
@@ -49,7 +49,7 @@
     <span class="shape blob3"></span>
   </div>
 </section>
-  <script src="join-us.js"></script>
+ 
 
 <!-- section 2  -->
  <!-- Rotating Circle with Dotted Border and Text -->
@@ -246,6 +246,12 @@
       overlay.style.display = 'none';
       unlockBackground();
     }
+
+    // Show once after 3 seconds, on every page load.
+    window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(showForm, 3000);
+    });
+
     closeBtn.addEventListener('click', hideForm);
     overlay.addEventListener('click', e => {
       if (e.target === overlay) hideForm();
@@ -256,7 +262,10 @@
       console.log('Submitted:', Object.fromEntries(new FormData(form)));
       hideForm();
     });
-  </script>
+
+   
+</script>
+
 
     <script>
 document.getElementById("contactForm").addEventListener("submit", async function (e) {

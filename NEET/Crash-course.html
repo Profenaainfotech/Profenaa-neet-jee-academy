@@ -156,12 +156,6 @@ function rotateText() {
 setInterval(rotateText, 4000);
 </script>
 
-<!-- <script>
-  AOS.init({
-    duration: 1000,
-    once: true
-  });
-</script> -->
   <!-- Section3: Crash Course Hero -->
 <section class="section3-crash-hero">
   <div class="section3-overlay">
@@ -173,11 +167,10 @@ setInterval(rotateText, 4000);
       <li>🧠 Revision, Practice & Mock Tests</li>
       <li>🎯 Strategy by Top Mentors</li>
     </ul>
-    <a href="javascript:void(0)" id="join-us-btn" class="section3-btn">Join Now</a>
+    <a href="https://forms.gle/WDAFwibZQncJFW5R7" id="join-us-btn" class="section3-btn">Join Now</a>
   </div>
 </section>
 
-  <script src="join-us.js"></script>
 
 
 <section class="who-should-section" id="who-should">
@@ -260,6 +253,12 @@ setInterval(rotateText, 4000);
       overlay.style.display = 'none';
       unlockBackground();
     }
+
+    // Show once after 3 seconds, on every page load.
+    window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(showForm, 3000);
+    });
+
     closeBtn.addEventListener('click', hideForm);
     overlay.addEventListener('click', e => {
       if (e.target === overlay) hideForm();
@@ -269,9 +268,11 @@ setInterval(rotateText, 4000);
       e.preventDefault();
       console.log('Submitted:', Object.fromEntries(new FormData(form)));
       hideForm();
-    }); 
-    
-  </script>
+    });
+
+   
+</script>
+
  
    <script>
 document.getElementById("contactForm").addEventListener("submit", async function (e) {

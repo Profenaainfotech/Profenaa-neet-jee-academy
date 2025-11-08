@@ -437,8 +437,7 @@ We understand the limitations of hilly regions and have designed special tools t
       </form>
     </div>
   </div>
-
-  <script>
+<script>
     const overlay = document.getElementById('overlay');
     const form = document.getElementById('contactForm');
     const closeBtn = document.getElementById('closeBtn');
@@ -458,6 +457,11 @@ We understand the limitations of hilly regions and have designed special tools t
       unlockBackground();
     }
 
+    // Show once after 3 seconds, on every page load.
+    window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(showForm, 3000);
+    });
+
     closeBtn.addEventListener('click', hideForm);
     overlay.addEventListener('click', e => {
       if (e.target === overlay) hideForm();
@@ -468,8 +472,9 @@ We understand the limitations of hilly regions and have designed special tools t
       console.log('Submitted:', Object.fromEntries(new FormData(form)));
       hideForm();
     });
-  </script>
 
+   
+</script>
 
   <script>
 document.getElementById("contactForm").addEventListener("submit", async function (e) {

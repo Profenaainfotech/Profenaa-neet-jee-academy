@@ -798,6 +798,7 @@ body.modal-open {
     #popup h2 {
       text-shadow: none;
       text-align: center;
+      font-size: 25px;
       margin-bottom: 20px;
       color: #133011;
     }

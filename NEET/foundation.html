@@ -40,11 +40,11 @@
       <div>
         <h1>Your Foundation for NEET &amp; JEE</h1>
         <p>Join our class 6–10 program—build strength in Math, Physics &amp; Chemistry before it matters.</p>
-        <a  href="javascript:void(0)" id="join-us-btn" class="cta">Enroll Now</a>
+        <a  href="https://forms.gle/WDAFwibZQncJFW5R7" id="join-us-btn" class="cta">Enroll Now</a>
       </div>
     </div>
   </section>
-  <script src="join-us.js"></script>
+
 
   <script>
     if (!CSS.supports('animation-timeline','scroll()')) {
@@ -227,7 +227,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     </div>
   </div>
 
- <script>
+<script>
     const overlay = document.getElementById('overlay');
     const form = document.getElementById('contactForm');
     const closeBtn = document.getElementById('closeBtn');
@@ -246,6 +246,12 @@ document.addEventListener('DOMContentLoaded',()=>{
       overlay.style.display = 'none';
       unlockBackground();
     }
+
+    // Show once after 3 seconds, on every page load.
+    window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(showForm, 3000);
+    });
+
     closeBtn.addEventListener('click', hideForm);
     overlay.addEventListener('click', e => {
       if (e.target === overlay) hideForm();
@@ -256,7 +262,10 @@ document.addEventListener('DOMContentLoaded',()=>{
       console.log('Submitted:', Object.fromEntries(new FormData(form)));
       hideForm();
     });
-  </script>
+
+   
+</script>
+
 
     <script>
 document.getElementById("contactForm").addEventListener("submit", async function (e) {

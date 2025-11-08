@@ -254,10 +254,9 @@
         <div class="about-container">
             <h2>Ready to Start Your Journey?</h2>
             <p>Join thousands of successful students who have achieved their dreams with Profenaa Academy</p>
-            <a href="javascript:void(0)" id="join-us-btn" class="about-btn">Enroll Now</a>
+            <a href="https://forms.gle/WDAFwibZQncJFW5R7" id="join-us-btn" class="about-btn">Enroll Now</a>
         </div>
     </div>
-  <script src="join-us.js"></script>
 
     <script>
         // Animated counter for statistics
@@ -399,6 +398,12 @@
       overlay.style.display = 'none';
       unlockBackground();
     }
+
+    // Show once after 3 seconds, on every page load.
+    window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(showForm, 3000);
+    });
+
     closeBtn.addEventListener('click', hideForm);
     overlay.addEventListener('click', e => {
       if (e.target === overlay) hideForm();
@@ -409,7 +414,10 @@
       console.log('Submitted:', Object.fromEntries(new FormData(form)));
       hideForm();
     });
-  </script>
+
+   
+</script>
+
 
   <script>
 document.getElementById("contactForm").addEventListener("submit", async function (e) {

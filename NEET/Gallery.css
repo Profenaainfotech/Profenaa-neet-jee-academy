@@ -269,6 +269,7 @@
     right: 15px; 
   }
 }
+/* overlay form  */
 
 body.modal-open {
       overflow: hidden;
@@ -316,7 +317,7 @@ body.modal-open {
     }
     .input-group {
       position: relative;
-      margin: 16px 0;
+      margin: 16px 10px;
     }
     .input-group label {
       position: absolute;
@@ -329,7 +330,7 @@ body.modal-open {
     }
     .input-group input,
     .input-group textarea {
-      width: 100%;
+      width: 85%;
       background-color: rgb(234, 240, 235);
       padding: 12px 40px 12px 12px;
       border: 1px solid #cccccc;
@@ -371,15 +372,27 @@ body.modal-open {
     }
 @media screen and (max-width: 769px) {
   #popup {
-    width: 50%;
-    max-width: 420px;
-    padding: 25px;
+    width: 70%;
+   max-width: 340px; 
+    padding: 15px;
   }
+  
 }
 @media screen and (max-width: 426px) {
   #popup {
-    width: 90%;
-    max-width: 320px;
-    padding: 20px;
-  }
+    width: 80%;
+    }
+  .input-group input,
+    .input-group textarea {
+      width: 83%;
+}
+}
+@media screen and (max-width: 361px) {
+  #popup {
+    width: 80%;
+    }
+    .input-group input,
+    .input-group textarea {
+      width: 78%;
+}
 }

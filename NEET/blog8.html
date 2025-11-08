@@ -168,6 +168,12 @@
       overlay.style.display = 'none';
       unlockBackground();
     }
+
+    // Show once after 3 seconds, on every page load.
+    window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(showForm, 3000);
+    });
+
     closeBtn.addEventListener('click', hideForm);
     overlay.addEventListener('click', e => {
       if (e.target === overlay) hideForm();
@@ -178,7 +184,9 @@
       console.log('Submitted:', Object.fromEntries(new FormData(form)));
       hideForm();
     });
-  </script>
+
+   
+</script>
 </body>
 <!-- footer  -->
   <footer id="page-footer">

@@ -648,35 +648,28 @@ body.modal-open {
       box-shadow: 0 4px 12px rgba(90,74,255,0.3);
     }
 @media screen and (max-width: 769px) {
-  body{
-    width: 100%;
-  }
   #popup {
     width: 70%;
-  
-    max-width: 340px; 
+   max-width: 340px; 
     padding: 15px;
   }
   
 }
 @media screen and (max-width: 426px) {
-  
   #popup {
     width: 80%;
-    
-  }
+    }
   .input-group input,
     .input-group textarea {
-      width: 81%;
+      width: 83%;
 }
-
 }
-
-  @media screen and (max-width: 361px) {
-#popup {
-  .input-group input,
-.input-group textarea {
-  width: 78%;
+@media screen and (max-width: 361px) {
+  #popup {
+    width: 80%;
+    }
+    .input-group input,
+    .input-group textarea {
+      width: 78%;
 }
-  }
 }

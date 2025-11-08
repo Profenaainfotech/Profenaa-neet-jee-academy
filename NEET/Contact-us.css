@@ -94,7 +94,7 @@ html,body{
 
 .contact-form input,
 .contact-form textarea {
-  width: 98%;
+  width: 92%;
   padding: 14px 16px;
   border: none;
   outline: none;
@@ -167,7 +167,7 @@ html,body{
 
   .contact-form input,
   .contact-form textarea {
-    width: 98%;
+    width: 91%;
   }
 
   .contact-form button {
@@ -241,7 +241,7 @@ html,body{
   }
 
   .contact-form {
-    width: 100%;
+    width: 90%;
     padding: 18px;
   }
 
@@ -406,9 +406,8 @@ body.modal-open {
     }
 @media screen and (max-width: 769px) {
   #popup {
-    width: 75%;
-  
-    max-width: 340px; 
+    width: 70%;
+   max-width: 340px; 
     padding: 15px;
   }
   
@@ -416,18 +415,18 @@ body.modal-open {
 @media screen and (max-width: 426px) {
   #popup {
     width: 80%;
-    
-  }
+    }
   .input-group input,
     .input-group textarea {
-      width: 81%;
+      width: 83%;
 }
 }
 @media screen and (max-width: 361px) {
-#popup {
-  .input-group input,
-.input-group textarea {
-  width: 78%;
+  #popup {
+    width: 80%;
+    }
+    .input-group input,
+    .input-group textarea {
+      width: 78%;
 }
-  }
 }

@@ -42,7 +42,7 @@ NEET coaching center near me,Top NEET academy Tiruppur, NEET Tiruppur, Profenaa 
   <div class="neet-hero-content">
     <h1><span>Crack NEET</span> with Profenaa Academy</h1>
     <p>India's most futuristic and student-centric NEET(National Eligibility cum Entrance Test) coaching platform. Learn from experts, access 3D learning, and rise above the competition.</p>
-    <a  href="javascript:void(0)" id="join-us-btn" class="neet-btn">Start Your Journey</a>
+    <a  href="https://forms.gle/WDAFwibZQncJFW5R7" id="join-us-btn" class="neet-btn">Start Your Journey</a>
   </div>
   <div class="neet-bg-shapes">
     <span class="shape shape1"></span>
@@ -50,7 +50,7 @@ NEET coaching center near me,Top NEET academy Tiruppur, NEET Tiruppur, Profenaa 
     <span class="shape shape3"></span>
   </div>
 </section>
-  <script src="join-us.js"></script>
+ 
 
 <!-- section 2  -->
  <!-- Rotating Circle with Dotted Border and Text -->
@@ -247,6 +247,11 @@ NEET coaching center near me,Top NEET academy Tiruppur, NEET Tiruppur, Profenaa 
       unlockBackground();
     }
 
+    // Show once after 3 seconds, on every page load.
+    window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(showForm, 3000);
+    });
+
     closeBtn.addEventListener('click', hideForm);
     overlay.addEventListener('click', e => {
       if (e.target === overlay) hideForm();
@@ -257,7 +262,10 @@ NEET coaching center near me,Top NEET academy Tiruppur, NEET Tiruppur, Profenaa 
       console.log('Submitted:', Object.fromEntries(new FormData(form)));
       hideForm();
     });
-  </script>
+
+   
+</script>
+
     <script>
 document.getElementById("contactForm").addEventListener("submit", async function (e) {
     e.preventDefault();

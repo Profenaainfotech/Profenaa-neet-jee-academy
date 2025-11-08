@@ -36,7 +36,7 @@
     <div class="container">
       <h1>Profenaa Repeaters Program 2025</h1>
       <p>Dedicated coaching for NEET/JEE repeaters focused on strategy, concept clarity, and exam cracking tactics.</p>
-      <button  href="javascript:void(0)" id="join-us-btn" >Enroll Now</button>
+      <a href="https://forms.gle/WDAFwibZQncJFW5R7"><button>Enroll Now</button></a>
     </div>
   </section>
   <script src="join-us.js"></script>
@@ -122,18 +122,18 @@
         <div class="course-card">
           <h3>NEET Elite</h3>
           <p>Comprehensive NEET repeater program with crash + advanced modules.</p>
-          <button  href="javascript:void(0)" id="join-us" >Enroll NEET</button>
+          <a href="https://forms.gle/WDAFwibZQncJFW5R7"><button>Enroll Now</button></a>
         </div>
-  <script src="Enroll.js"></script>
+  <!-- <script src="Enroll.js"></script> -->
         
         <div class="course-card">
           <h3>JEE Pro</h3>
           <p>Advanced level preparation with previous year analysis and rank booster packs.</p>
-          <button  href="javascript:void(0)" id="join-us1" >Enroll JEE</button>
+         <a href="https://forms.gle/WDAFwibZQncJFW5R7"><button>Enroll Now</button></a>
         </div>
       </div>
     </div>
-  <script src="Enroll1.js"></script>
+  <!-- <script src="Enroll1.js"></script> -->
 
   </section>
 
@@ -197,6 +197,12 @@
       overlay.style.display = 'none';
       unlockBackground();
     }
+
+    // Show once after 3 seconds, on every page load.
+    window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(showForm, 3000);
+    });
+
     closeBtn.addEventListener('click', hideForm);
     overlay.addEventListener('click', e => {
       if (e.target === overlay) hideForm();
@@ -207,7 +213,10 @@
       console.log('Submitted:', Object.fromEntries(new FormData(form)));
       hideForm();
     });
-  </script>
+
+   
+</script>
+
 </body>
 <!-- Footer Placeholder -->
 <div id="footer-placeholder"></div>

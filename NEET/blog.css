@@ -472,7 +472,7 @@ body.modal-open {
     }
     .input-group input,
     .input-group textarea {
-      width: 100%;
+      width: 85%;
       background-color: rgb(234, 240, 235);
       padding: 12px 40px 12px 12px;
       border: 1px solid #cccccc;
@@ -522,7 +522,19 @@ body.modal-open {
 }
 @media screen and (max-width: 426px) {
   #popup {
-    width: 90%;
+    width: 80%;
     }
-
+  .input-group input,
+    .input-group textarea {
+      width: 83%;
+}
+}
+@media screen and (max-width: 361px) {
+  #popup {
+    width: 80%;
+    }
+    .input-group input,
+    .input-group textarea {
+      width: 78%;
+}
 }
