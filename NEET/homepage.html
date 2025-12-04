@@ -9,8 +9,7 @@
 <meta name="keywords" content="Profenaa neet academy,Best NEET coaching Pollachi,NEET coaching Pollachi,Best JEE coaching Pollachi, JEE coaching Pollachi,profenaa,pro,neet,jee,academy,neet&jee,neet academy,jee academy, NEET coaching in Coimbatore, JEE coaching in Coimbatore, NEET coaching in Erode, JEE coaching in Erode, NEET coaching in Udumalpet, JEE coaching in Udumalpet, NEET coaching in Tiruppur,
                                JEE coaching in Tiruppur, Profenaa Academy, NEET JEE online classes, NEET JEE offline coaching,Best NEET coaching in Coimbatore,Best JEE coaching in Coimbatore,Best NEET coaching in Erode,Best JEE coaching in Erode,Best NEET coaching in Udumalpet,Best JEE coaching in Udumalpet,Best NEET coaching in Tiruppur,Best JEE coaching in Tiruppur,
                                Best NEET JEE online classes, Best NEET JEE offline coaching, best NEET coaching in Tamil Nadu, best JEE coaching in Tamil Nadu,Best NEET coaching Pollachi,NEET coaching Pollachi,Best JEE coaching Pollachi, JEE coaching Pollachi,profenaa,pro,neet,jee,academy,neet&jee,neet academy,jee academy, NEET coaching in Coimbatore, JEE coaching in Coimbatore,
-                               NEET coaching in Erode, JEE coaching in Erode, NEET coaching in Udumalpet, JEE coaching in Udumalpet, NEET coaching in Tiruppur, JEE coaching in Tiruppur, Profenaa Academy, NEET JEE online classes, NEET JEE offline academy,Best NEET academy in Coimbatore,Best JEE academy in Coimbatore,Best NEET academy in Erode,Best JEE academy in Erode,
-                               Best NEET academy in Udumalpet,Best JEE academy in Udumalpet,Best NEET academy in Tiruppur,Best JEE academy in Tiruppur,best NEET academy in Tamil Nadu, best JEE academy">
+                               Profenaa Academy, NEET JEE online classes, Best NEET Academy in pollachi,Best JEE Academy in pollachi,NEET JEE offline academy,Best NEET academy in Coimbatore,Best JEE academy in Coimbatore,best NEET academy in Tamil Nadu, best JEE academy,NEET Coaching,JEE Coaching,NEET Academy,JEE Academy">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Profenaa NEET & JEE Academy">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -58,193 +57,330 @@
       section2Sentences[index].classList.add('active');
     }, 3000);
   </script>
-<!-- section 3   -->
- <section class="section3-banner">
-    <div class="section3-overlay"></div>
-    <div class="section3-content">
-      <h1 class="section3-heading">
-        Crack Competitive Exams <span class="section3-highlight">with Confidence</span>
-      </h1>
-      <p class="section3-description">
-        Prepare for India's top entrance exams like <strong>JEE</strong> and <strong>NEET</strong> with expert-curated content, real-time assessments, and powerful study plans. Elevate your preparation through personalized strategies and high-yield practice.
-      </p>
-      <a  href="https://forms.gle/WDAFwibZQncJFW5R7" id="join-us-btn"  class="section3-button">Join Us</a>
+
+<!-- ================= SECTION 1 ================= -->
+<section class="section1-hero">
+    <div class="section1-overlay"></div>
+
+    <div class="section1-content" data-animate="fade-up">
+        <h1>Crack Competitive Exams <span>with Confidence</span> </h1>
+        <p>
+            Prepare for India's top entrance exams like <b>JEE</b> and <b>NEET</b> 
+            with expert-curated content, real-time assessments, and powerful study plans. 
+            Elevate your preparation through personalized strategies and high-yield practice.
+        </p>
+
+        <a href="https://forms.gle/WDAFwibZQncJFW5R7" class="section1-btn">Join Us</a>
     </div>
-  </section>
-  
-<!-- section 4  -->
-<!-- Unlock Future Section -->
-<section class="section4 unlock-future-section">
-  <div class="section4 container">
-    <h2>Unlock Your Future: Enroll with Profenaa Today</h2>
-    <p class="section4 subheading">
-      <em><strong>Achieve your NEET & JEE aspirations. Join Profenaa for a proven path to success.</strong></em>
-    </p>
-    <div class="section4 points-grid">
-      <ul>
-        <li>Limited seats. Secure your spot!</li>
-        <li>Schedule a free consultation.</li>
-      </ul>
-      <ul>
-        <li>Explore our centres or online programmes.</li>
-        <li>Ignite your potential. Begin your academic journey with Profenaa.</li>
-      </ul>
-    </div>
-    <div class="section4 cta-buttons">
-      <a href="tel:9500027638" class="section4 btn-primary">Schedule a Free Consultation</a>
-    </div>
-  </div>
 </section>
+<script>
+const sections = document.querySelectorAll("[data-animate]");
+
+function scrollAnimate() {
+    sections.forEach(sec => {
+        let top = sec.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+            sec.classList.add("show");
+        }
+    });
+}
+
+window.addEventListener("scroll", scrollAnimate);
+scrollAnimate();
+</script>
+
+
 
   <!-- section 5 -->
  <!-- What We Offer Section -->
-<section class="section5-offer-section">
-  <div class="section5-container">
-    <h2 class="section5-offer-title">What We Offer</h2>
-    <div class="section5-offer-grid">
-      <div class="section5-offer-card section5-refresh-animate">
-        <img src="images/blog1.4.jpg" class="section5-icons">
-        <h3>Live Classes</h3>
-        <p>Daily interactive classes with top mentors.</p>
+<section class="section5-future">
+  <h2 class="section5-title">What We Offer</h2>
+
+  <div class="section5-grid">
+
+    <div class="section5-item">
+      <div class="section5-hex">
+        <img src="images/blog1.4.jpg" alt="Best NEET Academy in pollachi"/>
       </div>
-      <div class="section5-offer-card section5-refresh-animate">
-        <img src="images/blog6.4.jpg" class="section5-icons">
-        <h3>Mock Tests</h3>
-        <p>Simulated full-length exams with performance reports.</p>
+      <h3>Live Classes</h3>
+      <p>Interactive live classes powered by advanced learning tools.</p>
+    </div>
+
+    <div class="section5-item">
+      <div class="section5-hex">
+        <img src="images/blog3.jpg" alt="Best JEE Academy in pollachi" />
       </div>
-      <div class="section5-offer-card section5-refresh-animate">
-        <img src="images/blog10.3.jpg" class="section5-icons">
-         <h3>Doubt Solving</h3>
-        <p>Get your queries cleared instantly by experts.</p>
+      <h3>Mock Tests</h3>
+      <p>Real exam-like mock tests with AI-based analysis.</p>
+    </div>
+
+    <div class="section5-item">
+      <div class="section5-hex">
+        <img src="images/1.jpg" alt="Best NEET Coaching in pollachi"/>
       </div>
-      <div class="section5-offer-card section5-refresh-animate">
-        <img src="images/blog4.1.jpg" class="section5-icons">
-        <h3>Study Materials</h3>
-        <p>Well-curated notes and practice sheets for NEET & JEE.</p>
+      <h3>Doubt Solving</h3>
+      <p>Instant doubt resolution with subject-expert mentors.</p>
+    </div>
+
+    <div class="section5-item">
+      <div class="section5-hex">
+        <img src="images/log6.5.jpg" alt="Best JEE Coaching in pollachi"/>
       </div>
+      <h3>Study Materials</h3>
+      <p>Premium curated notes exclusively for NEET & JEE students.</p>
+    </div>
+
+  </div>
+</section>
+<script>
+  const cards5 = document.querySelectorAll(".section5-item");
+
+  const obs5 = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = "1";
+        entry.target.style.transform = "translateY(0) scale(1)";
+      }
+    });
+  }, { threshold: 0.2 });
+
+  cards5.forEach(card => obs5.observe(card));
+</script>
+
+<!-- section 4  -->
+<section class="section4 unlock-future-section">
+  <div class="section4 container">
+
+    <h2>Unlock Your Future: Best NEET and JEE Academy</h2>
+
+    <p class="section4 subheading">
+      <em><strong>Achieve your NEET & JEE aspirations with India's most trusted learning system.</strong></em>
+    </p>
+
+    <div class="section4 points-grid">
+      <ul>
+        <li>✨ Limited seats. Secure your spot today!</li>
+        <li>📞 Schedule a free expert consultation.</li>
+      </ul>
+
+      <ul>
+        <li>🏫 Explore our centres or join online classes.</li>
+        <li>🚀 Ignite your potential and begin your journey.</li>
+      </ul>
+    </div>
+
+    <div class="section4 cta-buttons">
+      <a href="tel:9500027638" class="section4 btn-primary">Schedule a Free Consultation</a>
+    </div>
+
+  </div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll(".section4.unlock-future-section");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("section4-visible");
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  sections.forEach(sec => observer.observe(sec));
+});
+</script>
+
+<!-- Section 6: Why Students Trust Profenaa -->
+<section class="section6-new">
+  <h2 class="section6-new-title">Why Students Trust Profenaa</h2>
+
+  <div class="section6-feature reveal">
+    <div class="sec6-img" style="background-image:url('images/ai.jpg')"></div>
+    <div class="sec6-content">
+      <h3>AI-Based Tracking</h3>
+      <p>Advanced AI-powered learning paths monitor your NEET & JEE performance in real-time.</p>
+    </div>
+  </div>
+
+  <div class="section6-feature reveal reverse">
+    <div class="sec6-img" style="background-image:url('images/analytics.png')"></div>
+    <div class="sec6-content">
+      <h3>Detailed Analytics</h3>
+      <p>Get topic-wise analysis, trends, strengths, weaknesses, and improvement charts.</p>
+    </div>
+  </div>
+
+  <div class="section6-feature reveal">
+    <div class="sec6-img" style="background-image:url('images/top.jpg')"></div>
+    <div class="sec6-content">
+      <h3>Flexible Learning</h3>
+      <p>Learn at your pace with structured schedules and adaptive study models.</p>
+    </div>
+  </div>
+
+  <div class="section6-feature reveal reverse">
+    <div class="sec6-img" style="background-image:url('images/flexible.jpg')"></div>
+    <div class="sec6-content">
+      <h3>Top Faculty</h3>
+      <p>India’s best NEET & JEE educators with proven track records guide your preparation.</p>
     </div>
   </div>
 </section>
 
+<script>
+  const reveals = document.querySelectorAll(".reveal");
 
- <!-- section 6  -->
-  <!-- Section 6: Why Students Trust Profenaa -->
-<section class="section6-container">
-  <div class="section6-inner">
-    <h2 class="section6-title">Why Students Trust Profenaa</h2>
-    <div class="section6-grid">
-      <div class="section6-card refresh-animate" style="background-image: url('images/ai.jpg');">
-        <div class="section6-overlay">
-          <h3>AI-Based Tracking</h3>
-          <p>Monitor your progress smartly with AI algorithms built for NEET/JEE.</p>
-        </div>
+  const revealOnScroll = () => {
+    reveals.forEach(el => {
+      const rect = el.getBoundingClientRect().top;
+      if (rect < window.innerHeight - 120) {
+        el.classList.add("show");
+      }
+    });
+  };
+
+  window.addEventListener("scroll", revealOnScroll);
+  revealOnScroll();
+</script>
+
+
+<!-- SECTION 7 – Futuristic Testimonials -->
+<section class="section7-slider">
+  <h2 class="section7-slider-title">Hear From Our Toppers</h2>
+
+  <div class="testimonial-track">
+
+    <div class="testimonial-card">
+      <div class="corner-img">
+        <img src="images/pradeep.png" alt="student 1">
       </div>
-      <div class="section6-card refresh-animate" style="background-image: url('images/analytics.png');">
-        <div class="section6-overlay">
-          <h3>Detailed Analytics</h3>
-          <p>Topic-wise performance reports to identify strengths & weaknesses.</p>
-        </div>
-      </div>
-      <div class="section6-card refresh-animate" style="background-image: url('images/top.jpg');">
-        <div class="section6-overlay">
-          <h3>Flexible Learning</h3>
-          <p>Study anytime, anywhere with a personalized roadmap for your goal.</p>
-        </div>
-      </div>
-      <div class="section6-card refresh-animate" style="background-image: url('images/flexible.jpg');">
-        <div class="section6-overlay">
-          <h3>Top Faculty</h3>
-          <p>Learn from India’s top 1% educators with years of proven success.</p>
-        </div>
+      <div class="content">
+        <h3>Pradeep</h3>
+        <h4>NEET Topper 2024</h4>
+        <p>"Profenaa made my preparation structured, stress-free and result-driven."</p>
       </div>
     </div>
+
+    <div class="testimonial-card">
+      <div class="corner-img">
+        <img src="images/arjun.jpg" alt="student 1">
+      </div>
+      <div class="content">
+        <h3>Arjun</h3>
+        <h4>JEE AIR 74</h4>
+        <p>"Daily mentorship kept me consistent and confident throughout."</p>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="corner-img">
+        <img src="images/diya.png" alt="student 1">
+      </div>
+      <div class="content">
+        <h3>Diya</h3>
+        <h4>NEET Rank 12</h4>
+        <p>"Profenaa's strategies helped me reach my dream medical college."</p>
+      </div>
+    </div>
+
   </div>
 </section>
+<script>
+  const cards = document.querySelectorAll('.testimonial-card');
 
-<!-- section 7  -->
-   <!-- Section 7: Hear from Our Toppers -->
-<section class="section7-grid">
-  <h2 class="section7-grid-title">Hear from Our Toppers</h2>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.3 });
 
-  <div class="section7-grid-wrapper">
-    <!-- Testimonial 1 -->
-    <div class="section7-grid-card">
-      <img src="images/pradeep.png" alt="Riya Sharma">
-      <h3>Pradeep</h3>
-      <h4>NEET Topper 2024</h4>
-      <p>"Profenaa's test series and video lectures were a game changer for my NEET prep."</p>
-    </div>
+  cards.forEach(card => observer.observe(card));
+</script>
 
-    <!-- Testimonial 2 -->
-    <div class="section7-grid-card">
-      <img src="images/arjun.jpg" alt="Arjun Mehta">
-      <h3>Arjun </h3>
-      <h4>JEE AIR 74</h4>
-      <p>"With Profenaa’s mentorship and daily practice, I stayed consistent and confident."</p>
-    </div>
+<!-- Section 8: Why Choose Profenaa (New Premium Design) -->
+<section class="section8-neo" id="section8">
 
-    <!-- Testimonial 3 -->
-    <div class="section7-grid-card">
-      <img src="images/diya.png" alt="Diya Patel">
-      <h3>Diya</h3>
-      <h4>NEET Rank 12</h4>
-      <p>"The guidance and strategy I received helped me score my dream medical seat."</p>
-    </div>
-  </div>
-</section>
+  <h2 class="s8-main-title">Why Students <span>Choose Profenaa</span></h2>
+  <p class="s8-sub">Where Quality Meets Results.</p>
 
-<!-- Section 8: Why Choose Profenaa -->
-<section class="section8-whyprofenna" id="section8">
-  <h2 class="section8-title">Why Students <span>Choose Profenaa</span></h2>
-  <p class="section8-subtitle">More than coaching. It’s a movement.</p>
+  <div class="s8-grid">
 
-  <div class="section8-feature-blocks">
-
-    <!-- Feature 1 -->
-    <div class="feature-row">
-      <div class="feature-icon">
-        <img src="images/flexible.jpg" alt="Top Faculty">
+    <!-- CARD 1 -->
+    <div class="s8-card reveal">
+      <div class="s8-img-box">
+        <img src="images/flexible.jpg" alt="Faculty">
       </div>
-      <div class="feature-text">
+      <div class="s8-content">
         <h3>India’s Best Faculty</h3>
-        <p>Our elite JEE/NEET mentors are trusted by thousands of toppers for their crystal-clear teaching and smart approach.</p>
+        <p>Top NEET & JEE educators with a proven record of producing 600+ scorers and AIR toppers.</p>
       </div>
     </div>
 
-    <!-- Feature 2 -->
-    <div class="feature-row reverse">
-      <div class="feature-icon">
-        <img src="images/strategy.jpg" alt="Strategic Planning">
+    <!-- CARD 2 -->
+    <div class="s8-card reveal">
+      <div class="s8-img-box">
+        <img src="images/strategy.jpg" alt="Strategy">
       </div>
-      <div class="feature-text">
-        <h3>Personalized Strategy</h3>
-        <p>Get prep timelines and topic maps that match your strengths, weaknesses and targets — no copy-paste plans.</p>
+      <div class="s8-content">
+        <h3>Personalized Learning Paths</h3>
+        <p>Every student gets a fully tailored prep roadmap based on strengths, weaknesses & target rank.</p>
       </div>
     </div>
 
-    <!-- Feature 3 -->
-    <div class="feature-row">
-      <div class="feature-icon">
+    <!-- CARD 3 -->
+    <div class="s8-card reveal">
+      <div class="s8-img-box">
         <img src="images/smart.jpg" alt="Analytics">
       </div>
-      <div class="feature-text">
-        <h3>Smart Analytics</h3>
-        <p>AI-powered dashboards that show your performance pattern, time usage, topic drops — and help you fix them fast.</p>
+      <div class="s8-content">
+        <h3>AI-Powered Smart Analytics</h3>
+        <p>Smart dashboards that track accuracy, timing, weak zones and advise what to study next.</p>
       </div>
     </div>
 
-    <!-- Feature 4 -->
-    <div class="feature-row reverse">
-      <div class="feature-icon">
-        <img src="images/1on 1.jpg" alt="1-on-1 Mentorship">
+    <!-- CARD 4 -->
+    <div class="s8-card reveal">
+      <div class="s8-img-box">
+        <img src="images/1on 1.jpg" alt="Mentorship">
       </div>
-      <div class="feature-text">
+      <div class="s8-content">
         <h3>1-on-1 Mentorship</h3>
-        <p>Every Profenaa student gets paired with a mentor who tracks, motivates, and adjusts your path weekly.</p>
+        <p>Your personal mentor monitors progress weekly and adjusts strategy to keep you on track.</p>
       </div>
     </div>
-   </div>
+
+  </div>
 </section>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  
+  const reveals = document.querySelectorAll(".reveal");
+
+  function revealCards() {
+    reveals.forEach(card => {
+      const windowHeight = window.innerHeight;
+      const elementTop = card.getBoundingClientRect().top;
+
+      if (elementTop < windowHeight - 120) {
+        card.classList.add("active");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", revealCards);
+  revealCards(); // initial call
+
+});
+</script>
+
+
    <!-- Toppers Section -->
 <section class="toppers-section">
   <div class="toppers-container">
@@ -257,20 +393,16 @@
       <div class="topper-card">
         <div class="topper-video">
           <video controls>
-            <source src="images/speech 1.mp4" type="video/mp4">
+            <source src="images/speech 1.mp4" alt="Best Foundation course in pollachi">
             Your browser does not support the video tag.
           </video>
         </div>
-        <!-- <h3>Priya S.</h3>
-        <p>NEET 2024 Topper - Score 685/720</p> -->
       </div>
 
       <!-- Topper 2 -->
       <div class="topper-card">
-    <img src="images/toppers.jpeg">
+    <img src="images/toppers.jpeg" alt="Best crash course in pollachi">
         </div>
-        <!-- <h3>Arjun K.</h3>
-        <p>JEE Advanced 2024 Topper - AIR 37</p> -->
       </div>
 
     </div>

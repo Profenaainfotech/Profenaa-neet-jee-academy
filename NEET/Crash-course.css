@@ -12,6 +12,7 @@ html,body{
 .section1-crash-wrapper {
   position: relative;
   margin-top: 60px;
+  /* background: #2c2f2c; */
   width: 100%;
   height: 100vh;
   overflow: hidden;
@@ -130,7 +131,7 @@ html,body{
 }
 
 .glass-card {
-  background: rgba(133, 17, 165, 0.15);
+  background: rgba(27, 132, 31, 0.15);
   backdrop-filter: blur(12px);
   border-radius: 20px;
   padding: 40px;
@@ -195,7 +196,9 @@ html,body{
   gap: 0;
 }
 }
+
 /* ===== Crash Course Section ===== */
+
 .crash-course-section {
   padding: 60px 20px;
   font-family: 'Segoe UI', sans-serif;
@@ -344,8 +347,26 @@ html,body{
   overflow: hidden;
   animation: fadeIn 1.2s ease-in-out;
 }
+.section3-crash-hero {
+  position: relative; /* important */
+}
+
+.section3-crash-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45); /* Black transparent overlay */
+  backdrop-filter: blur(3px);       /* Blur effect */
+  -webkit-backdrop-filter: blur(5px);
+  z-index: 1; /* overlay above image */
+}
 
 .section3-overlay {
+   position: relative;
+  z-index: 2;
   padding: 30px;
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(8px);
